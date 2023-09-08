@@ -1,0 +1,145 @@
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
+
+<header class="header">
+    <button class="button-burger" role="button" aria-hidden="true"></button>
+    <div class="header__logo-wrapper">
+        <a href="/" title="СтопДолг" role="banner">
+            <include src="./src/include/icons/common-icons/logo-header.html"></include>
+        </a>
+    </div>
+    <div class="header__collapse">
+        <nav class="header__nav nav" role="navigation">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/index.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/main-page.html"></include>
+                        Главная
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/tasks.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/tasks-in-work.html"></include>
+                        Задачи
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/questionnaire.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/questionnaire.html"></include>
+                        Анкета
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/questionnaire-zpz.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/questionnaire.html"></include>
+                        Анкета ЗПЗ
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/borrower-protection.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/zpz-progress.html"></include>
+                        Ход дела
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/progress-of-the-bfl-case.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/zpz-progress.html"></include>
+                        Ход дела БФЛ
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/living-wage.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/living-wage.html"></include>
+                        Прожиточный минимум
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/pay.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/money.html"></include>
+                        Оплата
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/pay-cashback.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/money.html"></include>
+                        Оплата Кешбэк
+                    </a>
+                </li>
+                <!--<li class="nav__item">
+                    <a href="/form.html" class="nav__link" role="link">
+                        Анкета
+                    </a>
+                </li>-->
+                <!--<li class="nav__item">
+                    <a href="/documents.html" class="nav__link" role="link">
+                        Документы по делу
+                    </a>
+                </li>-->
+                <li class="nav__item">
+                    <a href="/new-useful.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/info.html"></include>
+                        Полезная информация
+                    </a>
+                </li>
+                <!--<li class="nav__item">
+                    <a href="/test.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/test-dev.html"></include>
+                        Тестовые задания
+                    </a>
+                </li>-->
+            </ul>
+        </nav>
+    </div>
+    <!--<div class="interactive-guide">
+        <button class="interactive-guide__btn" role="button">Обучающий ГИД</button>
+        <ul class="interactive-guide__list" role="list">
+            <li>
+                <a href="/main.html" data-run-onboard role="button"><span>Главная</span></a>
+            </li>
+            <li>
+                <a href="/tasks.html" data-run-onboard role="link"><span>Задачи</span></a>
+            </li>
+            <li>
+                <a href="" data-run-onboard role="link"><span>Анкета</span></a>
+            </li>
+            <li>
+                <a href="" data-run-onboard role="link"><span>Ход дела</span></a>
+            </li>
+            <li>
+                <a href="" data-run-onboard role="link"><span>Прожиточный минимум</span></a>
+            </li>
+            <li>
+                <a href="" data-run-onboard role="link"><span>Оплата</span></a>
+            </li>
+            <li>
+                <a href="" data-run-onboard role="link"><span>Полезная информация</span></a>
+            </li>
+        </ul>
+    </div>-->
+    <div class="user-nav__item header__sendFeed">
+        <button class="button button--green sendFeed" data-modal="1">
+            <include src="./src/include/icons/operator.html"></include>
+            Заказать звонок
+        </button>
+    </div>
+    <div class="header__user-nav user-nav">
+        <ul class="user-nav__list">
+            <li class="user-nav__item">
+                <div class="user-nav__button">
+<!--                    <span class="user-nav__photo-wrapper">-->
+<!--                        <img src="/assets/images/users/user.jpg" alt="Фотография пользователя" class="user-nav__photo">-->
+<!--                    </span>-->
+                    <p>ПИРОЖКОВ АРТУР Иванович</p>
+                </div>
+                <a class="user-nav__setup inDeveloping js-open-modal" href="/setup.html" data-modal="inDeveloping" title="В разработке" role="link">
+                    <include src="./src/include/icons/common-icons/setup.html"></include>
+                </a>
+                <a href="/login.html" class="button-logout"></a>
+            </li>
+        </ul>
+    </div>
+</header>

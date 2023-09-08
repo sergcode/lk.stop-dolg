@@ -1,0 +1,65 @@
+<!-- Ход дела ЗПЗ -->
+<div class="toggle-modal" role="dialog" data-modal="5">
+  <div class="toggle-modal__box toggle-modal__box_p-none">
+    <div class="toggle-modal__header">
+      <article role="article">
+        <figure>
+          <include src="./src/include/icons/zpz-stages/icon-5.html"></include>
+          <figcaption class="toggle-modal__text_uppercase">
+            Сообщение о новом деле
+          </figcaption>
+        </figure>
+      </article>
+    </div>
+    <div class="toggle-modal__body toggle-modal__body_white toggle-modal__body_pb-35">
+      <form class="form-modal ajax-save" id="formModalNewTasks" enctype="multipart/form-data" method="post" role="form">
+        <fieldset>
+          <input data-name="a_message_about_a_new_case" type="hidden">
+          <div class="form-modal__row">
+            <select class="select" name="select_the_document_type" form="formModalNewTasks">
+              <option selected>Не выбран</option>
+              <option>Получен судебный приказ</option>
+              <option>Получено исковое заявление кредитора</option>
+              <option>Получено судебное решение</option>
+              <option>Получено постановление пристава</option>
+            </select>
+            <label class="form-modal__label">Выберите тип документа</label>
+          </div>
+          <div class="form-modal__row form-modal__row_relative">
+            <textarea class="form-modal__textarea" name="task_text" id="formModalCommentNewTasks" form="formModalNewTasks" rows="3" spellcheck="true" placeholder="Введите текст комментария"
+                      role="textbox"></textarea>
+            <label class="form-modal__label" for="formModalCommentNewTasks">Комментарий <span class="form-modal__text_red">*</span></label>
+            <div class="form-modal__tooltip">Это обязательное поле! Текст должен быть не короче 5-ти символов. Длина текста сейчас: <span>0</span></div>
+          </div>
+          <div class="form-modal__row attach__search_wrapper-created-files">
+            <div class="attach__container-created-files">
+              <div class="attach__wrapper-created-files"></div>
+            </div>
+            <div class="attach">
+              <div class="attach__item attach__item_space-between">
+                <label class="attach__button">
+                      <span class="button button__little button--green attach__up">
+                          <img src="/assets/images/attach-files/icon-1.svg" alt="Плюс">
+                          Прикрепить файл
+                      </span>
+                  <input class="attach__input" type="file"
+                         accept="image/*, .doc, .docx, .xml, application/msword,
+                         application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                         application/pdf, .pdf, application/octet-stream, application/x-rar-compressed,
+                         .rar, application/gzip, application/x-7z-compressed, .7z, application/zip,
+                         application/x-zip, application/x-zip-compressed, .zip, .tar"
+                         multiple/>
+                </label>
+                <button class="attach__button button button__little button--green js-open-modal-success-unsuccess" data-modal="4Success" role="button">
+                  <include src="./src/include/icons/common-icons/send-mail.html"></include>
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <button class="toggle-modal__close js-modal-close" title="Закрыть" type="button" role="button"></button>
+</div>

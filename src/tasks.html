@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <include src="./src/sections/components/head/link.html"></include>
+  <title>Стоп долг | Задачи</title>
+  <include src="./src/sections/components/head/meta.html"></include>
+</head>
+<body>
+
+<include src="./src/sections/header.html"></include>
+<include src="./src/sections/info.html"></include>
+
+<main class="main main__container-fluid" role="main">
+  <div class="main--small main--fluid">
+    <article class="task" role="article">
+      <section class="task__breadcrumbs-and-filters" role="region">
+
+        <nav class="breadcrumbs" role="navigation">
+          <ul class="B_crumbBox">
+            <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                <span itemprop="title">Главная</span>
+              </a>
+            </li>
+            <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/tasks.html">
+                <span itemprop="title">Задачи</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="task__filters" role="row">
+          <button class="button button__grey" id="activeTask" role="button">
+            <include src="./src/include/icons/tasks/active-tasks.html"></include>
+            <span class="task__filters_title">Активные</span><span class="task__filters_num"></span>
+          </button>
+
+          <button class="button button__grey" id="onCheckTask" role="button">
+            <include src="./src/include/icons/tasks/on-check-tasks.html"></include>
+            <span class="task__filters_title">На проверке</span><span class="task__filters_num"></span>
+          </button>
+
+          <button class="button button__grey" id="completedTask" role="button">
+            <include src="./src/include/icons/tasks/completed-tasks.html"></include>
+            <span class="task__filters_title">Завершенные</span><span class="task__filters_num"></span>
+          </button>
+
+          <button class="task__filters__reset-filters" id="resetFilters" role="button" disabled>
+            Все <br/>задачи
+          </button>
+        </div>
+      </section>
+
+      <section class="task__accordion" role="region">
+
+        <!--todo Активные задачи-->
+        <button class="task__accordion-btn task__accordion_btn-wrapper" type="button" name="activeTask" role="button">
+          <include src="./src/include/icons/tasks/active-tasks.html"></include>
+          Активные задачи (<span>0</span>)
+        </button>
+        <div class="task__accordion_wrapper">
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+
+                  <ul class="task__accordion_item--list-files task__accordion_item--list-files__downloads">
+                    <li>
+                      <span>Файлы от юриста:</span>
+                      <div class="task__accordion_item--list-files__checkbox task__accordion_item--list-files__checkbox_checked-all">
+                        <input id="checkedAllCheckbox1" type="checkbox">
+                        <label for="checkedAllCheckbox1">Выбрать все</label>
+                      </div>
+                    </li>
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer1" type="checkbox">
+                        <label for="fileLawyer1"></label>
+                      </div>
+
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer2" type="checkbox">
+                        <label for="fileLawyer2"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer3" type="checkbox">
+                        <label for="fileLawyer3"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer4" type="checkbox">
+                        <label for="fileLawyer4"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer5" type="checkbox">
+                        <label for="fileLawyer5"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer6" type="checkbox">
+                        <label for="fileLawyer6"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer7" type="checkbox">
+                        <label for="fileLawyer7"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer8" type="checkbox">
+                        <label for="fileLawyer8"></label>
+                      </div>
+                      <a href="/assets/images/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button"></a>
+                    </li>
+                  </ul>
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <button class="attach__button" name="buttonDownloadAllFiles" role="button" disabled>
+                      <span class="button button--green">Скачать файлы</span>
+                    </button>
+                    <button class="attach__button" name="taskAccordionAttach" role="button">
+                      <span class="button button--red">Выполнил</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+
+                  <ul class="task__accordion_item--list-files task__accordion_item--list-files__downloads">
+                    <li>
+                      <span>Файлы от юриста:</span>
+                      <div class="task__accordion_item--list-files__checkbox task__accordion_item--list-files__checkbox_checked-all">
+                        <input id="checkedAllCheckbox2" type="checkbox">
+                        <label for="checkedAllCheckbox2">Выбрать все</label>
+                      </div>
+                    </li>
+                    <li class="task__accordion_item--list-files__wrapper">
+                      <div class="task__accordion_item--list-files__checkbox">
+                        <input id="fileLawyer11" type="checkbox">
+                        <label for="fileLawyer11"></label>
+                      </div>
+
+                      <a href="/assets/images/photo/jambalova_sysygma_dugarnimaevnajambalova_sysygma_dugarnimaevna.document" title="Скачать файл" role="button"></a>
+                    </li>
+                  </ul>
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <button class="attach__button" name="buttonDownloadAllFiles" role="button" disabled>
+                      <span class="button button--green">Скачать файлы</span>
+                    </button>
+                    <button class="attach__button" name="taskAccordionAttach" role="button" disabled>
+                      <span class="button button--green">Выполнил</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="attach__container-created-files">
+                    <div class="attach__wrapper-created-files"></div>
+                  </div>
+
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <form class="task__add-file" enctype="multipart/form-data" method="post" role="form">
+                      <fieldset>
+                        <div class="attach">
+                          <div class="attach__item">
+                            <a target="_blank" href="/assets/photo/Скан договора.jpg" class="attach__button" role="button" download>
+                              <div class="button button--green">Скачать образец</div>
+                            </a>
+                            <label class="attach__button" role="button">
+                              <span class="button button--green attach__up">
+                                  Добавить файл
+                              </span>
+                              <input class="attach__input" type="file" id="file2"
+                                     accept="image/*, .doc, .docx, .xml, application/msword,
+                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                                     application/pdf, .pdf, application/octet-stream, application/x-rar-compressed,
+                                     .rar, application/gzip, application/x-7z-compressed, .7z, application/zip,
+                                     application/x-zip, application/x-zip-compressed, .zip, .tar"
+                                     multiple/>
+                            </label>
+                            <button class="attach__button" name="taskAccordionAttach" role="button" disabled>
+                              <span class="button button--green">Отправить файлы</span>
+                            </button>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="attach__container-created-files">
+                    <div class="attach__wrapper-created-files"></div>
+                  </div>
+
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <form class="task__add-file" enctype="multipart/form-data" method="post" role="form">
+                      <fieldset>
+                        <div class="attach">
+                          <div class="attach__item">
+                            <a href="/assets/photo/Скан договора.jpg" class="attach__button" role="button" download>
+                              <div class="button button--green">Скачать образец</div>
+                            </a>
+                            <label class="attach__button" role="button">
+                              <span class="button button--green attach__up">
+                                  Добавить файл
+                              </span>
+                              <input class="attach__input" type="file" id="file3"
+                                     accept="image/*, .doc, .docx, .xml, application/msword,
+                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                                     application/pdf, .pdf, application/octet-stream, application/x-rar-compressed,
+                                     .rar, application/gzip, application/x-7z-compressed, .7z, application/zip,
+                                     application/x-zip, application/x-zip-compressed, .zip, .tar"
+                                      multiple/>
+                            </label>
+                            <button class="attach__button" name="taskAccordionAttach" role="button" disabled>
+                              <span class="button button--green">Отправить файлы</span>
+                            </button>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Сходить к приставам
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Вам необходимо сходить к судебным приставам и что-то там сделать.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <button class="attach__button" type="submit" value="" role="button">
+                      <span class="button button--green">Выполнил</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item warning is-unread">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/money.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Оплатите услуги
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">До окончания срока выполнения задачи остался 1 день!</span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <button class="attach__button" type="submit" value="" role="button">
+                      <span class="button button--green">Перейти к оплате</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item warning is-unread">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/money.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Оплатите услуги
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Задача просрочена!</span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Будьте внимательны при заполнении.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <button class="attach__button" type="submit" value="" role="button">
+                      <span class="button button--green">Перейти к оплате</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread bankruptcy-commissioner" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/bankruptcy-commissioner.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Задача от арбитражного управляющего
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Пояснение по задаче от арбитражного управляющего.
+                  </span>
+                  <div class="task__accordion_item--add-info">
+                    <p>Ваш арбитражный управляющий:<br/> Константинов Константин Константинович.</p>
+                    <p>Помощник арбитражного управляющего:<br/> Николаев Николай Николаевич.</p>
+                    <div>
+                      <span>Телефон помощника: <a href="tel:+79139139139" title="Позвонить" role="link">+7-913-913-9139</a></span>
+                      <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                      <span>E-mail: <a href="mailto:nikolaev@gmail.com" title="Написать сообщение" role="link">nikolaev@gmail.com</a></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="attach__container-created-files">
+                    <div class="attach__wrapper-created-files"></div>
+                  </div>
+
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <form class="task__add-file" enctype="multipart/form-data" method="post" role="form">
+                      <fieldset>
+                        <div class="attach">
+                          <div class="attach__item">
+                            <label class="attach__button" role="button">
+                              <span class="button button--green attach__up">
+                                  Добавить файл
+                              </span>
+                              <input class="attach__input" type="file" id="file4"
+                                     accept="image/*, .doc, .docx, .xml, application/msword,
+                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                                     application/pdf, .pdf, application/octet-stream, application/x-rar-compressed,
+                                     .rar, application/gzip, application/x-7z-compressed, .7z, application/zip,
+                                     application/x-zip, application/x-zip-compressed, .zip, .tar"
+                                     multiple/>
+                            </label>
+                            <button class="attach__button" name="taskAccordionAttach" role="button" disabled>
+                              <span class="button button--green">Отправить файлы</span>
+                            </button>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item is-unread warning bankruptcy-commissioner">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/bankruptcy-commissioner.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+                <span class="task__accordion_item--header" role="row">
+                    <span class="task__accordion_item--title task__accordion__col">
+                        Просроченная задача от арбитражного управляющего
+                    </span>
+                    <span class="task__accordion_item--right-elements">
+                        <span class="task__accordion_item--numb-task">#000030222</span>
+                    </span>
+                </span>
+                <span class="task__accordion_item--deadline">Задача просрочена!</span>
+            </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Пояснение по задаче от арбитражного управляющего.
+                  </span>
+                  <div class="task__accordion_item--add-info">
+                    <p>Ваш арбитражный управляющий:<br/> Константинов Константин Константинович.</p>
+                    <p>Помощник арбитражного управляющего:<br/> Николаев Николай Николаевич.</p>
+                    <div>
+                      <span>Телефон помощника: <a href="tel:+79139139139" title="Позвонить">+7-913-913-9139</a></span>
+                      <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                      <span>E-mail: <a href="mailto:nikolaev@gmail.com" title="Написать сообщение">nikolaev@gmail.com</a></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="attach__container-created-files">
+                    <div class="attach__wrapper-created-files"></div>
+                  </div>
+
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <form class="task__add-file" enctype="multipart/form-data" method="post" role="form">
+                      <fieldset>
+                        <div class="attach">
+                          <div class="attach__item">
+                            <label class="attach__button" role="button">
+                              <span class="button button--green attach__up">
+                                  Добавить файл
+                              </span>
+                              <input class="attach__input" type="file" id="file5"
+                                     accept="image/*, .doc, .docx, .xml, application/msword,
+                                     application/vnd.openxmlformats-officedocument.wordprocessingml.document,
+                                     application/pdf, .pdf, application/octet-stream, application/x-rar-compressed,
+                                     .rar, application/gzip, application/x-7z-compressed, .7z, application/zip,
+                                     application/x-zip, application/x-zip-compressed, .zip, .tar"
+                                     multiple/>
+                            </label>
+                            <button class="attach__button" name="taskAccordionAttach" role="button" disabled>
+                              <span class="button button--green">Отправить файлы</span>
+                            </button>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--todo Задачи на проверке у юриста-->
+        <button class="task__accordion-btn task__accordion_btn-wrapper" type="button" name="onCheckTask" role="button">
+          <include src="./src/include/icons/tasks/on-check-tasks.html"></include>
+          Задачи на проверке у юриста (<span>0</span>)
+        </button>
+        <div class="task__accordion_wrapper">
+
+          <div class="task__accordion-item-btn task__accordion_item" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Пойдите в МФЦ и сделайте что-нибудь
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--info-in-processing">
+                          <include src="./src/include/icons/tasks/info-in-processing.html"></include>
+                          <span>Информация в обработке</span>
+                      </span>
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <ul>
+                      <li>Прикреплённые файлы:</li>
+                      <li>
+                        <a href="/assets/photo/jambalova_sysygma_dugarnimaevnajambalova_sysygma_dugarnimaevna.document" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+                <span class="task__accordion_item--header" role="row">
+                    <span class="task__accordion_item--title task__accordion__col">
+                        Отправить документы
+
+                    </span>
+                    <span class="task__accordion_item--right-elements">
+                        <span class="task__accordion_item--info-in-processing">
+                            <include src="./src/include/icons/tasks/info-in-processing.html"></include>
+                            <span>Информация в обработке</span>
+                        </span>
+                        <span class="task__accordion_item--numb-task">#000030222</span>
+                    </span>
+                </span>
+                <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+            </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                  <span class="task__accordion_item--text-task">
+                      Предоставьте скан паспорта, трудовой книжки и копию договора.
+                  </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <ul>
+                      <li>Прикреплённые файлы:</li>
+                      <li>
+                        <a href="/assets/photo/jambalova_sysygma_dugarnimaevnajambalova_sysygma_dugarnimaevna.document" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test-test.png" title="Скачать файл" role="button" download></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!--todo Завершённые задачи-->
+        <button class="task__accordion-btn task__accordion_btn-wrapper" type="button" name="completedTask" role="button">
+          <include src="./src/include/icons/tasks/completed-tasks.html"></include>
+          Завершённые задачи (<span>0</span>)
+        </button>
+        <div class="task__accordion_wrapper">
+
+          <div class="task__accordion-item-btn task__accordion_item" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                 <span class="task__accordion_item--text-task">
+                    Предоставьте скан паспорта, трудовой книжки и копию договора.
+                </span>
+                </div>
+                <!--<div class="task__accordion_item&#45;&#45;buttons">
+                    <div class="task__accordion_item&#45;&#45;buttons-wrapper">
+                        <ul>
+                            <li>Прикреплённые файлы:</li>
+                            <li>
+                                <a href="/assets/photo/jambalova_sysygma_dugarnimaevnajambalova_sysygma_dugarnimaevna.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%94%D0%B8%D0%B2%D0%B0%D0%BA%20%D0%9D%D0%B8%D0%BD%D0%B0%20%D0%A2%D0%AE%D0%9F%20.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%94%D0%B5%D1%80%D0%BD%D0%BE%D0%B2%D0%B0.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/noimage_46x46_b3c.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%A1%D0%9F%D0%97%20%D0%93%D0%BD%D0%B5%D0%B7%D0%B4%D0%B8%D0%BB%D0%BE%D0%B2%D0%B01%20(2).jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D1%8B_0031_1C4A3690%20as%20Smart%20Object-1.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D1%8B_0020_1C4A3833%20as%20Smart%20Object-1.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                            <li>
+                                <a href="/assets/photo/%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D1%8B_0012_1C4A9648%20as%20Smart%20Object-1.jpg" title="Скачать файл" role="button" download></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="task__accordion-item-btn task__accordion_item" role="button">
+            <span class="task__accordion_item--icon">
+                <include src="./src/include/icons/tasks/balance.html"></include>
+            </span>
+            <div class="task__accordion_item--close-info" role="button"></div>
+            <span class="task__accordion_item--wrapper-text">
+              <span class="task__accordion_item--header" role="row">
+                  <span class="task__accordion_item--title task__accordion__col">
+                      Отправить документы
+                  </span>
+                  <span class="task__accordion_item--right-elements">
+                      <span class="task__accordion_item--numb-task">#000030222</span>
+                  </span>
+              </span>
+              <span class="task__accordion_item--deadline">Срок выполнения задачи: <time>10.12.2020</time></span>
+          </span>
+          </div>
+          <div class="task__accordion_item--more-info">
+            <div class="task__accordion_item--more-wrapper">
+              <div class="task__accordion_item--info-buttons task__accordion__col" role="row">
+                <div class="task__accordion_item--info task__accordion__col">
+                 <span class="task__accordion_item--text-task">
+                    Предоставьте скан паспорта, трудовой книжки и копию договора.
+                </span>
+                </div>
+                <div class="task__accordion_item--buttons">
+                  <div class="task__accordion_item--buttons-wrapper">
+                    <ul>
+                      <li>Прикреплённые файлы:</li>
+                      <li>
+                        <a href="/assets/docs/Инструкция создания подписи в Яндекс.Почте.pdf" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/docs/КОНТРОЛЬ ВЕРСИЙ И ДЕПЛОЙ ПРИ РАЗРАБОТКЕ САЙТОВ НА MODX.docx" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/docs/приведи друга - регламент внутренний.docx" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/images/background/bg-login.jpg" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора2.jpeg" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора3.png" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора4.pdf" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора5.doc" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора6.docx" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора7.rar" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора8.zip" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора9.7z" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора9.tar" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                      <li>
+                        <a href="/assets/photo/Скан договора10.svg" target="_blank" title="Скачать файл" role="button" download></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<include src="./src/sections/footer.html"></include>
+<include src="./src/sections/components/common-files.html"></include>
+<script src="/assets/js/attachTasks.js"></script>
+<script src="/assets/js/light.accordion.js"></script>
+<script src="/assets/js/form.sending.data.attachment.files.js"></script>
+<script src="/assets/js/helpful.information/promotions.js"></script>
+<script defer src="/assets/js/interactive.guide/sections/tasks.html.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <h3 class="questionnaire__form_title">
+        5. Укажите ваших кредиторов
+    </h3>
+    <div class="questionnaire__form_wrapper-parent visible">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="lenderName[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Наименование кредитора</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <select class="questionnaire__form_select" name="tinOfTheLender[]" form="formCustomerProfile" required>
+                    <option></option>
+                    <option>7704841080</option>
+                    <option>7704841080</option>
+                    <option>7704841080</option>
+                </select>
+                <label class="questionnaire__form_label">ИНН кредитора (если известен)</label>
+            </div>
+            <h3 class="questionnaire__form_title">
+                Номер и дата кредитного договора / договора займа (при наличии)
+            </h3>
+            <div class="questionnaire__form_space-between">
+                <div class="questionnaire__form_row">
+                    <input class="questionnaire__form_input number" name="numberContract[]" type="text" form="formCustomerProfile" required/>
+                    <label class="questionnaire__form_label">Номер договора</label>
+                </div>
+                <div class="questionnaire__form_row">
+                    <input class="questionnaire__form_input" name="dateOfTheLoanAgreement[]" type="date" form="formCustomerProfile" required/>
+                    <label class="questionnaire__form_label">Дата договора</label>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <label class="questionnaire__form_title">Месяц, год последнего платежа (примерно)</label>
+                <input class="questionnaire__form_input" name="dateOfMarriage[]" type="month" form="formCustomerProfile" required/>
+            </div>
+            <div class="questionnaire__form_row">
+                <label class="questionnaire__form_title">Рыночная стоимость (приблизительно)</label>
+                <input class="questionnaire__form_input marketPrice" placeholder=" ₽" name="marketPriceLender[]" type="text" form="formCustomerProfile" required/>
+            </div>
+            <div class="questionnaire__form_row">
+                <div class="switches">
+                    <h3 class="switches_title">
+                        <label>
+                            По долгу имеется залог?
+                        </label>
+                    </h3>
+                    <div class="switches__elements">
+                        <div class="switches__wrapper">
+                            <input class="switches__checkbox" name="thereIsAdepositSourceOfIncome[]" form="formCustomerProfile" type="checkbox"/>
+                            <div class="switches__knobs">
+                                <span></span>
+                            </div>
+                            <div class="switches__layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center visible">
+        <button class="button button__very-small button--green" name="createBlock" type="button" form="formCustomerProfile" role="button">
+            <img src="/assets/images/tasks/add.svg" alt="Плюс">
+            Добавить
+        </button>
+    </div>
+</fieldset>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/meta.html"></include>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг | Анкета клиента</title>
+    </head>
+    <body>
+
+        <include src="./src/sections/header-no-menu.html"></include>
+
+        <main class="main main__center" role="main">
+            <div class="main--small">
+                <section class="default-template" role="region">
+                    <div class="default-template__header green">
+                        <article role="article">
+                            <figure>
+                                <include src="./src/include/icons/questionnaire-gather/icon-1.html"></include>
+                                <figcaption><h1>Анкета клиента</h1></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="default-template__body">
+                        <div class="questionnaire">
+
+                            <form class="owl-carousel owl-theme questionnaire__form" id="formCustomerProfile" action="" novalidate method="post" name="formCustomerProfile" autocomplete="off" enctype="multipart/form-data" role="form">
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire/questionnaire-slide-one.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire/questionnaire-slide-two.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire/questionnaire-slide-three.html"></include>
+                                </div>
+                            </form>
+
+
+                            <article class="questionnaire__successfully" style="display: none" role="article">
+                                <figure>
+                                    <include src="./src/include/icons/questionnaire-gather/successfully.html"></include>
+                                    <figcaption><h2>Поздравляем с прохождением анкеты!</h2></figcaption>
+                                    <figcaption class="questionnaire__successfully_content">
+                                        <h3 class="questionnaire__successfully_content--pb-30">Ваша ситуация действительно важна для нас, в связи с этим вам будет оказана бесплатная консультация по нашим услугам.</h3>
+                                        <p class="questionnaire__successfully_content--pb-30">Также вы можете ознакомиться с приложением СтопДолг в обучающем видео</p>
+                                    </figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+<!--                <section class="default-template__center default-template__pt-32">-->
+<!--                    <a href="/protection-prior-to-court.html" class="button button__little button&#45;&#45;green button__little_ml-15" role="link">-->
+<!--                        <img class="zpz-stages_arrow-left" src="/assets/images/stages/arrow-open.png" alt="Плюс">-->
+<!--                        Выйти из анкеты-->
+<!--                    </a>-->
+<!--                </section>-->
+
+            </div>
+        </main>
+
+        <include src="./src/sections/footer-center.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/input.type.number.js"></script>
+        <script src="/assets/js/owl.carousel/owl.carousel.min.js"></script>
+        <script src="/assets/js/questionnaire/owl.carousel.setup.js"></script>
+        <script src="/assets/js/tooltipster.bundle.min.js"></script>
+        <script src="/assets/js/questionnaire/tooltipster.setup.js"></script>
+        <script src="/assets/js/questionnaire/forms.js"></script>
+        <script src="/assets/js/jquery.inputmask/jquery.inputmask.min.js"></script>
+        <script src="/assets/js/jquery.inputmask/jquery.inputmask.setup.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.min.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.init.js"></script>
+        <script src="/assets/js/authAndPassRecovery/show.password.js"></script>
+    </body>
+</html>

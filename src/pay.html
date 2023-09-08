@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <include src="./src/sections/components/head/link.html"></include>
+  <title>Стоп долг | Оплата</title>
+  <include src="./src/sections/components/head/meta.html"></include>
+</head>
+<body>
+
+<include src="./src/sections/header.html"></include>
+<include src="./src/sections/info.html"></include>
+
+<main class="main" role="main">
+  <div class="main--small">
+
+    <nav class="breadcrumbs" role="navigation">
+      <ul class="B_crumbBox">
+        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+            <span itemprop="title">Главная</span>
+          </a>
+        </li>
+        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+          <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/pay_old.html">
+            <span itemprop="title">Оплата</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="main__block pay">
+					<span class="pay__title">
+						Осталось внести <br><span class="color__green">120 000 &#x20bd;</span>
+					</span>
+      <div class="pay__table-wrapper">
+        <table class="pay__table">
+          <thead class="pay__thead">
+          <tr class="pay__tr">
+            <th class="pay__td">Оплатить <br>до</th>
+            <th class="pay__td">Сумма</th>
+            <th class="pay__td">№ <br>договора</th>
+            <th class="pay__td"></th>
+          </tr>
+          </thead>
+          <tbody class="pay__tbody">
+          <tr class="pay__tr">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              500 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <span class="button">
+                Оплачено
+              </span>
+            </td>
+          </tr>
+          <tr class="pay__tr">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              6000 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <span class="button">
+                Оплачено
+              </span>
+            </td>
+          </tr>
+          <tr class="pay__tr pay__tr--red">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              25 600 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <button data-page_ya="payment/ya-payment.html?pay_id=555555" data-page_blank="payment/sbp.html?id=555555" class="button modal-pay" data-payment-id="3" data-company="3" role="button">
+                Оплатить
+              </button>
+            </td>
+          </tr>
+
+          <tr class="pay__tr pay__tr--red">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              176 000 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <button data-page_ya="payment/ya-payment.html?pay_id=555555" data-page_blank="payment/sbp.html?id=555555" class="button modal-pay" data-payment-id="3" data-company="3" role="button">
+                Оплатить
+              </button>
+            </td>
+          </tr>
+          <tr class="pay__tr pay__tr--green">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              260 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <button data-page_ya="payment/ya-payment.html?pay_id=555555" data-page_blank="payment/sbp.html?id=555555" class="button modal-pay" data-payment-id="3" data-company="3" role="button">
+                Оплатить
+              </button>
+            </td>
+          </tr>
+          <tr class="pay__tr pay__tr--green">
+            <td class="pay__td">
+              30.03.2019
+            </td>
+            <td class="pay__td">
+              12 500 &#x20bd;
+            </td>
+            <td class="pay__td">
+              №03-2830/20
+            </td>
+            <td class="pay__td">
+              <button data-page_ya="payment/ya-payment.html?pay_id=555555" data-page_blank="payment/sbp.html?id=555555" class="button modal-pay" data-payment-id="3" data-company="3" role="button">
+                Оплатить
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+
+<include src="./src/sections/footer.html"></include>
+<include src="./src/sections/components/common-files.html"></include>
+<script src="/assets/js/interactive.guide/sections/pay.html.js"></script>
+</body>
+</html>

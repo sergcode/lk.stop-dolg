@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/meta.html"></include>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг | Анкета ЗПЗ</title>
+    </head>
+    <body>
+
+        <include src="./src/sections/header.html"></include>
+
+        <main class="main" role="main">
+            <div class="main--small">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/questionnaire.html">
+                                <span itemprop="title">Анкета клиента</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="default-template" role="region">
+                    <div class="default-template__header green">
+                        <article role="article">
+                            <figure>
+                                <include src="./src/include/icons/questionnaire-gather/icon-1.html"></include>
+                                <figcaption><h1>Анкета (защита прав заёмщика)</h1></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="default-template__body">
+                        <div class="questionnaire">
+
+                            <form class="owl-carousel owl-theme questionnaire__form" id="formCustomerProfileZPZ" action="" novalidate method="post" name="formCustomerProfileZPZ" autocomplete="off" enctype="multipart/form-data" role="form">
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-one.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-two.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-three.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-four.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-five.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-six.html"></include>
+                                </div>
+
+                                <div class="item">
+                                    <include src="./src/sections/pages/questionnaire-zpz/questionnaire-slide-zpz-seven.html"></include>
+                                </div>
+                            </form>
+
+                            <article class="questionnaire__successfully" style="display: none" role="article">
+                                <figure>
+                                    <include src="./src/include/icons/questionnaire-gather/successfully.html"></include>
+                                    <figcaption><h2>ПОЗДРАВЛЯЕМ!</h2></figcaption>
+                                    <figcaption><h3>Вы успешно заполнили и отправили анкету.</h3></figcaption>
+                                </figure>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="default-template__row default-template__center" role="region">
+                    <a class="button button__little button--green questionnaire__return" href="/" style="display: none" role="button">
+                        Вернуться в основное меню
+                    </a>
+                </section>
+            </div>
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/input.type.number.js"></script>
+        <script src="/assets/js/owl.carousel/owl.carousel.min.js"></script>
+        <script src="/assets/js/questionnaire/owl.carousel.setup__OLD.js"></script>
+        <script src="/assets/js/tooltipster.bundle.min.js"></script>
+        <script src="/assets/js/questionnaire/tooltipster.setup.js"></script>
+        <script src="/assets/js/questionnaire/forms__OLD.js"></script>
+        <script src="/assets/js/jquery.inputmask/jquery.inputmask.min.js"></script>
+        <script src="/assets/js/jquery.inputmask/jquery.inputmask.setup.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.min.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.init.js"></script>
+        <script src="/assets/js/authAndPassRecovery/show.password.js"></script>
+    </body>
+</html>

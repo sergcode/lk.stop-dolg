@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг | Подготовка к суду</title>
+        <include src="./src/sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="./src/sections/header.html"></include>
+
+        <main class="main" role="main">
+
+            <div class="main--small">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/progress-of-the-bfl-case.html">
+                                <span itemprop="title">Ход дела</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="">
+                                <span itemprop="title">Подготовка к суду</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="default-top-elements" role="region">
+                    <p>Дата судебного заседания: <strong>10.06.2021</strong></p>
+                    <p>Ссылка на дело в арбитражном суде:
+                        <a href="" title="Перейти по ссылке">
+                            <strong>А58-12579/2019</strong>
+                        </a>
+                    </p>
+                </section>
+
+                <section class="default-template" role="region">
+                    <div class="default-template__header default-template__btn-come-back">
+                        <a href="/progress-of-the-bfl-case.html" class="button__come-back" role="link">
+                            <include src="./src/include/icons/common-icons/come-back.html"></include>
+                            Ход дела
+                        </a>
+                        <article role="article">
+                            <figure>
+                                <include src="./src/include/icons/progress-case-bfl/icon-1.html"></include>
+                                <figcaption><h1>Подготовка к суду</h1></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+                    <div class="default-template__body">
+                        <div class="Wrap" id="app">
+                            <div class="Accordion preparation-court">
+                                <expander title="Анкетирование" animation="bottomToTop" arrow_open="/assets/images/icons/arrow-accord.svg" class_status="done">
+
+                                    <div class="Expander__body_item">
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                    </div>
+
+                                </expander>
+
+                                <expander title="Сбор документов" animation="bottomToTop" arrow_open="/assets/images/icons/arrow-accord.svg" class_status="done">
+
+                                    <div class="Expander__body_item">
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                    </div>
+
+                                </expander>
+
+                                <expander title="Подготовка документов" animation="bottomToTop" arrow_open="/assets/images/icons/arrow-accord.svg" class_status="performed">
+
+                                    <div class="Expander__body_item">
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                    </div>
+
+                                </expander>
+
+                                <expander title="Оплата обязательных платежей" animation="bottomToTop" arrow_open="/assets/images/icons/arrow-accord.svg">
+
+                                    <div class="Expander__body_item">
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                        Текст про анкетирование. Текст про анкетирование. Текст про анкетирование.
+                                    </div>
+
+                                </expander>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="default-template__row default-template__center">
+                    <a class="button button__little button--green button__little_ml-15" href="/progress-of-the-bfl-case.html" role="link">
+                        <img class="zpz-stages_arrow-left" src="/assets/images/stages/arrow-open.png" alt="Плюс">
+                        Ход дела
+                    </a>
+                    <a class="button button__little button--green button__little_mr-15" href="/court-recognized-by-the-bankrupt.html" title="Cуд по признанию банкротом" role="link">
+                        Следующий этап
+                        <img class="zpz-stages_arrow-right" src="/assets/images/stages/arrow-open.png" alt="Плюс">
+                    </a>
+                </section>
+
+            </div>
+
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/modals/_complaint-about-actions-bill.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.min.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.init.js"></script>
+        <script src="/assets/js/attachFiles.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,190 @@
+.page-news {
+    & .inDeveloping-modal {
+        position: absolute;
+        z-index: 2000;
+        opacity: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        transition: 0.3s;
+
+        &.show {
+            animation: showModal 0.3s;
+            animation-fill-mode: both;
+
+            & .inDeveloping-modal__window {
+                animation: showWindow 0.3s;
+                animation-fill-mode: both;
+            }
+        }
+
+        &.hide {
+            animation: closeModal 0.3s;
+            animation-fill-mode: both;
+
+            & .inDeveloping-modal__window {
+                animation: closeWindow 0.3s;
+                animation-fill-mode: both;
+            }
+        }
+
+        &__bg {
+            background: @black-rgba-ten;
+        }
+
+        &__window {
+            position: relative;
+            opacity: 0;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-100%);
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 40px 30px;
+            border-radius: 25px;
+            background-color: @white-one;
+            box-shadow: 0 28px 59px @black-rgba-eight,
+            0 40px 120px @black-rgba-nine;
+            transition: 0.5s;
+
+            h2 {
+                margin-top: 0;
+                padding-bottom: 15px;
+                font-size: 25px;
+                font-weight: 700;
+                color: @green-one;
+                @media screen and (max-width: @wsxga) {
+                    padding-bottom: 10px;
+                    font-size: 23px;
+                }
+            }
+
+            h3 {
+                padding-right: 20px;
+                padding-left: 20px;
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 23px;
+                font-weight: 500;
+                line-height: 1.8em;
+                color: @black-one;
+                @media screen and (max-width: @wsxga) {
+                    font-size: 20px;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                z-index: -1;
+                opacity: 0.05;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                background-image: url("/local/templates/bitrix24/images/page-news/inDeveloping/inDeveloping.gif");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            top: 25px;
+            right: 24px;
+            width: 36px;
+            height: 36px;
+            border: 2px solid @white-rgba-six;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: 0.3s;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 16px;
+                height: 2px;
+                top: 50%;
+                left: 50%;
+                background: @gray-eleven;
+                transition: 0.3s;
+                border-radius: 30px;
+            }
+
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:hover, &:focus, &:active {
+                border: 2px solid @white-rgba-seven;
+                background: @black-rgba-two;
+
+                &::before,
+                &::after {
+                    background: @white-one;
+                }
+            }
+        }
+    }
+
+    @keyframes showModal {
+        0% {
+            display: none;
+            opacity: 0;
+        }
+        100% {
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    @keyframes closeModal {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showWindow {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes closeWindow {
+        0% {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+    }
+}

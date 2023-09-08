@@ -1,0 +1,163 @@
+.tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-radius: 100px;
+  width: 24px;
+  height: 24px;
+  background: @color-green;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+  color: @white;
+  margin-left: auto;
+  margin-top: auto;
+  transition: background 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+    background: @green-rgba-four;
+  }
+
+  &_templates {
+    display: none;
+  }
+
+  &__default {
+    border-radius: 0;
+  }
+
+}
+
+.tooltipster-base {
+  display: flex;
+  pointer-events: none;
+  position: absolute;
+  padding-left: 10px;
+  height: max-content !important;
+  z-index: 96 !important;
+}
+
+.tooltipster-box {
+  flex: 1 1 auto;
+}
+
+.tooltipster-content {
+  box-sizing: border-box;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+/* ANIMATIONS */
+
+/* fade */
+
+.tooltipster-fade {
+  opacity: 0;
+  transform: translateX(-10%);
+  -webkit-transition-property: opacity, transform;
+  -moz-transition-property: opacity, transform;
+  -o-transition-property: opacity, transform;
+  -ms-transition-property: opacity, transform;
+  transition-property: opacity, transform;
+}
+.tooltipster-fade.tooltipster-show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* fade */
+
+@keyframes tooltipster-fading {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.tooltipster-update-fade {
+  animation: tooltipster-fading 400ms;
+}
+
+//tooltipster-box
+
+.tooltipster-sidetip .tooltipster-box {
+  background: @grey-rgba-three;
+  //border: 2px solid @green-rgba-four;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px @black-rgba-five;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-box {
+  margin-right: 8px;
+}
+
+/* .tooltipster-content */
+
+.tooltipster-sidetip .tooltipster-content {
+  color: @white;
+  line-height: 1.5em;
+  padding: 10px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+//tooltipster-arrow
+
+.tooltipster-sidetip .tooltipster-arrow {
+  overflow: hidden;
+  position: absolute;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow {
+  height: 20px;
+  margin-top: -10px;
+  right: 0;
+  top: 0;
+  width: 10px;
+}
+
+/* common rules between .tooltipster-arrow-background and .tooltipster-arrow-border */
+
+.tooltipster-sidetip .tooltipster-arrow-background,
+.tooltipster-sidetip .tooltipster-arrow-border {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+/* .tooltipster-arrow-background */
+
+.tooltipster-sidetip .tooltipster-arrow-background {
+  border: 10px solid transparent;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background {
+  border-left-color: @grey-rgba-three;
+  left: -3px;
+  top: 0;
+}
+
+/* .tooltipster-arrow-border */
+
+.tooltipster-sidetip .tooltipster-arrow-border {
+  border: 10px solid transparent;
+  left: 0;
+  top: 0;
+}
+
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border {
+  border-left-color: @grey-rgba-three;
+}
+
+/* tooltipster-arrow-uncropped */
+
+.tooltipster-sidetip .tooltipster-arrow-uncropped {
+  position: relative;
+}

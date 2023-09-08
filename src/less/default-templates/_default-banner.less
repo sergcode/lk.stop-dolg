@@ -1,0 +1,153 @@
+@bg-green: @green-eleven url("/assets/images/promotions/cashback/background.jpg") no-repeat center / cover;
+
+.default-banner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  box-shadow: 0 24px 36px -16px @black-rgba-six, 0px 4px 16px @black-rgba-fourteen;
+
+  &__d-none {
+    display: none;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  &__wrapper {
+    border-radius: 25px;
+    padding: 26px 21px 26px;
+
+    @media screen and (min-width: 400.98px) {
+      padding: 26px 33px 26px;
+    }
+
+    @media screen and (min-width: 576px) {
+      padding: 26px 19px 26px;
+    }
+
+    @media screen and (min-width: 1010px) {
+      padding: 26px 34px 26px;
+    }
+  }
+
+  article {
+    figure {
+      margin: 0;
+
+      figcaption {
+        h2 {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  & ol {
+    margin: 0;
+    line-height: 19px;
+
+    & li {
+      & a {
+        color: @gold-two;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__end {
+    justify-content: flex-end;
+  }
+
+  &__text {
+    &_white {
+      color: @white;
+    }
+
+    &_yellow {
+      color: @gold-two;
+    }
+    &_uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    top: -17px;
+    right: -10px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: @grey-two;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+    transform: rotate(0deg);
+
+    @media screen and (max-width: 400px) {
+      width: 40px;
+      height: 40px;
+      top: -5px;
+      right: -5px;
+    }
+
+    @media screen and (max-width: 812.98px) and (max-height: 451px) {
+      top: -15px;
+      right: -15px;
+    }
+
+    &:hover {
+      transform: rotate(180deg);
+      background-color: @color-red;
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-135deg);
+      }
+    }
+
+    &:focus {
+      background-color: @color-red;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 28px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      background-color: @white;
+      transition: 0.5s;
+      border-radius: 30px;
+
+      @media screen and (max-width: 400px) {
+        width: 24px;
+      }
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}

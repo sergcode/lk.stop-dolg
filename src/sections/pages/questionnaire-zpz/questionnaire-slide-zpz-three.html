@@ -1,0 +1,73 @@
+<fieldset class="questionnaire__form_wrapper" name="individualEntrepreneurZPZ">
+    <h3 class="questionnaire__form_title">
+        3.1. Являетесь ли Вы индивидуальным предпринимателем (ИП)?
+    </h3>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneurZPZ" type="radio" form="formCustomerProfileZPZ"/>
+        <label class="questionnaire__form_label-radio">
+            Да, действующий ИП
+        </label>
+    </div>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneurZPZ" type="radio" form="formCustomerProfileZPZ"/>
+        <label class="questionnaire__form_label-radio">
+            Нет, <span class="questionnaire__form_red-text">не был</span> ИП в течение последних 3 лет
+        </label>
+    </div>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneurZPZ" type="radio" form="formCustomerProfileZPZ"/>
+        <label class="questionnaire__form_label-radio">
+            Нет, но <span class="questionnaire__form_red-text">был</span> ИП в течение последних 3 лет
+        </label>
+    </div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="sourceOfIncomeZPZ">3.2. Имеется ли у вас доход (включая неофициальные источники)?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="sourceOfIncomeZPZ" type="checkbox" name="switchesVisibleAndHiddenBlock" form="formCustomerProfileZPZ"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form">
+        <p class="questionnaire__form_d-flex questionnaire__form_subtitle">
+            Укажите вид и размер дохода (в месяц)
+        </p>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <select class="questionnaire__form_select" name="sourceOfIncomeSelectZPZ[]" form="formCustomerProfileZPZ" required>
+                    <option></option>
+                    <option>Заработная плата</option>
+                    <option>Пенсия</option>
+                    <option>Пособия</option>
+                    <option>Свой вариант</option>
+                </select>
+                <label class="questionnaire__form_label">Вид дохода</label>
+            </div>
+            <div class="questionnaire__form_d-flex">
+                <div class="questionnaire__form_col">
+                    <input class="questionnaire__form_input marketPrice" name="marketPriceZPZ[]" type="tel" onkeypress='validateNumber()' form="formCustomerProfileZPZ" required/>
+                    <label class="questionnaire__form_label">Размер дохода</label>
+                </div>
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfileZPZ" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>

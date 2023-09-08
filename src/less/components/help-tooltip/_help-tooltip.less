@@ -1,0 +1,231 @@
+.help-tooltip {
+  position: relative;
+  z-index: 2000;
+  display: block;
+
+  &.activeHelpTooltip {
+    & .help-tooltip__wrapper-tooltip {
+      display: block;
+      animation: tooltipShow 0.4s ease;
+      animation-fill-mode: both;
+    }
+  }
+
+  &__btn {
+    z-index: 1000;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    float: right;
+    padding: 0;
+    @media
+    screen and (max-width: 322.98px),
+    screen and (min-width: 450px) and (max-height: 450px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    & svg {
+      pointer-events: none;
+      display: block;
+      width: 28px;
+      height: 28px;
+      @media
+      screen and (max-width: 322.98px),
+      screen and (min-width: 450px) and (max-height: 450px) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  &__wrapper-tooltip {
+    position: absolute;
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    z-index: 1001;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-width: 350px;
+    min-width: 295px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: @white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+
+    &[hidden] {
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: -9px;
+      right: 2px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid @white;
+    }
+
+    &_close {
+      position: absolute;
+      overflow: hidden;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 28px;
+      padding: 0;
+      background-color: @white;
+      border-radius: 50%;
+      line-height: 28px;
+      font-size: 30px;
+      color: @color-ash;
+      @media screen and (max-width: 322.98px) {
+        width: 20px;
+        line-height: 20px;
+      }
+
+      @media screen and (min-width: 450px) and (max-height: 450px) {
+        width: 28px;
+        line-height: 28px;
+      }
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5em;
+      text-align: justify;
+      color: @color-ash;
+      word-wrap: break-word;
+      word-break: normal;
+      line-break: auto;
+      hyphens: manual;
+
+      &.login__password-length_symbols {
+        display: flex;
+        width: auto;
+        font-size: 14px;
+        font-weight: normal;
+        color: @white;
+      }
+    }
+
+    &_big {
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    &_auto {
+      width: auto;
+      max-width: none;
+      min-width: auto;
+    }
+
+    &_top {
+      top: 0;
+    }
+
+    &_bottom {
+      top: 5px;
+    }
+
+    &_left {
+      right: auto;
+      left: 0;
+      &:before {
+        right: auto;
+        left: 10px;
+      }
+    }
+  }
+
+  &__title,
+  &__content {
+    color: @color-ash;
+    font-weight: 500;
+  }
+
+  &__title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    @media screen and (min-width: 441px) {
+      font-size: 18px;
+    }
+
+    & ~ .help-tooltip__content{
+      padding-top: 13px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+
+    & ~ .help-tooltip__d-flex {
+      padding-top: 13px;
+    }
+  }
+
+  &__d-flex {
+    position: relative;
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+
+    & .help-tooltip__wrapper-tooltip_close {
+      position: relative;
+      width: max-content;
+      min-width: 94px;
+      min-height: 54px;
+      max-height: 40px;
+      margin-left: 10px;
+      @media screen and (min-width: 441px) {
+        min-width: max-content;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@keyframes tooltipShow {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+    transform: translateY(-10%);
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transform: none;
+  }
+}
+
+@keyframes tooltipCloseBntShow {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

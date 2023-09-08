@@ -1,0 +1,129 @@
+<fieldset class="questionnaire__form_wrapper">
+    <legend class="questionnaire__form_title">
+        1.1. Укажите адрес регистрации по паспорту
+    </legend>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="indexNumber" name="indexNumber" type="tel" onkeypress='validateNumber()' min="6" max="6" minlength="6" maxlength="6" form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="indexNumber">Индекс</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="region" name="region" type="text" form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="region">Регион</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="locality" name="locality" type="text" form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="locality">Населённый пункт</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="street" name="street" type="text" form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="street">Улица</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="house" name="house" type="text" form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="house">Дом</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="corps" name="corps" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="corps">Корпус (если имеется)</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="apartment" name="apartment" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+        <label class="questionnaire__form_label" for="apartment">Квартира (если имеется)</label>
+    </div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" id="actualAddressResidence">
+    <legend class="questionnaire__form_title">
+        1.2. Адрес фактического места жительства
+    </legend>
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <label for="switchesFactual">Совпадает с адресом регистрации</label>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="switchesFactual" onclick="return actualAddressOfResidence(document.getElementById('formCustomerProfile'))" name="switchesFactual" type="checkbox" />
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="indexFactual" name="indexFactual" type="tel" onkeypress='validateNumber()' min="6" max="6" minlength="6" maxlength="6" form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="indexFactual">Индекс</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="regionFactual" name="regionFactual" type="text" form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="regionFactual">Регион</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="localityFactual" name="localityFactual" type="text" form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="localityFactual">Населённый пункт</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="streetFactual" name="streetFactual" type="text" form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="streetFactual">Улица</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="houseFactual" name="houseFactual" type="text" form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="houseFactual">Дом</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="corpsFactual" name="corpsFactual" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="corpsFactual">Корпус (если имеется)</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="apartmentFactual" name="apartmentFactual" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+            <label class="questionnaire__form_label" for="apartmentFactual">Квартира (если имеется)</label>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="switchesFIO">1.3. Была ли у вас смена ФИО?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="switchesFIO" name="switchesVisibleAndHiddenBlock" type="checkbox" />
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="questionnaire__form_subtitle">Укажите предыдущую(ие) ФИО</p>
+
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="surnameNew[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Фамилия</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="nameNew[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Имя</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="middleNameNew[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Отчество</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>

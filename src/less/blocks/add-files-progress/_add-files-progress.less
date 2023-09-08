@@ -1,0 +1,139 @@
+/* Задачи в старом дизайне */
+.task.task-old {
+  .generate-progress(@n, @i: 0) when (@i =< @n) {
+    .progress progress[value="@{i}"] {
+
+      & ~ .progress-value {
+        &:before {
+          content: '@{i}%'
+        }
+      }
+
+      & ~ .progress-bg {
+        & .progress-bar {
+          width: @i * 1%;
+        }
+      }
+    }
+    .generate-progress(@n, (@i + 1));
+  }
+
+  .generate-progress(100);
+
+  & .progress {
+    font: 12px Arial, Tahoma, sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 220px;
+    margin: auto;
+    @media screen and (max-width: 640px) {
+      max-width: 320px;
+      min-width: 320px;
+    }
+    @media screen and (max-width: 399.98px) {
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+    }
+  }
+}
+
+/** Задачи в новом дизайне **/
+.progress {
+  position: relative;
+  overflow: hidden;
+  width: 220px;
+  margin: auto;
+  font: 12px Arial, Tahoma, sans-serif;
+}
+
+progress {
+  position: absolute;
+  overflow: hidden;
+  display: block;
+  left: -777px;
+  width: 0;
+  height: 0;
+}
+
+.progress-value {
+  position: absolute;
+  display: block;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: @montserrat-font;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 21px;
+  text-shadow: 0 0 1px @black-two;
+  color: @white;
+}
+
+.progress-bg {
+  position: relative;
+  overflow: hidden;
+  height: 12px;
+  border-radius: 5px;
+  background: @grey-two;
+}
+
+.progress-bar {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: @green-one;
+  transition: width 1s linear;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    animation: progress_bar 0.8s linear infinite;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+  }
+
+  &__mobile {
+    &_svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_bg {
+      fill: none;
+      stroke: none;
+    }
+
+    &_progress {
+      fill: none;
+      stroke: @green-thirteen;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke-dasharray 0.5s, stroke-dashoffset 0.5s;
+    }
+  }
+}
+
+@keyframes progress_bar {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+

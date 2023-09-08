@@ -1,0 +1,150 @@
+.default-table {
+  border-spacing: 0;
+
+  & th, & td {
+    font-size: 9px;
+    @media screen and (min-width: 370px) {
+      font-size: 10px;
+    }
+
+    @media screen and (min-width: 440px) {
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 576px) {
+      font-size: 14px;
+    }
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 900px) {
+      font-size: 18px;
+    }
+  }
+
+  & thead {
+    & th {
+      padding: 20px 15px;
+      border-bottom: 1px solid @grey-twenty-seven;
+      background-color: @white-three;
+      @media screen and (max-width: 639.98px) {
+        padding: 12px 10px;
+      }
+      @media screen and (max-width: 519.98px) {
+        padding: 12px 5px;
+      }
+      @media screen and (max-width: 399.98px) {
+        padding: 12px 3px;
+      }
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  & tbody {
+    & tr {
+      &:first-child {
+        & td {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          @media screen and (max-width: 575.98px) {
+            padding-top: 12px;
+            padding-bottom: 12px;
+          }
+        }
+      }
+      & td {
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media screen and (max-width: 575.98px) {
+          padding-bottom: 12px;
+        }
+        @media screen and (max-width: 519.98px) {
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+        @media screen and (max-width: 399.98px) {
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  & tfoot {
+    & th {
+      font-weight: 700;
+      border-top: 1px solid @grey-twenty-seven;
+      padding: 20px 15px;
+      @media screen and (max-width: 575.98px) {
+        padding: 12px 10px;
+      }
+      @media screen and (max-width: 519.98px) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      @media screen and (max-width: 399.98px) {
+        padding-left: 3px;
+        padding-right: 3px;
+      }
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  &__fluid {
+    width: 100%;
+  }
+
+  &__grey {
+    border: 1px solid @grey-twenty-seven;
+  }
+
+  &__cols-2 {
+    th, td {
+      width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__cols-4 {
+    th, td {
+      width: 25%;
+      max-width: 25%;
+    }
+  }
+
+  &__text {
+    &_center {
+      thead, tbody, tfoot {
+        th, td {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  & .button__little {
+    min-height: 40px;
+    @media screen and (max-width: 767.98px) {
+      min-height: 33px;
+      font-size: 12px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media screen and (max-width: 439.98px) {
+      font-size: 10px;
+    }
+  }
+}

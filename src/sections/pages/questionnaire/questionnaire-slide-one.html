@@ -1,0 +1,33 @@
+<fieldset class="questionnaire__form_wrapper">
+    <div class="questionnaire__form_row questionnaire__form_center">
+        <h2>Добро пожаловать в СтопДолг!</h2>
+    </div>
+    <div class="questionnaire__form_row">
+        <label class="questionnaire__form_title" for="describeSituationRegardingDebtObligations">Опишите пожалуйста вашу ситуацию относительно долговых обязательств:</label>
+        <textarea class="questionnaire__form_textarea" id="describeSituationRegardingDebtObligations" name="describeSituationRegardingDebtObligations" placeholder="Описание..." cols="30" rows="5" form="formCustomerProfile" required></textarea>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input marketPrice" id="totalDebtAmount" placeholder=" ₽" name="totalDebtAmount" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="totalDebtAmount">Сумма общего долга (руб.)</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="numberOfCreditors" name="numberOfCreditors" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="numberOfCreditors">Число кредиторов</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input marketPrice" id="incomeOfficialPart" name="incomeOfficialPart" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="incomeOfficialPart">Доход (официальная часть)</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input marketPrice" id="incomeUnofficialPart" name="incomeUnofficialPart" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="incomeUnofficialPart">Доход (неофициальная часть)</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="areaOfResidence" name="areaOfResidence" type="text" form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="areaOfResidence">Область/край проживания</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="cityOfResidence" name="cityOfResidence" type="text" form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="cityOfResidence">Город проживания</label>
+    </div>
+</fieldset>

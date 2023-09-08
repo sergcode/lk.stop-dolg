@@ -1,0 +1,1085 @@
+.toggle-modal {
+  position: fixed;
+  z-index: 999;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  animation-duration: 0.7s;
+  transition: 0.3s ease-in-out;
+  @media (max-width: 600px) {
+    padding: 0 15px;
+  }
+  @media screen and (max-width: 440.98px) {
+    max-height: 473px;
+  }
+  @media screen and (max-width: 854px) and (orientation: landscape) {
+    height: calc(100vh - 15px);
+    padding: 0 5px;
+  }
+
+  &__middle {
+    max-width: 560px;
+  }
+
+  &__small {
+    max-width: 400px;
+  }
+
+  &.active {
+    display: block;
+    animation: popupShow 0.3s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+    animation-fill-mode: both;
+
+    @media screen and (max-width: 1023.98px) {
+      animation-duration: 0.3s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: both;
+    }
+
+    & .rating-area:not(:checked) {
+      > label {
+        animation-name: ratingAreaShow;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(0.13, 0.3, 0.17, 0.99);
+      }
+    }
+  }
+
+  &.remove {
+    animation: popupHide 0.3s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+    animation-fill-mode: both;
+
+    @media screen and (max-width: 1023.98px) {
+      animation-duration: 0.3s;
+      animation: popupHide 0.3s ease-in-out;
+      animation-fill-mode: both;
+    }
+
+    & .rating-area:not(:checked) {
+      > label {
+        animation-name: ratingAreaHide;
+        animation-duration: 0.7s;
+        animation-timing-function: cubic-bezier(0.13, 0.3, 0.17, 0.99);
+      }
+    }
+  }
+
+  &__box {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 20px 45px 30px;
+    box-shadow: 0 28px 59px @black-rgba-two,
+                0 40px 120px @black-rgba-five;
+    height: 100%;
+    border-radius: 25px;
+    transform: translateZ(0);
+
+    @media screen and (max-width: 854px) and (orientation: landscape) {
+      overflow-y: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
+    &_p-none {
+      padding: 0;
+    }
+
+    &_overflowY-hidden {
+      overflow-y: hidden;
+    }
+  }
+
+  &__text {
+    margin: 0 0 22px;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 500;
+
+    @media (max-width: @tablet-width) {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    &_uppercase {
+      text-transform: uppercase;
+
+      &.modal__text_bold {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    @media screen and (min-width: 441px) {
+      font-size: 22px;
+      line-height: 1.8em;
+    }
+    @media screen and (max-width: 854px) and (orientation: landscape) {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    font-size: 14px;
+    line-height: 1.5em;
+    @media screen and (min-width: 441px) {
+      font-size: 20px;
+      line-height: 1.8em;
+    }
+    @media screen and (max-width: 854px) and (orientation: landscape) {
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }
+
+  &__buttons {
+    width: 240px;
+    margin: 0 auto;
+
+    & .button {
+      height: 53px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__close {
+    padding: 0;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    border: none;
+    background-color: @grey-two;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+    transform: rotate(0deg);
+    @media (max-width: @tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
+    @media screen and (max-width: 600px) {
+      right: 7px;
+    }
+    @media screen and (max-width: 450.98px) {
+      top: -10px;
+    }
+
+    @media screen and (max-width: 380px) {
+      top: 5px;
+      right: 17px;
+      border-radius: 0;
+      background-color: transparent;
+    }
+    @media screen and (max-width: 854px) and (orientation: landscape) {
+      top: 2px;
+      right: 9px;
+      background-color: fadeout(@color-green, 30%);
+    }
+    @media screen and (max-width: 600px) and (orientation: landscape) {
+      top: 8px;
+      right: 17px;
+      border: none;
+    }
+
+    &:hover {
+      @media screen and (min-width: 451px) {
+        transform: rotate(180deg);
+        background-color: @color-red;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-135deg);
+      }
+    }
+
+    &:focus {
+      @media screen and (min-width: 451px) {
+        background-color: @color-red;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 28px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      background-color: @white;
+      transition: 0.5s;
+      border-radius: 30px;
+      @media (max-width: @tablet-width) {
+        width: 25px;
+        height: 2px;
+      }
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &_sm-green {
+      &::before,
+      &::after {
+        @media screen and (max-width: 380px) {
+          background-color: @color-green;
+        }
+        @media screen and (max-width: 1024px) and (orientation: landscape) {
+          background-color: @color-green;
+        }
+        @media screen and (min-width: 450px) and (max-height: 450px) {
+          background-color: @color-green;
+        }
+      }
+
+      &:hover {
+        @media screen and (max-width: 380px) {
+          background-color: transparent;
+        }
+
+        &::before {
+          @media screen and (max-width: 380px) {
+            background-color: @color-red;
+          }
+          @media screen and (min-width: 450px) and (max-height: 450px) {
+            background-color: @color-red;
+          }
+        }
+
+        &::after {
+          @media screen and (max-width: 380px) {
+            background-color: @color-red;
+          }
+          @media screen and (min-width: 450px) and (max-height: 450px) {
+            background-color: @color-red;
+          }
+        }
+      }
+
+      &:focus {
+        @media screen and (max-width: 380px) {
+          background-color: transparent;
+          @media screen and (min-width: 450px) and (max-height: 450px) {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    padding: 21px 30px;
+    text-align: center;
+    background-color: @color-green;
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      padding: 15px 30px;
+    }
+
+    @media screen and (max-width: 450.98px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    figure {
+      margin: 0;
+
+      svg {
+        width: auto;
+        height: 40px;
+        margin-bottom: 14px;
+        transition: 0.3s ease-in-out;
+        @media screen and (max-width: 450.98px) {
+          margin-bottom: 5px;
+          padding: 0;
+        }
+        @media screen and (max-width: 575px) and (max-height: 451px) {
+          width: 55px;
+          height: 55px;
+        }
+        @media screen and (min-width: 576px) {
+          width: 80px;
+          height: 80px;
+        }
+        @media screen and (max-width: 1024px) and (orientation: landscape) {
+          width: 55px;
+          height: 55px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          display: none;
+        }
+      }
+
+      img {
+        width: auto;
+        height: 50px;
+        margin-bottom: 14px;
+        transition: 0.3s ease-in-out;
+        @media screen and (max-width: 450.98px) {
+          margin-bottom: 5px;
+          padding: 0;
+        }
+        @media screen and (max-width: 575px) and (max-height: 451px) {
+          height: 55px;
+        }
+        @media screen and (min-width: 576px) {
+          height: 80px;
+        }
+        @media screen and (max-width: 1024px) and (orientation: landscape) {
+          height: 55px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          display: none;
+        }
+      }
+
+      figcaption {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.5em;
+        color: @white;
+        transition: 0.3s ease-in-out;
+        @media screen and (max-width: 991.98px) {
+          font-size: 18px;
+        }
+        @media screen and (max-width: 900px) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          text-transform: uppercase;
+        }
+
+        br {
+          @media screen and (max-width: 854px) and (orientation: landscape) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    padding: 30px 30px;
+    @media screen and (max-width: 1024px) and (orientation: landscape) {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      padding: 25px 30px;
+    }
+    @media screen and (max-width: 450.98px) {
+      padding: 30px 20px;
+    }
+    @media screen and (max-width: 400px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &_vert-center {
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+      }
+    }
+
+    &_white {
+      background-color: @white;
+      @media screen and (max-width: 380px) {
+        padding-top: 20px;
+      }
+    }
+
+    figure {
+      margin-top: 0;
+      @media screen and (max-width: 440.98px) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    &_pb-50 {
+      padding-bottom: 50px;
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+        padding-bottom: 30px;
+      }
+      @media screen and (max-width: 854px) and (orientation: landscape) {
+        padding-bottom: 15px;
+      }
+      @media screen and (max-width: 450.98px) {
+        padding-bottom: 30px;
+      }
+      @media screen and (max-width: 380px) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &_pb-35 {
+      padding-bottom: 35px;
+      @media screen and (max-width: 1024px) and (orientation: landscape) {
+        padding-bottom: 30px;
+      }
+      @media screen and (max-width: 854px) and (orientation: landscape) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      @media screen and (max-width: 450.98px) {
+        padding-bottom: 30px;
+      }
+      @media screen and (max-width: 380px) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &_pt-sm-50 {
+      @media screen and (max-width: 380px) {
+        padding-top: 50px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: @color-green;
+    transition: 0.2s;
+    cursor: pointer;
+    background: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__successfully,
+  &__unsuccessfully,
+  &__file-updated {
+    text-align: center;
+
+    svg, img {
+      width: auto;
+      height: 80px;
+      @media screen and (min-width: 441px) {
+        height: 120px;
+      }
+      @media screen and (max-width: 854px) and (orientation : landscape) {
+        height: 80px;
+      }
+    }
+
+    & .toggle-modal__title {
+      margin-bottom: 0;
+    }
+
+    & .toggle-modal__subtitle {
+      &_mb-0 {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      &:first-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & .button {
+      margin: auto;
+    }
+  }
+
+  &__successfully {
+    & .toggle-modal__title {
+      color: @color-green;
+    }
+  }
+
+  &__unsuccessfully {
+    & .toggle-modal__title {
+      color: @color-red;
+    }
+  }
+
+  &__file-updated {
+    & .toggle-modal__body {
+      padding: 40px 30px;
+
+      figure {
+        margin: 0;
+      }
+
+      & .wrapper {
+        width: 100%;
+        margin: auto;
+      }
+
+      & .checkmark {
+        stroke: @green-eight;
+        stroke-dashoffset: 745.74853515625;
+        stroke-dasharray: 745.74853515625;
+        animation: dash 2s ease-out forwards;
+      }
+
+      @keyframes dash {
+        0% {
+          stroke-dashoffset: 745.74853515625;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+    & .toggle-modal__title {
+      margin-top: 30px;
+    }
+  }
+
+  & .attach {
+    &__item {
+      width: 100%;
+      margin: 0;
+
+      & label, & div.attach__button {
+        padding-bottom: 0;
+      }
+    }
+
+    & .button__little {
+      padding-left: 12px;
+      padding-right: 10px;
+      min-width: 220px;
+      @media screen and (max-width: 400px) {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 40px;
+        text-align: center;
+      }
+
+      & img {
+        width: max-content;
+        height: 29px;
+        margin-right: 5px;
+        @media screen and (min-width: 400.98px) {
+          height: 40px;
+        }
+      }
+
+      &.js-open-modal-success-unsuccess {
+        & svg {
+          width: 100%;
+          max-width: 32px;
+          height: 21px;
+          margin-top: 2px;
+          margin-right: 10px;
+          @media screen and (min-width: 400.98px) {
+            width: auto;
+            max-width: max-content;
+            height: 29px;
+          }
+        }
+      }
+    }
+
+    & ~ .button {
+      margin-top: 20px;
+    }
+  }
+
+  & .button__small {
+    @media screen and (max-width: 400px) {
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  /**** Modifier ****/
+
+  &__default-text {
+    font-size: 14px;
+    line-height: 1.5em;
+    @media screen and (min-width: 900px) {
+      font-size: 16px;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 18px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    & .modal__buttons {
+      margin-top: 30px;
+    }
+  }
+
+  &[data-modal="inDeveloping"] {
+    & .toggle-modal {
+      &__body {
+        z-index: 1;
+        background-image: url("@{assetsImg}pictures/inDeveloping.gif");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: cover;
+        @media screen and (max-width: 399.98px) {
+          padding-top: 30px;
+        }
+        @media screen and (min-width: 400px) {
+          background-position: center;
+        }
+
+        &::before {
+          content: '';
+          z-index: -1;
+          position: absolute;
+          display: block;
+          top: 0; right: 0;
+          bottom: 0; left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(255, 255, 255, 0.95);
+        }
+      }
+      &__close {
+        @media screen and (max-width: 399.98px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &[data-modal="messageForClientPTF"] {
+    @media screen and (max-width: 575.98px) and (max-height: 451px),
+    screen and (max-width: 640px) and (max-height: 480px),
+    screen and (max-width: 520px) and (max-height: 680px) {
+      top: 0;
+      position: absolute;
+      margin-top: 15px;
+    }
+
+    &.active {
+      @media screen and (max-width: 575.98px) and (max-height: 451px),
+      screen and (max-width: 640px) and (max-height: 480px),
+      screen and (max-width: 520px) and (max-height: 680px) {
+        display: block;
+        animation: popupWrapperShow 0.4s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+        animation-fill-mode: both;
+        transform: translateX(-50%);
+      }
+
+      @media screen and (max-width: 1023.98px) {
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
+    &.remove {
+      @media screen and (max-width: 575.98px) and (max-height: 451px),
+      screen and (max-width: 640px) and (max-height: 480px),
+      screen and (max-width: 520px) and (max-height: 680px) {
+        animation: popupWrapperHide 0.4s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+      }
+
+      @media screen and (max-width: 1023.98px) {
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+      }
+    }
+  }
+
+  &.errorSend {
+    & .modal__text {
+      color: @color-red;
+    }
+  }
+
+  &__warning {
+    max-width: 900px;
+    backdrop-filter: blur(10px);
+    @media screen and (max-width: 399.98px),
+    screen and (max-width: 854px) and (orientation: landscape) {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    &.requestForEachFile {
+      @media screen and (max-width: 854px) and (orientation: landscape) {
+        height: 100%;
+      }
+
+      & .toggle-modal__box {
+        @media screen and (max-width: 399.98px),
+        screen and (max-width: 854px) and (orientation: landscape) {
+          overflow-y: scroll;
+        }
+      }
+
+      & .toggle-modal__body {
+        @media screen and (max-width: 399.98px) {
+          height: 100%;
+          padding-top: 45px;
+          padding-bottom: 10px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          height: auto;
+          padding-bottom: 25px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          padding-top: 10px;
+        }
+
+        & p {
+
+          &[data-file-name] {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            @media screen and (min-width: 400px) {
+              margin-top: 30px;
+            }
+            @media screen and (max-width: 854px) and (orientation: landscape) {
+              margin-top: 10px;
+            }
+
+            &.hide {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+          }
+
+          &[data-number-file] {
+            display: block;
+            width: max-content;
+            padding: 5px 15px;
+            border-radius: 10px;
+            background: @gradient-green;
+            box-shadow: inset 0 24px 24px transparent, inset 0 -30px 30px transparent;
+            @media screen and (min-width: 400px) {
+              margin: 0 auto;
+            }
+            @media screen and (max-width: 399.98px),
+            screen and (max-width: 854px) and (orientation: landscape) {
+              margin: 15px auto 15px;
+            }
+          }
+
+          &.modal__text_grey {
+            @media screen and (max-width: 399.98px),
+            screen and (max-width: 854px) and (orientation: landscape) {
+              padding-top: 10px;
+            }
+          }
+        }
+      }
+
+      & .modal {
+        &__text_uppercase {
+          margin-bottom: 0;
+          padding-bottom: 15px;
+          @media screen and (min-width: 400px) {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+          }
+          @media screen and (max-width: 854px) and (orientation: landscape) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    & .toggle-modal__box {
+      box-shadow: none;
+      @media screen and (min-width: 400px) {
+        border: 2px solid @green-five;
+        border-radius: 10px;
+      }
+      @media screen and (max-width: 399.98px),
+      screen and (max-width: 854px) and (orientation: landscape) {
+        border: none;
+        border-radius: 0;
+      }
+    }
+
+    & .toggle-modal__body {
+      @media screen and (min-width: 400px) {
+        padding-bottom: 50px;
+      }
+      @media screen and (max-width: 399.98px),
+      screen and (max-width: 854px) and (orientation: landscape) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        height: 100%;
+        padding: 10px 0;
+      }
+
+      & p {
+        color: @white;
+
+        &.modal__text_grey {
+          color: @grey-four;
+          margin-bottom: 0;
+          @media screen and (min-width: 400px) {
+            padding-top: 30px;
+          }
+          @media screen and (max-width: 399.98px),
+          screen and (max-width: 854px) and (orientation: landscape) {
+            padding-top: 0;
+          }
+        }
+
+        &:not(.modal__text_uppercase) {
+          font-weight: 400;
+        }
+
+        &[data-number-file],
+        &[data-file-name] {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        &:not(.toggle-modal__warning.requestForEachFile .toggle-modal__body p[data-file-name] span) {
+          &[data-file-name] {
+            & span {
+              display: block;
+              margin-top: 20px;
+
+              @media screen and (max-width: 399.98px),
+              screen and (max-width: 854px) and (orientation: landscape) {
+                margin-top: 0;
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .toggle-modal__close {
+      @media screen and (max-width: 380px) {
+        top: 10px;
+        right: 6px;
+      }
+      @media screen and (min-width: 400px) {
+        top: 10px;
+        right: 6px;
+        background-color: transparent;
+      }
+      @media screen and (max-width: 854px) and (orientation: landscape) {
+        right: 6px;
+        background-color: transparent;
+      }
+
+      &:hover {
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          background-color: transparent;
+        }
+      }
+
+      &_sm-green {
+        &::before, &::after {
+          @media screen and (min-width: 400px) {
+            background-color: @grey-four;
+          }
+          @media screen and (max-width: 399.98px),
+          screen and (max-width: 854px) and (orientation: landscape) {
+            background-color: @white;
+          }
+        }
+
+        &:hover {
+          &::before, &::after {
+            @media screen and (min-width: 400px) {
+              background-color: @white;
+            }
+          }
+        }
+      }
+    }
+
+    & .modal {
+      &__text_uppercase {
+        position: relative;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+        @media screen and (min-width: 400px) {
+          margin-bottom: 0;
+          padding-bottom: 30px;
+          font-size: 25px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          font-size: 22px;
+        }
+        @media screen and (max-width: 399.98px),
+        screen and (max-width: 854px) and (orientation: landscape) {
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          display: block;
+          width: 100%;
+          max-width: 850px;
+          height: 2px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          margin: auto;
+          background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(36,101,98,0.28) 10%, rgba(36,101,98,0.57) 20%, rgba(36,101,98,1) 50%, rgba(36,101,98,0.57) 79%, rgba(36,101,98,0.27) 90%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(36,101,98,0.28) 10%,rgba(36,101,98,0.57) 20%,rgba(36,101,98,1) 50%,rgba(36,101,98,0.57) 79%,rgba(36,101,98,0.27) 90%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(36,101,98,0.28) 10%,rgba(36,101,98,0.57) 20%,rgba(36,101,98,1) 50%,rgba(36,101,98,0.57) 79%,rgba(36,101,98,0.27) 90%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+        }
+      }
+      &__buttons_d-flex {
+        @media screen and (max-width: 399.98px) {
+          flex-wrap: wrap;
+        }
+        @media screen and (min-width: 400px) {
+          padding-top: 50px;
+        }
+        @media screen and (max-width: 854px) and (orientation: landscape) {
+          flex-wrap: wrap;
+          width: 100%;
+          padding-top: 25px;
+        }
+
+        & .button {
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          margin-bottom: 0;
+          padding-right: 15px;
+          padding-left: 15px;
+          text-align: center;
+          @media screen and (max-width: 854px) and (orientation: landscape) {
+            -ms-flex: 0 0 44%;
+            flex: 0 0 44%;
+            max-width: 44%;
+            min-width: auto;
+          }
+          &:nth-child(1) {
+            @media screen and (max-width: 854px) and (orientation: landscape) {
+              margin-right: 15px;
+            }
+          }
+          &:nth-child(2) {
+            @media screen and (max-width: 399.98px) {
+              margin: 25px 0;
+            }
+            @media screen and (min-width: 400px) {
+              margin: 0 30px;
+            }
+            @media screen and (max-width: 854px) and (orientation: landscape) {
+              margin-left: 15px;
+              margin-right: 0;
+            }
+          }
+          &:not([hidden]) {
+            display: flex;
+            &:nth-child(3) {
+              @media screen and (max-width: 854px) and (orientation: landscape) {
+                margin-top: 30px;
+              }
+            }
+            &:nth-child(4) {
+              @media screen and (max-width: 854px) and (orientation: landscape) {
+                margin-top: 30px;
+              }
+            }
+          }
+
+          & img {
+            width: max-content;
+            height: 35px;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  &.warning {
+    z-index: 997;
+    pointer-events: none;
+  }
+}
+
+.toggle-modal-bg {
+  position: fixed;
+  z-index: 998;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: @black-rgba-three;
+
+  &__warning {
+    z-index: 999;
+    background: @black-rgba-seventeen;
+  }
+
+  &.active {
+    display: block;
+    animation: popupWrapperShow 0.4s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+    animation-fill-mode: both;
+  }
+
+  &.remove {
+    animation: popupWrapperHide 0.4s cubic-bezier(0.13, 0.3, 0.17, 0.99);
+    animation-fill-mode: both;
+  }
+}

@@ -1,0 +1,71 @@
+<div class="popup d-none" role="dialog">
+    <div class="popup__content popup__content_d-block">
+        <div class="popup__wrapper">
+            <div class="popup__header">
+                <article role="article">
+                    <figure>
+                        <include src="./src/include/icons/pay/icon-title.html"></include>
+                        <figcaption>
+                            <h2>Выбор способа оплаты</h2>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+
+            <div class="popup__body popup__body_pay">
+                <a class="button popup__button_pay" id="sbpOplata" href="" target="_blank" role="link">
+                    <include src="./src/include/icons/pay/icon-sbp.html"></include>
+                    Система Быстрых Платежей
+                </a>
+
+                <a class="button popup__button_pay" id="payByBankCard" href="" target="_blank" role="link">
+                    <include src="./src/include/icons/pay/icon-visa-mastercard-mir.html"></include>
+                    Картой онлайн
+                </a>
+            </div>
+        </div>
+
+        <button class="popup__close toggle-modal__close" role="button"></button>
+    </div>
+</div>
+
+<!-- todo Старый дизайн -->
+<!--<div class="popup d-none" role="dialog">
+    <div class="popup__content popup__content_d-block">
+        <div class="popup__wrapper">
+            <div class="popup__header">
+                <article role="article">
+                    <figure>
+                        <include src="./src/include/icons/pay/icon-title.html"></include>
+                        <figcaption>
+                            <h2>Выбор способа оплаты</h2>
+                        </figcaption>
+                    </figure>
+                </article>
+            </div>
+
+            <div class="popup__body">
+                <form class="popup__form" id="formPay" action="" novalidate method="post" name="formPay" role="form">
+                    <fieldset>
+                        <div class="popup__radio" id="sbpOplata">
+                            <input id="radioSBP" data-pay-link name="paymentMethod" type="radio" form="formPay" checked/>
+                            <label for="radioSBP">
+                                Оплатить через
+                                <span><include src="./src/include/icons/pay/icon-sbp.html"></include></span>
+                            </label>
+                        </div>
+                        <div class="popup__radio">
+                            <input id="payByBankCard" data-pay-link name="paymentMethod" type="radio" form="formPay"/>
+                            <label for="payByBankCard">
+                                Оплатить банковской <br>картой
+                            </label>
+                        </div>
+                        <a class="button button&#45;&#45;green" href="" target="_blank" role="link">Перейти к оплате</a>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <button class="popup__close toggle-modal__close" role="button"></button>
+    </div>
+</div>-->

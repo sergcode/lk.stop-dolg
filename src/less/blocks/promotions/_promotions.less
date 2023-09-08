@@ -1,0 +1,260 @@
+.promotions {
+  display: block;
+  overflow: hidden;
+  box-shadow: none;
+  border-radius: 12px;
+  border: 1px solid @color-green;
+  text-decoration: none;
+  transition: 0.25s ease-in-out;
+
+  @media screen and (max-width: 479.98px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 575.98px) and (orientation : landscape) {
+    margin-bottom: 20px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 0 0 1px @color-green;
+
+    & .promotions__file {
+      &_icon {
+        background: @color-green;
+      }
+
+      &_extension {
+        color: @white;
+      }
+
+      &_lines {
+        color: @white;
+
+        & strong {
+          background: @white;
+
+          &:first-child {
+            width: 80%;
+            margin-left: 20%;
+          }
+
+          &:last-child {
+            margin-left: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  &__d-flex {
+    display: flex;
+  }
+
+  &__y {
+    &_center {
+      align-items: center;
+    }
+  }
+
+  &__file {
+    &_icon {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      position: relative;
+      padding: 10px;
+      font-size: 15px;
+      transition: 0.25s ease-in-out;
+      border-right: 1px solid @color-green;
+      background: transparent;
+
+      @media screen and (min-width: 480px) {
+        padding: 10px 20px;
+        font-size: 18px;
+      }
+
+      @media screen and (min-width: 576px) {
+        font-size: 22px;
+        line-height: 26.82px;
+      }
+
+      @media screen and (max-width: 854.98px) and (orientation : landscape) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 575.98px) and (orientation : landscape) {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+
+    &_extension {
+      text-transform: uppercase;
+      color: @color-green;
+      transition: 0.25s ease-in-out;
+    }
+
+    &_lines {
+      display: block;
+      position: relative;
+      width: 100%;
+      padding: 2px 0;
+      transition: 0.25s ease-in-out;
+
+      & strong {
+        display: block;
+        height: 1px;
+        margin-bottom: 5px;
+        background: @color-green;
+        transition: 0.25s ease-in-out;
+
+        &:not(:last-child) {
+          width: 100%;
+          margin-left: 0;
+          transition: width 0.25s ease-in-out, margin-left 0.25s ease-in-out;
+          transition-delay: 0.15s;
+        }
+
+        &:last-child {
+          width: 80%;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &_size {
+      margin: 0;
+      padding-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      color: @color-green;
+
+      @media screen and (min-width: 480px) {
+        font-size: 14px;
+        line-height: 26.82px;
+      }
+
+      @media screen and (min-width: 576px) {
+        font-size: 18px;
+        line-height: 26.82px;
+      }
+
+      @media screen and (max-width: 854.98px) and (orientation : landscape) {
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 575.98px) and (orientation : landscape) {
+        font-size: 12px;
+        line-height: 18.29px;
+      }
+    }
+  }
+
+  &__link {
+    &_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: center;
+      padding: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 18.29px;
+      text-align: left;
+
+      @media screen and (min-width: 480px) {
+        padding: 10px 14px;
+        font-size: 18px;
+        line-height: 21.94px;
+      }
+
+      @media screen and (min-width: 576px) {
+        padding: 10px 15px 10px 30px;
+        font-size: 22px;
+        line-height: 26.82px;
+      }
+
+      @media screen and (max-width: 854.98px) and (orientation : landscape) {
+        padding: 10px 20px;
+        font-size: 20px;
+        line-height: 26.82px;
+      }
+
+      @media screen and (max-width: 575.98px) and (orientation : landscape) {
+        padding: 10px;
+        font-size: 15px;
+        line-height: 18.29px;
+      }
+
+      & span {
+        color: fadeout(@color-green, 75%);
+
+        @media screen and (max-width: 575.98px) {
+           display: none;
+        }
+      }
+    }
+
+    &_doc {
+      display: block;
+      width: 100%;
+      color: @color-green;
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 75px;
+    margin-left: auto;
+    padding: 10px 7px;
+    background: @color-green;
+
+    @media screen and (min-width: 480px) {
+      max-width: 117px;
+      padding: 10px;
+    }
+
+    @media screen and (min-width: 576px) {
+      max-width: 160px;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 10px 27px;
+    }
+
+    @media screen and (max-width: 854.98px) and (orientation : landscape) {
+      max-width: 130px;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 575.98px) and (orientation : landscape) {
+      max-width: 100px;
+      padding: 10px;
+    }
+
+    & img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+#promotionsCashback {
+  & .tab__content {
+    padding-right: 15px;
+    padding-left: 15px;
+    @media screen and (min-width: 480px) {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
+}

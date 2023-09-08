@@ -1,0 +1,315 @@
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="realEstate">
+                    4.1. Зарегистрировано ли на Вас или вашем супруге недвижимое имущество (доли имущества)?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="realEstate" type="checkbox" name="switchesVisibleAndHiddenBlock"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_realEstate">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_realEstate">
+                        Первый. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam! Assumenda debitis doloribus ea illo maiores nisi
+                        quibusdam quo repellendus vel! Voluptatibus.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form">
+                <p class="questionnaire__form_subtitle">
+                    Вид имущества
+                </p>
+            </div>
+            <div class="questionnaire__form_row">
+                <select class="questionnaire__form_select" name="sourceOfIncomeSelect[]" form="formCustomerProfile" required>
+                    <option></option>
+                    <option>Квартира</option>
+                    <option>Дом</option>
+                    <option>Дача</option>
+                    <option>Гараж</option>
+                </select>
+                <label class="questionnaire__form_label">Вид дохода</label>
+            </div>
+            <h3 class="questionnaire__form_title">
+                Как зарегистрировано имущество?
+            </h3>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioHowPropertyIsRegistered[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Полностью на вас</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioHowPropertyIsRegistered[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Полностью на супругу(а)</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioHowPropertyIsRegistered[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Зарегистрированы в долях</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <label class="questionnaire__form_title">Рыночная стоимость (приблизительно) (руб.)</label>
+                <input class="questionnaire__form_input marketPrice" placeholder=" ₽" name="marketPriceRealEstate[]" type="text" form="formCustomerProfile" required/>
+            </div>
+            <div class="questionnaire__form_row">
+                <div class="switches">
+                    <h3 class="switches_title">
+                        <label>
+                            Имеется разделение на доли?
+                        </label>
+                    </h3>
+                    <div class="switches__elements">
+                        <div class="switches__wrapper">
+                            <input form="formCustomerProfile" name="switchesShareOfProperty[]" type="checkbox" class="switches__checkbox"/>
+                            <div class="switches__knobs">
+                                <span></span>
+                            </div>
+                            <div class="switches__layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input shareOfProperty" name="shareOfPropertyDivisionIntoShares[]" type="text" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label" >Укажите вашу долю</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <div class="switches">
+                    <h3 class="switches_title">
+                        <label>
+                            У супруга (супруги) также есть доля в этом имуществе?
+                        </label>
+                    </h3>
+                    <div class="switches__elements">
+                        <div class="switches__wrapper">
+                            <input form="formCustomerProfile" name="switchesShareInThisProperty[]" type="checkbox" class="switches__checkbox"/>
+                            <div class="switches__knobs">
+                                <span></span>
+                            </div>
+                            <div class="switches__layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input shareOfProperty" name="shareOfPropertyShareInThisProperty[]" type="text" onkeypress='validateNumber()' form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Укажите долю супруга (супруги)</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <div class="switches">
+                    <h3 class="switches_title">
+                        <label>
+                            Имущество приобретено в браке?
+                        </label>
+                    </h3>
+                    <div class="switches__elements">
+                        <div class="switches__wrapper">
+                            <input form="formCustomerProfile" name="switchesPropertyAcquiredInMarriage[]" type="checkbox" class="switches__checkbox"/>
+                            <div class="switches__knobs">
+                                <span></span>
+                            </div>
+                            <div class="switches__layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <h3 class="questionnaire__form_title">
+                    Укажите, как приобретено имущество:
+                </h3>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioHowPropertyWasAcquired[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Куплено</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioHowPropertyWasAcquired[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Подарено</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioHowPropertyWasAcquired[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Получено по наследству</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioHowPropertyWasAcquired[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Приватизировано</label>
+                </div>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="vehicles">
+                    4.2. Имеются ли у Вас или вашего супруга в собственности транспортные средства?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="vehicles" name="switchesVisibleAndHiddenBlock" type="checkbox" />
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_vehicles">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_vehicles">
+                        Второй. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam! Assumenda debitis doloribus ea illo maiores nisi
+                        quibusdam quo repellendus vel! Voluptatibus.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <h3 class="questionnaire__form_title">
+                    Собственник (на кого зарегистрировано транспортное средство)
+                </h3>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioVehicles[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Вы</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioVehicles[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Супруг(а)</label>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="vehicleMakeAndModel[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Марка и модель ТС</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <label class="questionnaire__form_title">Рыночная стоимость (приблизительно) (руб.)</label>
+                <input class="questionnaire__form_input marketPrice" placeholder=" ₽" name="marketPriceVehicles[]" type="text" form="formCustomerProfile" required/>
+            </div>
+            <div class="questionnaire__form_row">
+                <div class="switches">
+                    <h3 class="switches_title">
+                        <label>
+                            Имущество приобретено в браке?
+                        </label>
+                    </h3>
+                    <div class="switches__elements">
+                        <div class="switches__wrapper">
+                            <input form="formCustomerProfile" name="switchesPropertyAcquiredInMarriage[]" type="checkbox" class="switches__checkbox"/>
+                            <div class="switches__knobs">
+                                <span></span>
+                            </div>
+                            <div class="switches__layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <h3 class="questionnaire__form_title">
+                    Укажите, как приобретено имущество:
+                </h3>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioPurchasedVehicles[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Куплено</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioPurchasedVehicles[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Подарено</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioPurchasedVehicles[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Получено по наследству</label>
+                </div>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="founderOfOrganizations">
+                    4.3. Являетесь ли Вы или ваш(а) супруг(а) учредителем организаций (ООО)?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="founderOfOrganizations" name="switchesVisibleAndHiddenBlock" type="checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_founderOfOrganizations">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_founderOfOrganizations">
+                        Третий. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <h3 class="questionnaire__form_title">
+                    Учредитель
+                </h3>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <input name="radioFounderOfOrganizations[]" type="radio" form="formCustomerProfile"/>
+                    <label class="questionnaire__form_label-radio">Вы</label>
+                </div>
+                <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                    <label class="questionnaire__form_label-radio">
+                        <input name="radioFounderOfOrganizations[]" type="radio" form="formCustomerProfile"/>Супруг(а)</label>
+                </div>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="nameOfCompanyFounderOfOrganizations[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Наименование организации</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input inn" name="INNFounderOfOrganizations[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">ИНН</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>

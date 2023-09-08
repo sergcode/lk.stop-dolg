@@ -1,0 +1,98 @@
+.backTop {
+  position: fixed;
+  z-index: 9;
+  display: block;
+  opacity: 0;
+  bottom: 0;
+  right: 0;
+  width: 73px;
+  height: 73px;
+  padding: 2px;
+  border-radius: 100% 0 0 0;
+  transform: translate(76px, 76px);
+  background: @white;
+  box-shadow: 0 0 20px 5px @black-rgba-seven;
+  cursor: pointer;
+  transition: opacity 0.3s @cubicBezier-one,
+  transform 0.4s @cubicBezier-one,
+  box-shadow 0.2s ease-in-out;
+
+  @media screen and (max-width: 420px) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (max-width: 854px) and (orientation : landscape) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.visibleBackTop {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: opacity 0.8s @cubicBezier-one,
+    transform 0.4s @cubicBezier-one,
+    box-shadow 0.2s ease-in-out;
+
+    & .backTop__wrapper {
+      & svg {
+        transform: rotate(0);
+        transition: 0.9s @cubicBezier-one;
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: 1366px) {
+        box-shadow: 0 0 30px 6px @black-rgba-two;
+      }
+
+      & .backTop__wrapper {
+        & svg {
+          transition: 0.9s @cubicBezier-one;
+
+          @media screen and (min-width: 1366px) {
+            animation: expandUpNoRotate 0.6s ease-in-out infinite;
+            animation-fill-mode: both;
+          }
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-left: 7px;
+    border-radius: 50%;
+
+    & svg {
+      pointer-events: none;
+      transform: rotate(-45deg);
+      transition: 0.2s @cubicBezier-one;
+
+      @media screen and (max-width: 479.98px) {
+        width: 30px;
+      }
+
+      @media screen and (max-width: 360px) {
+        width: 23px;
+      }
+
+      @media screen and (max-width: 854px) and (orientation : landscape) {
+        width: 30px;
+      }
+    }
+  }
+}
+
+

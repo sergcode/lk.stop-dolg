@@ -1,0 +1,97 @@
+<header class="header header--inner" role="banner">
+    <a href="/index.html" class="header__button-back" role="link">
+        <span class="visually-hidden">
+            Вернуться на главную
+        </span>
+    </a>
+    <button class="button-burger" role="button">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+    </button>
+    <div class="header__logo-wrapper">
+        <a href="/" title="СтопДолг" role="link">
+            <include src="./src/include/icons/common-icons/logo-header.html"></include>
+        </a>
+    </div>
+    <h1 class="header__title">
+        Заголовок
+    </h1>
+
+    <div class="header__collapse">
+        <nav class="header__nav nav" role="navigation">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/index.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/main-page.html"></include>
+                        Главная
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/tasks.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/tasks-in-work.html"></include>
+                        Задачи
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/borrower-protection.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/zpz-progress.html"></include>
+                        Ход дела
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/living-wage.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/living-wage.html"></include>
+                        Прожиточный минимум
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/pay_old.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/money.html"></include>
+                        Оплата
+                    </a>
+                </li>
+                <!--<li class="nav__item">
+                    <a href="/form.html" class="nav__link" role="link">
+                        Анкета
+                    </a>
+                </li>-->
+                <!--<li class="nav__item">
+                    <a href="/documents.html" class="nav__link" role="link">
+                        Документы по делу
+                    </a>
+                </li>-->
+                <li class="nav__item">
+                    <a href="/new-useful.html" class="nav__link" role="link">
+                        <include src="./src/include/icons/common-icons/info.html"></include>
+                        Полезная информация
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="user-nav__item header__sendFeed">
+        <button class="button button--green sendFeed" data-modal="1">
+            <include src="./src/include/icons/operator.html"></include>
+            Заказать звонок
+        </button>
+    </div>
+    <div class="header__user-nav user-nav">
+        <ul class="user-nav__list">
+            <li class="user-nav__item">
+                <div class="user-nav__button">
+                    <span class="user-nav__photo-wrapper">
+                        <img src="/assets/images/users/user.jpg" alt="Фотография пользователя" class="user-nav__photo">
+                    </span>
+                    Пиражков Артур Иванович
+                </div>
+                <a href="" class="button-logout" role="link">
+                    <span class="visually-hidden">
+                      Выйти из аккаунта
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</header>

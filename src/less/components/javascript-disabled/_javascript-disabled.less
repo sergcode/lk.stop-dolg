@@ -1,0 +1,161 @@
+.javascript-disabled {
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  width: 100%;
+  line-height: 1.8em;
+  color: @color-ash;
+  background-color: @gold-two;
+  box-shadow: 0 1px 3px @black-rgba-three;
+  cursor: pointer;
+
+  & details {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    @media screen and (min-width: 400px) {
+      padding: 15px 2vw;
+    }
+
+    & p {
+      margin: 0;
+      text-align: center;
+    }
+
+    & summary {
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none
+      }
+    }
+
+    &[open] {
+      padding-bottom: 30px;
+      @media screen and (max-width: 360px) {
+        padding-bottom: 70px;
+      }
+
+      & .javascript-disabled__title {
+        padding-bottom: 8px;
+
+        &_more {
+          @media screen and (max-width: 360px) {
+            position: absolute;
+            bottom: 0;
+            padding: 10px;
+            margin-top: 8px;
+            border-radius: 0;
+            box-shadow: none;
+          }
+          @media screen and (min-width: 360.98px) {
+            margin-bottom: 10px;
+          }
+
+          &::before {
+            content: 'Скрыть';
+          }
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+    @media screen and (min-width: 400px) {
+      text-align: center;
+    }
+
+    b {
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    &_more {
+      display: block;
+      left: 0;
+      width: 100%;
+      max-width: 360px;
+      padding: 7px 10px;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 10px;
+      text-align: center;
+      background-color: @white;
+      box-shadow: inset 0 30px 20px @green-rgba-five, 0 1px 3px @black-rgba-one;
+      @media screen and (min-width: 360.98px) {
+        margin-top: 15px;
+      }
+
+      &::before {
+        content: 'Подробнее...';
+        font-weight: normal;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 30px;
+      min-width: 30px;
+      height: 30px;
+      min-height: 30px;
+      margin-right: 15px;
+      @media screen and (min-width: 400px) {
+        width: 25px;
+        min-width: 25px;
+        height: 25px;
+        min-height: 25px;
+        margin-right: 10px;
+      }
+
+      circle {
+        stroke: @color-ash;
+      }
+
+      path {
+        fill: @color-ash;
+      }
+    }
+  }
+
+  & a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__market {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 5px 10px 5px 13px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 50px;
+    font-weight: normal;
+    text-decoration: none;
+    color: @white;
+    background-color: @color-ash;
+    @media screen and (max-width: 360px) {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      max-width: 150px;
+      margin: 10px auto;
+    }
+
+    & svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      margin-right: 7px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.number-task {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 17px 20px 17px 32px;
+  background: @grey-six;
+  color: @color-green;
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: 0 1px 0 @white-rgba-four;
+  transition: 0.3s ease-in-out;
+
+  svg {
+    margin-right: 31px;
+
+    path {
+      fill: @color-green;
+    }
+  }
+
+  @media only screen and (max-width: 479.98px) {
+    font-size: 16px;
+  }
+}

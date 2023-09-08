@@ -1,0 +1,58 @@
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel {
+  .animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .owl-animated-in {
+    z-index: 0;
+  }
+
+  .owl-animated-out {
+    z-index: 1;
+  }
+
+  .fadeOut {
+    animation-name: fadeOut;
+  }
+
+  .fadeIn {
+    animation-name: fadeIn;
+  }
+
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  30% {
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

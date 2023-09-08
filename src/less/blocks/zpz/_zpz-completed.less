@@ -1,0 +1,29 @@
+.zpz-completed {
+  & .zpz-anticollector__tasks-title {
+    & h3 {
+      color: @color-green;
+    }
+  }
+
+  & h4 {
+    font-weight: 700;
+    color: @grey-one;
+  }
+}
+
+.completed-task {
+  color: @grey-one !important;
+  border-top: 1px solid @grey-twenty-seven !important;
+
+  &:nth-child(1) {
+    border-top: none !important;
+  }
+
+  ::placeholder {
+    color: @grey-one !important;
+  }
+
+  & textarea {
+    color: @grey-one !important;
+  }
+}

@@ -1,0 +1,55 @@
+<fieldset class="questionnaire__form_wrapper">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="isThePropertyAvailable">Имеется ли имущество в наличии?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input id="isThePropertyAvailable" type="checkbox" class="switches__checkbox questionnaire__form_not-required"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input marketPrice" id="totalValueOfAssets" placeholder=" ₽" name="totalValueOfAssets" type="text" form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="totalValueOfAssets">Суммарная стоимость активов (руб.)</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <input class="questionnaire__form_input" id="numberOfGuarantors" name="numberOfGuarantors" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+        <label class="questionnaire__form_label" for="numberOfGuarantors">Число поручителей</label>
+    </div>
+    <div class="questionnaire__form_row">
+        <label class="questionnaire__form_title">Залоговое имущество или имущество под арестом</label>
+        <select class="questionnaire__form_select" name="collateralOrPropertyUnderArrest" form="formCustomerProfile" required>
+            <option selected>Не выбрано</option>
+            <option>Залоговых обязательств нет</option>
+            <option>Залоговые обязательства есть</option>
+        </select>
+    </div>
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="doCollectorsBotherYou">Беспокоят ли вас коллекторы?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input id="doCollectorsBotherYou" type="checkbox" class="switches__checkbox questionnaire__form_not-required"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_row">
+        <label class="questionnaire__form_title" for="numberOfMinorChildren">Количество несовершеннолетних детей</label>
+        <input class="questionnaire__form_input" id="numberOfMinorChildren" name="numberOfMinorChildren" type="tel" onkeypress='validateNumber()' form="formCustomerProfile" required value=""/>
+    </div>
+</fieldset>
+

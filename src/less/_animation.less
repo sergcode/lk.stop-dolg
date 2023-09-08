@@ -1,0 +1,450 @@
+.animation-glare {
+  &:after { // white blik
+    content: "";
+    top: 0;
+    left: -200%;
+    display: block;
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.4) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.4)));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.4) 100%);
+    transform: skewX(-25deg);
+    animation-name: glare_anim_right;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
+
+// Accordion
+@keyframes accordionShow {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes accordionHide {
+  0% {
+    max-height: 100%;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.readMoreTextareaShow(@minimalHeight) {
+  @keyframes readMoreTextareaShow {
+    0% {
+      max-height: @minimalHeight;
+    }
+    100% {
+      max-height: 100%;
+    }
+  }
+}
+
+.readMoreTextareaHide(@minimalHeight) {
+  @keyframes readMoreTextareaHide {
+    0% {
+      max-height: 100%;
+    }
+    100% {
+      max-height: @minimalHeight;
+    }
+  }
+}
+
+
+@keyframes treatment {
+  0% {
+    transform: rotateY(0deg)
+  }
+  100% {
+    transform: rotateY(360deg)
+  }
+
+}
+
+// Пульсирующая стрелка вверх
+@keyframes expandUp {
+  0% {
+    transform: translateY(0) rotate(270deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(270deg);
+  }
+  100% {
+    transform: translateY(0) rotate(270deg);
+  }
+}
+
+// Пульсирующая стрелка вниз
+@keyframes expandDown {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(90deg);
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+// Пульсирующая стрелка вправо
+@keyframes expandRight {
+  0% {
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Пульсирующая стрелка влево
+@keyframes expandLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// Белый блик с лева на права
+@keyframes glare_anim_right {
+  0% {
+    left: -200%;
+    opacity: 0;
+  }
+  70% {
+    left: -200%;
+  }
+  100% {
+    left: 200%;
+    opacity: 1;
+  }
+}
+
+// Пульсирующая стрелка вверх без переворачивания
+@keyframes expandUpNoRotate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Пульсирующая стрелка вниз без переворачивания
+@keyframes expandDownNoRotate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// Появление ошибки
+@keyframes errorShow {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    transform: none;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: translateY(3px);
+  }
+}
+
+// Исчезновение ошибки
+@keyframes errorHide {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+    transform: translateY(3px);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    transform: none;
+  }
+}
+
+.errorShow {
+  animation-name: errorShow;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.errorHide {
+  animation-name: errorHide;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+// Появление Предупреждения
+@keyframes warningShow {
+  0% {
+    width: 100%;
+    opacity: 1;
+    visibility: hidden;
+    margin-top: -100px;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    margin-top: -50px;
+  }
+}
+
+// Исчезновение Предупреждения
+@keyframes warningHide {
+  0% {
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    margin-top: -50px;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -100px;
+  }
+}
+
+// Появление Предупреждения Цифры
+@media screen and (min-width: 0) {
+  @keyframes warningShowNumber {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+      transform: none;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: translateY(36px);
+    }
+  }
+}
+@media screen and (min-width: 360px) {
+  @keyframes warningShowNumber {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+      transform: none;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: translateY(45px);
+    }
+  }
+}
+@media screen and (min-width: 451px) {
+  @keyframes warningShowNumber {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+      top: 0;
+      transform: none;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+      top: 100%;
+      transform: translateY(43px);
+    }
+  }
+}
+
+// Появление Предупреждения
+@keyframes widthMax {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+// Исчезновение Предупреждения
+@keyframes widthMin {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+// Исчезновение элемента
+@keyframes hideElem {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+// Появление элемента
+@keyframes showElem {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+// Качание иконки
+@keyframes trembling {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
+// Появление ошибки
+@keyframes showElement {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+// Исчезновение ошибки
+@keyframes hideElement {
+  0% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+    height: 0;
+  }
+}
+
+.showElement {
+  animation-name: showElement;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+.hideElement {
+  animation-name: hideElement;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+// Анимация для стадий Хода дела ЗПЗ и БФЛ
+@keyframes perspectiveVerticalIn {
+  0% {
+    transform: none;
+    box-shadow: 0 0 10px @black-rgba-six;
+  }
+  30% {
+    transform: scale(1) rotateY(20deg);
+    box-shadow: -20px 15px 50px @black-rgba-two, inset -90px 0 100px @black-rgba-seven;
+  }
+  60% {
+    transform: scale(1) rotateY(20deg);
+    box-shadow: -20px 15px 50px @black-rgba-two, inset -90px 0 100px @black-rgba-seven;
+  }
+
+  100% {
+    transform: scale(1.07) rotateY(0deg);
+    box-shadow: 0 15px 30px @black-rgba-two, inset -90px 0 100px transparent;
+  }
+}
+
+// Шатается влево в право и пульсирует
+@keyframes pulseOpacity {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollHeightDemo {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes elementsDelete {
+  from {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+}
+
+

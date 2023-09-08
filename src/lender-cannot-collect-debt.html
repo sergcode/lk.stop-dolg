@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг</title>
+        <include src="./src/sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="./src/sections/header.html"></include>
+
+        <main class="main" role="main">
+            <div class="main--small">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/borrower-protection.html">
+                                <span itemprop="title">Ход дела</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/protection-in-court.html">
+                                <span itemprop="title">Кредитор не может взыскать долг</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="zpz-protection" role="region">
+                    <div class="zpz-protection__header green">
+                        <article role="article">
+                            <figure>
+                                <include src="./src/include/icons/zpz-stages/icon-4.html"></include>
+                                <figcaption><h1>Кредитор не может взыскать долг</h1></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="zpz-protection__body">
+                        <div class="row zpz-protection__position_center">
+                            <div class="zpz-protection__col">
+                                <article role="article">
+                                    <figure>
+                                        <div class="zpz-protection__tasks">
+                                            <include src="./src/include/icons/zpz-stages/icon-6.html"></include>
+                                            <div class="zpz-protection__tasks_text">
+                                                <span>Дел, по которым пропущены сроки исковой давности: 2</span>
+                                            </div>
+                                            <a href="/lender-cannot-collect-debt-process.html#missed-limitation" role="link">
+                                                <include src="./src/include/icons/common-icons/arrow-right.html"></include>
+                                            </a>
+                                        </div>
+                                        <div class="zpz-protection__tasks">
+                                            <include src="./src/include/icons/zpz-stages/icon-8.html"></include>
+                                            <div class="zpz-protection__tasks_text">
+                                                <span>Дел, по которым остановлено исполнительное производство: 2</span>
+                                            </div>
+                                            <a href="/lender-cannot-collect-debt-process.html#closed-performance-plants" role="link">
+                                                <include src="./src/include/icons/common-icons/arrow-right.html"></include>
+                                            </a>
+                                        </div>
+                                        <div class="zpz-protection__tasks zpz-protection__position_flex-start">
+                                            <div class="zpz-protection__tasks_outcome">
+                                                На общую сумму: 453 710 руб.
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="zpz-stages_center zpz-stages_pt-52">
+                    <a href="/borrower-protection.html" class="attach__up button button__little button--green button__little_ml-15" role="link">
+                        <img class="zpz-stages_arrow-left" src="/assets/images/stages/arrow-open.png" alt="Плюс">
+                        Вернуться
+                    </a>
+                </div>
+
+            </div>
+
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/modals/_complaint-about-actions-bill.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.min.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.init.js"></script>
+        <script src="/assets/js/attachFiles.js"></script>
+        <script src="/assets/js/scrollto.js"></script>
+
+    </body>
+</html>

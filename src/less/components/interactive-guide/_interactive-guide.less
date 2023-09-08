@@ -1,0 +1,156 @@
+.interactiveGuide,
+.interactiveGuideMobile {
+  & .doc__block {
+    padding: 20px 5px;
+    @media screen and (min-width: 400px) {
+      padding: 20px;
+    }
+
+    & .main__text {
+      width: 100%;
+    }
+  }
+}
+
+.interactive-guide {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  background-color: @white;
+
+  &:before {
+    content: 'Выберите раздел';
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    top: 17px;
+    left: 20px;
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: 500;
+    transition: margin-top 0.5s @cubicBezier-one, opacity 0.3s;
+    @media screen and (max-width: 991.98px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 440px) {
+      display: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1169.98px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (min-width: 1170px) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+    border-radius: 0;
+    font-weight: 400;
+    color: @color-ash;
+    transition: transform 0.5s, opacity 0.4s;
+    @media screen and (max-width: 400px) {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+
+    li {
+      display: flex;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+      align-items: center;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 2.5em;
+      @media screen and (min-width: 576px) {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 15px;
+        font-size: 16px;
+      }
+      @media screen and (min-width: 992px) {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+      @media screen and (min-width: 1570px) {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 12px;
+        box-shadow: 0 24px 36px -16px @black-rgba-six, 0px 4px 16px @black-rgba-fourteen;
+        text-decoration: none;
+        color: @color-ash;
+        background-color: @white;
+        transition: 0.3s;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 25px;
+          height: 25px;
+          margin-right: 10px;
+          background-image: url("../images/icons/play-button-green-bg.svg");
+          background-repeat:  no-repeat;
+          background-position: center;
+          background-size: 100%;
+          @media screen and (min-width: 1170px) {
+            width: 20px;
+            height: 20px;
+            margin-right: 15px;
+            transition: background-image 0.3s;
+          }
+        }
+
+        &:hover, &:focus, &:active {
+          color: @white;
+          background-color: @green-seven;
+          text-decoration: none;
+
+          &:before {
+            background-image: url("../images/icons/play-button-white-bg.svg");
+          }
+        }
+
+        span {
+          pointer-events: none;
+          overflow: hidden;
+          display: inline-block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        &.inDeveloping {
+          &:hover, &:focus, &:active {
+            background: initial;
+            color: initial;
+            &::before {
+              background-image: url("../images/icons/play-button-green-bg.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+}

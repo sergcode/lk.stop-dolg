@@ -1,0 +1,57 @@
+.readmore-js-toggle {
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  max-width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: @green-five;
+  transition: 0.3s ease-in-out;
+  margin: 30px auto 26px;
+
+  &:hover {
+    opacity: 0.9;
+
+    & svg {
+      animation: expandDown 0.6s ease-in-out infinite;
+      animation-fill-mode: both;
+    }
+  }
+
+  & svg {
+    display: block;
+    height: 20px;
+    margin-right: 0;
+    margin-top: 2px;
+    transform: rotate(90deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  &.active {
+    opacity: 0.9;
+
+    & svg {
+      margin-top: -2px;
+      transform: rotate(270deg);
+    }
+
+    &:hover {
+      opacity: 1;
+
+      & svg {
+        animation: expandUp 0.6s ease-in-out infinite;
+      }
+    }
+  }
+  & + article {
+    padding-top: 40px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+  }
+}

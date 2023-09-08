@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг</title>
+        <include src="./src/sections/components/head/meta.html"></include>
+    </head>
+    <body>
+        <include src="./src/sections/header.html"></include>
+        <div class="info info__gray info_pt-0 info_pb-0">
+            <div class="info__wrapper info__wrapper_d-block info__wrapper_sm--pt-15 info__wrapper_sm--pb-15">
+                <p class="info__text info__text_black info__text_bold info__text_center ">
+                    Юрист позвонит вам 01.10.2022. Ответит на вопросы, уточнит детали по вашему делу.
+                </p>
+            </div>
+        </div>
+
+        <include src="./src/sections/info-banner.html"></include>
+        <include src="./src/sections/info.html"></include>
+
+        <main class="main" role="main">
+            <section class="main-page">
+                <div class="task__informers">
+                    <div class="task__informers_row">
+                        <div class="task__informers_col">
+                            <span>Задачи:</span>
+                        </div>
+                        <div class="task__informers_col">
+                            <a href="/tasks.html#activeTask" title="Открыть активные задачи" role="link">
+                                <include src="./src/include/icons/tasks/active-tasks.html"></include>
+                                <span class="task__filters_title">Активные:</span>
+                                <span class="task__filters_num">7</span>
+                            </a>
+                        </div>
+                        <div class="task__informers_col">
+                            <a href="/tasks.html#onCheckTask" title="Открыть задачи на проверке" role="link">
+                                <include src="./src/include/icons/tasks/on-check-tasks.html"></include>
+                                <span class="task__filters_title">На проверке:</span>
+                                <span class="task__filters_num">2</span>
+                            </a>
+                        </div>
+                        <div class="task__informers_col">
+                            <a href="/tasks.html#completedTask" title="Открыть завершенные задачи" role="link">
+                                <include src="./src/include/icons/tasks/completed-tasks.html"></include>
+                                <span class="task__filters_title">Завершенные:</span>
+                                <span class="task__filters_num">2</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="default-banner default-banner__d-none">
+                    <div class="cashback cashback__big default-banner__wrapper">
+                        <article class="cashback__header" role="article">
+                            <figure class="cashback__d-flex cashback__y_center">
+                                <img src="/assets/images/promotions/cashback/cashback_logo.svg" alt="">
+                                <figcaption>
+                                    <h2 class="default-banner__text_white default-banner__text_uppercase cashback__text_big">
+                                        Совершай платежи по договору вовремя – получи до 15% кешбэка на следующий платёж!</h2>
+                                </figcaption>
+                            </figure>
+                        </article>
+                        <div class="default-banner__row default-banner__text_white cashback__body">
+
+                            <article class="cashback__col-3" role="article">
+                                <figure class="cashback__x_center">
+                                    <img src="/assets/images/promotions/cashback/stage_one.svg" alt="">
+                                    <figcaption>
+                                        <h3 class="cashback__column-3_p-left-right-22">
+                                            1. Внеси плату <br/>по договору <br/>точно в срок
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                            <article class="cashback__col-3" role="article">
+                                <figure class="cashback__x_center">
+                                    <img src="/assets/images/promotions/cashback/stage_two.svg" alt="">
+                                    <figcaption>
+                                        <h3 class="cashback__column-3_p-left-right-22">
+                                            2. Дождись <br/>зачисления <br/>платежа
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                            <article class="cashback__col-3" role="article">
+                                <figure class="cashback__x_center">
+                                    <img src="/assets/images/promotions/cashback/stage_three.svg" alt="">
+                                    <figcaption>
+                                        <h3 class="cashback__column-3_p-left-right-22">
+                                            3. Получи кешбэк <br/>на следующий <br/>платёж
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                            <article class="cashback__col-3" role="article">
+                                <figure class="cashback__x_center">
+                                    <img src="/assets/images/promotions/cashback/stage_four.svg" alt="">
+                                    <figcaption>
+                                        <h3>
+                                            4. Вноси каждый последующий платёж вовремя – <span>увеличивай кешбэк!</span>
+                                        </h3>
+                                    </figcaption>
+                                </figure>
+                            </article>
+
+                        </div>
+                        <div class="default-banner__row default-banner__text_white cashback__footer">
+                            <p>Условия акции:</p>
+                            <ol>
+                                <li>Датой оплаты считается дата зачисления платежа</li>
+                                <li>Срок акции не ограничен</li>
+                                <li>Минимальный размер кэшбека — 5%, максимальный — 15%</li>
+                                <li>Полные условия акции по <a href="/new-useful.html#promotionsCashback">ссылке</a></li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <button class="default-banner__close default-banner__close_sm-green" name="closeElement" title="Закрыть" role="button"></button>
+                </div>
+
+                <div class="default-banner default-banner__d-none">
+                    <div class="bring-a-friend bring-a-friend__big default-banner__wrapper">
+                        <article class="bring-a-friend__header" role="article">
+                            <figure class="bring-a-friend__d-flex">
+                                <img src="/assets/images/promotions/bring-a-friend/bring-a-friend_logo.svg" alt="">
+                                <figcaption>
+                                    <h2 class="default-banner__text_uppercase bring-a-friend__text_very-big">
+                                        Приведи друга!
+                                    </h2>
+                                    <h3 class="bring-a-friend__pr-0 bring-a-friend__pr-lg-9">
+                                        Хотите получить скидку на следующие платежи?
+                                    </h3>
+                                    <h3 class="bring-a-friend__pr-9">
+                                        Рекомендуйте нас друзьям, коллегам, родственникам и получите скидку
+                                        от 2 500 до 5 000 за <span class="default-banner__text_uppercase">КАЖДОГО</span>
+                                        клиента, который заключит договор по вашей рекомендации. Скидку получите и вы, и новый клиент!
+                                    </h3>
+                                    <h3>Для применения скидки ваш знакомый должен назвать индивидуальный промокод: <span class="default-banner__text_yellow">65987</span></h3>
+                                    <ol role="list">
+                                        <li>Полные условия акции по <a href="/new-useful.html#promotionsCashback" role="link">ссылке</a></li>
+                                    </ol>
+                                </figcaption>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <button class="default-banner__close default-banner__close_sm-green" name="closeElement" title="Закрыть" role="button"></button>
+                </div>
+
+                <div class="main-page__cards">
+                    <div class="main-page__cards-item">
+                        <div class="main-page__cards-step main-page__cards-step_head-lawyers">
+                            <p class="main-page__cards-header">
+                                Руководитель юридической группы
+                            </p>
+                            <div class="main-page__cards_body main-page__cards_body--additional-information">
+                                <div class="main-page__cards-acontainer">
+                                    <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                </div>
+                                <div class="main-page__cards_info-employee">
+                                    <p class="main-page__cards-name">
+                                        Иванова<br/> Наталья Витальевна
+                                    </p>
+                                    <p class="main-page__cards-time main-page__top-delimetr">
+                                        Часы работы <br/>05:00 - 14:00 (МСК)
+                                    </p>
+                                    <div class="main-page__cards--additional-information">
+                                        <ul>
+                                            <li>
+                                                <span>Опыт работы в компании</span>
+                                                <span>6 лет</span>
+                                            </li>
+                                            <li>
+                                                <span>Общий стаж</span>
+                                                <span>10 лет</span>
+                                            </li>
+                                            <li>
+                                                <span>Образование</span>
+                                                <span>Высшее</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-page__cards-step">
+                            <p class="main-page__cards-header">
+                                Юристконсульты
+                            </p>
+                            <ul class="main-page__cards-consultants">
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br/> Ольга Владимировна
+                                        </p>
+                                        <p class="main-page__cards-constimes main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br/> Марина Владимировна
+                                        </p>
+                                        <p class="main-page__cards-constimes  main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br/> Ольга Владимировна
+                                        </p>
+                                        <p class="main-page__cards-constimes  main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br> Виктория Олеговна
+                                        </p>
+                                        <p class="main-page__cards-constimes  main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br/> Евгения Андреевна
+                                        </p>
+                                        <p class="main-page__cards-constimes  main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="main-page__cards-consitem">
+                                    <div class="main-page__cards-acontainer--smallmargin">
+                                        <img class="main-page__cards-avatar" alt="" src="/assets/images/users/1663856200_61-top-fon-com-p-biznes-serii-fon-foto-71.jpg"/>
+                                    </div>
+                                    <div class="main-page__cards_info-employee">
+                                        <p class="main-page__cards-consnames">
+                                            Петрова<br/> Наталья Николаевна
+                                        </p>
+                                        <p class="main-page__cards-constimes  main-page__top-delimetr">
+                                            Часы работы <br/> 06:00 - 18:00 (МСК)
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="main-page__cards-step main-page__cards-step_аrbitration">
+                            <p class="main-page__cards-header">
+                                Ваш арбитражный управляющий
+                            </p>
+                            <div class="main-page__cards_body">
+                                <div class="main-page__cards-acontainer">
+                                    <img class="main-page__cards-avatar" alt="" src="/assets/images/users/user.jpg"/>
+                                </div>
+                                <div class="main-page__cards_info-employee">
+                                    <p class="main-page__cards-name--smallmargin">
+                                        Иванов<br/> Иван Иванович
+                                    </p>
+                                    <span class="main-page__cards-delimetr"></span>
+                                    <p class="main-page__cards-time">
+                                        Часы работы<br/> 5:00 - 14:00 (МСК)
+                                    </p>
+                                    <div class="main-page__cards-contacts">
+                                        <a class="main-page__cards-contacts-item" href="tel:890000000">
+                                            <img class="main-page__cards-contacts-image" src="/assets/images/icons/phone.svg" alt="phone"/>
+                                            +7-ХХХ-ХХХ-ХХХХ
+                                        </a>
+                                        <a class="main-page__cards-contacts-item" href="mailto:ivanov@mail.ru">
+                                            <img class="main-page__cards-contacts-image" src="/assets/images/icons/mail.svg" alt="mail"/>
+                                            <span>ivanov@mail.ru</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-page__cards-item--smaller">
+                        <div class="main-page__cards-step--fixed-size">
+                            <p class="main-page__cards-header--left-align">Ваши договоры</p>
+                            <div class="main-page__cards-scroll-box">
+                                <table class="main-page__cards-table">
+                                    <tr class="main-page__cards-table-row">
+                                        <td>Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+                                    <tr class="main-page__cards-table-row">
+                                        <td class="main-page__table-first-col">Договор от</td>
+                                        <td>2020-02-03</td>
+                                        <td>№02-13551/20</td>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+        <script src="/assets/js/interactive.guide/bootstrap-tour-setup.LOCAL.js"></script>
+        <script src="/assets/js/interactive.guide/sections/index.html.LOCAL.js"></script>
+    </body>
+</html>

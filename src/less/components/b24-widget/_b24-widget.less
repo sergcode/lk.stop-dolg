@@ -1,0 +1,40 @@
+.b24-widget-button {
+
+  &-position-bottom-right {
+    z-index: 6 !important;
+    bottom: 30px !important;
+    right: 15px !important;
+    transition: bottom 0.3s @cubicBezier-one;
+    @media screen and (max-width: 360px) {
+      margin-bottom: -10px;
+    }
+    @media screen and (min-width: 1384px) {
+      right: 25px !important;
+    }
+  }
+
+  &-inner-mask,
+  &-inner-block {
+    background: @color-green !important;
+  }
+
+  &-pulse,
+  &-popup,
+  &-popup-triangle {
+    border-color: @color-green !important;
+  }
+
+  &-popup-btn-hide {
+    opacity: 0.6 !important;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  &-pulse {
+    &-animate {
+      animation-iteration-count: 3 !important;
+    }
+  }
+}

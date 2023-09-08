@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<include src="./src/sections/components/head/link.html"></include>
+		<title>Стоп долг</title>
+		<include src="./src/sections/components/head/meta.html"></include>
+	</head>
+	<body>
+
+		<include src="./src/sections/header.html"></include>
+
+		<main class="main" role="main">
+			<div class="main--small">
+				<nav class="breadcrumbs" role="navigation">
+					<ul class="B_crumbBox">
+						<li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+							<a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+								<span itemprop="title">Главная</span>
+							</a>
+						</li>
+						<li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+							<a class="B_currentCrumb" itemprop="url" rel="Задачи" href="tasks.html">
+								<span itemprop="title">Задачи</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<section class="main__block" role="region">
+					<span class="pay__title">
+						Полная стоимость договора - <span class="color__green">120 000 р.</span>
+					</span>
+					<span class="pay__text">
+					У Вас есть задолженность по оплате. Перейдите на сайт банка, чтобы внести платёж.
+					</span>
+					<a href="" class="button button__small button--green">
+						Перейти в банк
+					</a>
+				</section>
+			</div>
+		</main>
+
+		<include src="./src/sections/footer.html"></include>
+
+		<include src="./src/sections/components/common-files.html"></include>
+
+	</body>
+</html>

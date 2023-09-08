@@ -1,0 +1,187 @@
+<fieldset class="questionnaire__form_wrapper" name="sureties">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="suretiesSwitches">
+                    6.1. Имеются ли у Вас поручители по кредитным обязательствам?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input id="suretiesSwitches" type="checkbox" class="switches__checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_sureties">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_sureties">
+                        Первый. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="guarantorForOtherPeopleLoans">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="guarantorСreditObligations">
+                    6.2. Являетесь ли Вы поручителем по ЧУЖИМ кредитным обязательствам?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input id="guarantorСreditObligations" type="checkbox" class="switches__checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_guarantorForOtherPeopleLoans">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_guarantorForOtherPeopleLoans">
+                        Второй. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="guarantorPledgedLoans">
+                    Являетесь ли Вы поручителем (созаёмщиком) по ЧУЖИМ залоговым кредитам (ипотека/автокредит)?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input id="guarantorPledgedLoans" type="checkbox" class="switches__checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="propertyDealSwitches">
+                    6.3. Совершали ли Вы или ваш(а) супруг(а) сделки с недвижимым имуществом, автомобилями,
+                    организациями (продажа компаний) за последние 3 года?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="propertyDealSwitches" name="switchesVisibleAndHiddenBlock" type="checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_propertyDeal">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_propertyDeal">
+                        Третий. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h3 class="questionnaire__form_title">
+        Опишите сделки
+    </h3>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <h3 class="questionnaire__form_title">
+                Тип сделки
+            </h3>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioPropertyDeal[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Покупка</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioPropertyDeal[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Продажа</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_radio-flex">
+                <input name="radioPropertyDeal[]" type="radio" form="formCustomerProfile"/>
+                <label class="questionnaire__form_label-radio">Дарение</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="propertyType[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Тип недвижимости</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <label class="questionnaire__form_title">Стоимость (приблизительно) (руб.)</label>
+                <input class="questionnaire__form_input marketPrice" placeholder=" ₽" name="propertyDealMarketPrice[]" type="text" form="formCustomerProfile" required/>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input yearInQuestionnaire" name="yearOfTheTransaction[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Год совершения сделки</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <textarea class="questionnaire__form_textarea" form="formCustomerProfile" name="propertyDealComment[]" role="textbox" required></textarea>
+                <label class="questionnaire__form_label">Комментарий</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="loginAndPasswordSwitches">
+                    6.4. Имеются ли у вас логин и пароль от сайта «Госуслуги»?
+                </label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="loginAndPasswordSwitches" name="switchesVisibleAndHiddenBlock" type="checkbox"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+                <a class="tooltip" data-tooltip-content="#tooltip_loginAndPassword">?</a>
+                <div class="tooltip_templates">
+                    <span id="tooltip_loginAndPassword">
+                        Четвертый. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consequatur consequuntur
+                        deserunt eos explicabo minus nihil sed ullam!
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="loginPublicServices" name="loginPublicServices" type="text" form="formCustomerProfile" autocomplete="off" required/>
+            <label class="questionnaire__form_label" for="loginPublicServices">Логин</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input" id="passwordPublicServices" name="passwordToggle" type="password" form="formCustomerProfile" autocomplete="off" required/>
+            <a href="#" class="eyeToggle questionnaire__form_password-toggle" title="Показать пароль"></a>
+            <label class="questionnaire__form_label" for="passwordPublicServices">Пароль</label>
+        </div>
+    </div>
+</fieldset>

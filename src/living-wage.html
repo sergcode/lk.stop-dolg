@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг | Прожиточный минимум</title>
+        <include src="./src/sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="./src/sections/header.html"></include>
+
+        <main class="main" role="main">
+
+            <div class="main--small">
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/living-wage.html">
+                                <span itemprop="title">Прожиточный минимум</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="default-template" role="region">
+                    <div class="default-template__header green">
+                        <article role="article">
+                            <figure>
+                                <include src="./src/include/icons/living-wage/icon-1.html"></include>
+                                <figcaption><h1>Прожиточный минимум</h1></figcaption>
+                            </figure>
+                        </article>
+                    </div>
+
+                    <div class="default-template__body">
+
+                        <article class="default-template__position_center default-template__pt-0" role="article">
+                            <figure>
+                                <figcaption>
+                                    <h4 class="default-template__block_middle-narrow">
+                                        Прожиточный минимум переводится банкроту арбитражным управляющим 1 раз в месяц в
+                                        случае, если на основном счёте банкрота достаточно средств.
+                                    </h4>
+                                </figcaption>
+                            </figure>
+                        </article>
+
+                        <div class="default-template__block default-template__block_narrow">
+                            <article class="default-template__position_center default-template__text_pt-40" role="article">
+                                <figure>
+                                    <include src="./src/include/icons/living-wage/icon-7.html"></include>
+                                </figure>
+                            </article>
+                            <form class="form form__fluid" action="" id="requestTransfer" name="requestTransfer" method="post" role="form">
+                                <fieldset>
+                                    <legend class="form__text_center">Вы можете отправить запрос арбитражному
+                                        управляющему на перевод прожиточного минимума
+                                    </legend>
+                                    <div class="form__row form__row_relative">
+                                        <label class="label-textarea">
+                                            <textarea class="textarea" name="comment" rows="3" placeholder="Введите комментарий"></textarea>
+                                        </label>
+                                        <div class="form__tooltip">Это обязательное поле! Текст комментария должен быть
+                                            не короче 10-ти символов. Длина текста сейчас: <span>0</span></div>
+                                    </div>
+                                    <div class="form__row">
+                                        <button class="button button__middle button--green" type="button" onclick="return validateForm(document.getElementById('requestTransfer'))" name="button">
+                                            Запросить перевод
+                                        </button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <h4 class="default-template__text_center default-template__text_middle-weight default-template__text_pt-40">
+                            Размер прожиточного минимума 10 000 руб.
+                        </h4>
+
+                        <div data-readmore="readMore">
+                            <div class="readMore__wrapper">
+                                <div class="readMore__hiding-wrapper">
+                                    <table class="default-table default-table__fluid default-table__grey">
+                                        <thead>
+                                        <tr>
+                                            <th>На кого выделяется прожиточный минимум</th>
+                                            <th>Сумма в месяц (руб.)</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Иванов Иван Иванович</td>
+                                            <td>3 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Иванова Настасья Филипповна</td>
+                                            <td>3 000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Иванов Кондратий Иванович</td>
+                                            <td>4 000</td>
+                                        </tr>
+                                        </tbody>
+
+                                        <tfoot>
+                                        <tr>
+                                            <th>
+                                                Итого:
+                                            </th>
+                                            <th>
+                                                10 000
+                                            </th>
+                                        </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="default-template__position_center" role="article">
+                            <figure>
+                                <include src="./src/include/icons/living-wage/icon-2.html"></include>
+                                <figcaption><h2>Как получить прожиточный минимум</h2></figcaption>
+                            </figure>
+                        </article>
+
+                        <div class="zpz-work-task__wrapper-tasks">
+                            <div class="row zpz-work-task__position_space-between zpz-work-task__tasks">
+                                <div class="zpz-work-task__col-5">
+                                    <div class="row row_nowrap zpz-work-task__position_space-between">
+                                        <h3>Вид дохода: <b>Заработная плата</b></h3>
+                                    </div>
+                                    <div class="row zpz-work-task_pt-20">
+                                        <p class="zpz-work-task__text_normal">
+                                            Размер дохода: <b>10 000 руб.</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="zpz-work-task__textarea zpz-work-task__col">
+                                    <label>Описание:</label>
+                                    <div class="zpz-work-task__textarea_wrapper">
+                                        <div class="textarea">
+                                            <p>1. Бухгалтерия переводит деньги на основной счёт.</p>
+                                            <p>2. Арбитражный управляющий переводит прожиточный минимум
+                                                <a href="#">на счёт третьего лица</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row zpz-work-task__position_space-between zpz-work-task__tasks">
+                                <div class="zpz-work-task__col-5">
+                                    <div class="row row_nowrap zpz-work-task__position_space-between">
+                                        <h3>Вид дохода: <b>Заработная плата</b></h3>
+                                    </div>
+                                    <div class="row zpz-work-task_pt-20">
+                                        <p class="zpz-work-task__text_normal">
+                                            Размер дохода: <b>10 000 руб.</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="zpz-work-task__textarea zpz-work-task__col">
+                                    <label>Описание:</label>
+                                    <div class="zpz-work-task__textarea_wrapper">
+                                        <div class="textarea">
+                                            <p>1. Бухгалтерия переводит деньги на основной счёт.</p>
+                                            <p>2. Арбитражный управляющий переводит прожиточный минимум
+                                                <a href="#">на счёт третьего лица</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="default-template__position_center" role="article">
+                            <figure>
+                                <include src="./src/include/icons/living-wage/icon-3.html"></include>
+                                <figcaption><h2>Общая статистика по прожиточному минимуму</h2></figcaption>
+                            </figure>
+                        </article>
+
+                        <table class="default-table default-table__fluid default-table__grey default-table__text_center default-table__cols-4">
+                            <thead>
+                            <tr>
+                                <th>Начислено (руб.)</th>
+                                <th>Уже переведено (руб.)</th>
+                                <th>К переводу (руб.)</th>
+                                <th>Дата перевода</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>100 000</td>
+                                <td>90 000</td>
+                                <td>10 000</td>
+                                <td>15.10.2020</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+
+                        <div data-readmore="readMore">
+                            <div class="readMore__wrapper">
+                                <div class="readMore__hiding-wrapper">
+                                    <h2>Подробный график перевода прожиточного минимума</h2>
+                                    <table class="default-table default-table__fluid default-table__grey default-table__text_center default-table__cols-4">
+                                        <thead>
+                                        <tr>
+                                            <th>Дата поступления на основной счёт</th>
+                                            <th>Сумма поступления (руб.)</th>
+                                            <th>Размер начисленного прожиточного минимума (руб.)</th>
+                                            <th>Дата перевода</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>01.06.2020</td>
+                                            <td>10 000</td>
+                                            <td>9 000</td>
+                                            <td>15.06.2020</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>01.07.2020</td>
+                                            <td>8 000</td>
+                                            <td>8 000</td>
+                                            <td>15.07.2020</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>01.08.2020</td>
+                                            <td>15 000</td>
+                                            <td>2 000</td>
+                                            <td>15.08.2020</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>01.09.2020</td>
+                                            <td>1 000</td>
+                                            <td>0</td>
+                                            <td>15.09.2020</td>
+                                        </tr>
+                                        </tbody>
+
+                                        <tfoot>
+                                        <tr>
+                                            <th>
+                                                Итого:
+                                            </th>
+                                            <th>
+                                                34 000
+                                            </th>
+                                            <th>
+                                                19 000
+                                            </th>
+                                            <th></th>
+                                        </tr>
+                                        </tfoot>
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <article class="default-template__position_center" role="article">
+                            <figure>
+                                <include src="./src/include/icons/living-wage/icon-4.html"></include>
+                            </figure>
+                        </article>
+
+                        <div class="row default-template__space-between default-template__pt-50">
+                            <ul class="default-template__col-5">
+                                <li><h2>Основной счёт</h2></li>
+                                <li><span>БИК: </span><b>045004763</b></li>
+                                <li><span>Банк: </span><b>ПАО «Совкомбанк»</b></li>
+                                <li><span>ИНН: </span><b>4401116480</b></li>
+                                <li><span>КПП: </span><b>544543001</b></li>
+                                <li><span>Корсчёт: </span><b>30101810150040000763</b></li>
+                                <li><span>Счёт получателя: </span><b>40817810450133259704</b></li>
+                                <li><span>Получатель: </span><b>Иванов Иван Иванович</b></li>
+                            </ul>
+                            <div class="default-template__col-5">
+                                <div class="default-template__disguise">
+                                    <button class="attach__up button button__little button--green" id="addCheck" name="addCheck" type="button" role="button">
+                                        <img src="/assets/images/tasks/add.svg" alt="Плюс">
+                                        Добавить счёт третьего лица
+                                    </button>
+                                </div>
+
+                                <form class="form form__fluid" action="" id="formAddCheck" name="addData" method="post" role="form">
+                                    <fieldset>
+                                        <legend>Счёт третьего лица</legend>
+                                        <div class="form__row form__row_relative">
+                                            <label for="bik">БИК:</label>
+                                            <input id="bik" form="formAddCheck" name="bik" type="text" maxlength="9" autocomplete="off" onkeypress='validateNumber()' required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="bank">Банк:</label>
+                                            <input id="bank" form="formAddCheck" name="bank" type="text" autocomplete="off" required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="inn">ИНН:</label>
+                                            <input id="inn" form="formAddCheck" name="inn" type="text" maxlength="10" autocomplete="off" onkeypress='validateNumber()' required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="kpp">КПП:</label>
+                                            <input id="kpp" form="formAddCheck" name="kpp" type="text" maxlength="9" autocomplete="off" onkeypress='validateNumber()' required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="coreCheck">Корсчёт:</label>
+                                            <input id="coreCheck" form="formAddCheck" name="coreCheck" type="text" maxlength="20" autocomplete="off" onkeypress='validateNumber()' required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="beneficiaryAccount">Счёт получателя:</label>
+                                            <input id="beneficiaryAccount" form="formAddCheck" name="beneficiaryAccount" type="text" maxlength="20" autocomplete="off" onkeypress='validateNumber()' required/>
+                                        </div>
+                                        <div class="form__row form__row_relative">
+                                            <label for="recipient">Получатель:</label>
+                                            <input id="recipient" form="formAddCheck" name="recipient" type="text" autocomplete="off" required/>
+                                        </div>
+                                        <div class="form__row">
+                                            <button class="button button__middle button__middle_big button--green" onclick="valid(document.getElementById('formAddCheck'))" data-action="Сохранить данные" name="button" type="button" role="button">
+                                                <include src="./src/include/icons/living-wage/icon-6.html"></include>
+                                                Сохранить данные
+                                            </button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/readmore/read.More.js"></script>
+        <script src="/assets/js/save.data.js"></script>
+        <script src="/assets/js/validate.form.js"></script>
+        <script src="/assets/js/input.type.number.js"></script>
+        <script src="/assets/js/interactive.guide/sections/living-wage.html.js"></script>
+    </body>
+</html>

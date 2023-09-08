@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="./src/sections/components/head/link.html"></include>
+        <title>Стоп долг | Ход дела БФЛ</title>
+        <include src="./src/sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="./src/sections/header.html"></include>
+
+        <main class="main" role="main">
+
+            <div class="main--small">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/progress-of-the-bfl-case.html">
+                                <span itemprop="title">Ход дела</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="default-top-elements" role="region">
+                    <p>Дата судебного заседания: <strong>10.06.2021</strong></p>
+                    <p>Ссылка на дело в арбитражном суде:
+                        <a href="" title="Перейти по ссылке">
+                            <strong>А58-12579/2019</strong>
+                        </a>
+                    </p>
+                </section>
+
+                <section class="progress-case-bfl progress-case-bfl__pt-30" role="region">
+
+                    <div class="row progress-case-bfl__center">
+
+                        <div class="progress-case-bfl__stage stage__completed">
+                            <div class="progress-case-bfl__wrapper">
+                                <div class="progress-case-bfl__header">
+                                    <article role="article">
+                                        <figure>
+                                            <include src="./src/include/icons/progress-case-bfl/icon-1.html"></include>
+                                            <figcaption><h2>Подготовка к <br/>суду</h2></figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <p>Этап завершен</p>
+                                <a href="/preparation-for-court.html" class="button button__small button--green button_ml-30" role="button">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="progress-case-bfl__stage stage__progress animScrollBy">
+                            <div class="progress-case-bfl__wrapper">
+                                <div class="progress-case-bfl__header">
+                                    <article role="article">
+                                        <figure>
+                                            <include src="./src/include/icons/progress-case-bfl/icon-2.html"></include>
+                                            <figcaption><h2>Cуд по признанию <br/>банкротом</h2></figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <p>Вы находитесь на данном этапе</p>
+                                <a href="/court-recognized-by-the-bankrupt.html" class="button button__small button--green button_ml-30" role="button">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div class="progress-case-bfl__stage">
+                            <div class="progress-case-bfl__wrapper">
+                                <div class="progress-case-bfl__header">
+                                    <article role="article">
+                                        <figure>
+                                            <include src="./src/include/icons/progress-case-bfl/icon-3.html"></include>
+                                            <figcaption><h2>Процедура <br/>банкротства</h2></figcaption>
+                                        </figure>
+                                    </article>
+                                </div>
+                                <p></p>
+                                <a href="/bankruptcy-procedure.html" class="button button__small button--green button_ml-30" role="button">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="zpz-stages_center">
+                    <button class="attach__up button button__little button--green js-open-modal" data-modal="4" role="button">
+                        <img src="/assets/images/tasks/add.svg" alt="Плюс">
+                        Задача юристу
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <include src="./src/sections/footer.html"></include>
+
+        <include src="./src/sections/components/modals/_new-task-for-a-lawyer.html"></include>
+
+        <include src="./src/sections/components/common-files.html"></include>
+
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.min.js"></script>
+        <script src="/assets/js/jquery.form.styler/jquery.form.styler.init.js"></script>
+
+    </body>
+</html>

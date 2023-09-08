@@ -1,0 +1,100 @@
+.breadcrumbs {
+  display: none;
+  @media screen and (min-width: 0px) and (max-width: 1279.98px) {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  @media screen and (max-width: 479.98px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    padding-bottom: 15px;
+    margin: 0;
+
+    li {
+      position: relative;
+      display: inline-flex;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2.5em;
+      padding-left: 15px;
+      padding-right: 5px;
+
+      @media only screen and (max-width: 575.98px) {
+        font-size: 14px;
+      }
+      @media only screen and (max-width: 399.98px) {
+        font-size: 12px;
+      }
+
+      @media only screen and (max-width: 575px) and (max-height: 451px) {
+        font-size: 14px;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:nth-last-child(1) {
+        a {
+          color: @green-one;
+          text-decoration: none;
+          font-weight: 600;
+        }
+      }
+
+      & + li::before {
+        content: "";
+        display: inline-flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 6px;
+        height: 6px;
+        border-top: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid @grey-fourteen;
+        transition: 0.3s;
+      }
+
+      a {
+        color: @grey-twenty-eight;
+        transition: 0.3s;
+        text-decoration: underline;
+        text-shadow: 0 1px 0 @white-rgba-four;
+
+        &:hover {
+          color: @green-one;
+          text-decoration: none;
+        }
+
+        span {
+          pointer-events: none;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  /*& ~ .interactive-guide {
+    @media screen and (min-width: 576px) and (max-width: 1169.98px) {
+      padding-bottom: 10px;
+    }
+
+    & .interactive-guide__btn {
+      @media screen and (max-width: 1169.98px) {
+        margin-left: 0;
+      }
+    }
+  }*/
+}

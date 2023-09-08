@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <include src="./src/sections/components/head/link.html"></include>
+    <title>Стоп долг | Вход в личный кабинет</title>
+    <include src="./src/sections/components/head/meta.html"></include>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body class="registration">
+    <div class="headerAuth">
+      <div class="header__collapse headerAuth__wrapper">
+        <div class="header__logo-wrapper">
+          <a href="/" title="СтопДолг" role="banner">
+            <include src="./src/include/icons/headerAuth/logo.html"></include>
+          </a>
+        </div>
+        <nav class="header__nav nav" role="navigation">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/main-page.html"></include>
+                <span>Главная</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/tasks.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/tasks-in-work.html"></include>
+                <span>Задачи</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/questionnaire.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/questionnaire.html"></include>
+                <span>Анкета</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/questionnaire-zpz.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/questionnaire.html"></include>
+                <span>Анкета ЗПЗ</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/borrower-protection.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/zpz-progress.html"></include>
+                <span>Ход дела</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/progress-of-the-bfl-case.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/zpz-progress.html"></include>
+                <span>Ход дела БФЛ</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/living-wage.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/living-wage.html"></include>
+                <span>Прожиточный минимум</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/pay.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/money.html"></include>
+                <span>Оплата</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="/pay-cashback.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/money.html"></include>
+                <span>Оплата Кешбэк</span>
+              </a>
+            </li>
+            <!--<li class="nav__item">
+                <a href="/form.html" class="nav__link" role="link">
+                    Анкета
+                </a>
+            </li>-->
+            <!--<li class="nav__item">
+                <a href="/documents.html" class="nav__link" role="link">
+                    Документы по делу
+                </a>
+            </li>-->
+            <li class="nav__item">
+              <a href="/new-useful.html" class="nav__link" role="link">
+                <include src="./src/include/icons/common-icons/info.html"></include>
+                <span>Полезная информация</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="headerAuth__button">
+          <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.697053 9.09091C0.394022 9.39394 0.394022 9.69697 0.394022 10C0.394022 10.303 0.394022 10.6061 0.697053 10.9091L9.48493 19.697C9.78796 20 10.091 20 10.394 20C11.0001 20 11.6061 19.3939 11.6061 18.7879C11.6061 18.4848 11.6061 18.1818 11.3031 17.8788L3.1213 10L11.0001 2.12121C11.3031 1.81818 11.3031 1.51515 11.3031 1.21212C11.3031 0.606061 10.6971 0 10.091 0C9.78796 0 9.48493 0 9.1819 0.30303L0.394022 9.09091H0.697053Z" fill="#FEFEFE"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.303 9.09091C11 9.39394 11 9.69697 11 10C11 10.303 11 10.6061 11.303 10.9091L20.0909 19.697C20.3939 20 20.697 20 21 20C21.6061 20 22.2121 19.3939 22.2121 18.7879C22.2121 18.4848 22.2121 18.1818 21.9091 17.8788L13.7273 10L21.6061 2.12121C21.9091 1.81818 21.9091 1.51515 21.9091 1.21212C21.9091 0.606061 21.303 0 20.697 0C20.3939 0 20.0909 0 19.7879 0.30303L11 9.09091H11.303Z" fill="#FEFEFE"/>
+          </svg>
+          <span>Свернуть меню</span>
+        </button>
+      </div>
+    </div>
+
+    <main class="login" role="main">
+      <div class="login__content login__content_pt-30 login__content_pb-50 office-auth-login-wrapper">
+        <a href="https://stop-dolg.ru/" title="Открыть в новой вкладке сайт компании &laquo;Стопдолг&raquo;" target="_blank">
+          <div class="login__logo-wrapper">
+            <div class="login__logo animation-glare">
+              <svg width="125" height="95" viewBox="0 0 125 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.7261 51.8445H57.8648V0H24.5215C11.0646 0 0 10.7165 0 23.75V71.25C0 84.4284 11.0646 95 24.5215 95H57.7153V81.532H28.8577C23.4749 81.532 19.1388 77.3323 19.1388 72.1189V23.0259C19.1388 17.8125 23.4749 13.6128 28.8577 13.6128H40.3708C39.3242 16.7988 38.7261 20.2744 38.7261 23.8948V51.8445ZM86.4234 71.3948C86.4234 75.0152 85.8254 78.4909 84.7787 81.6768H96.2919C101.675 81.6768 106.011 77.4771 106.011 72.2637V23.0259C106.011 17.8125 101.675 13.6128 96.2919 13.6128L67.2847 13.468V0H100.478C114.085 0 125 10.7165 125 23.75V71.25C125 84.4284 113.935 95 100.478 95H67.2847V43.3003H86.4234V71.3948Z" fill="white"/>
+              </svg>
+            </div>
+            <img src="/assets/images/logo/logo-text-white.svg" alt="" class="login__logo-text">
+          </div>
+        </a>
+
+        <h1 class="login__title login__title_mt-0 login__title_mb-15">Регистрация</h1>
+        <h3 class="login__subtitle login__subtitle_mb-20">
+          Пожалуйста заполните все поля формы, чтобы зарегистрироваться в личном кабинете
+        </h3>
+        <form class="login__form" id="registration-form" method="post" role="form">
+          <fieldset>
+            <input name="registration" type="hidden" value=""/>
+
+            <div class="login__input-container">
+              <input class="login__input" id="registration-form-name" name="name" type="text" autocomplete="off" form="registration-form" required/>
+              <label class="login__label">Ваше имя</label>
+              <div class="login__error">Пожалуйста заполните это поле</div>
+            </div>
+            <div class="login__input-container">
+              <input class="login__input" name="surname" type="text" autocomplete="off" form="registration-form" required/>
+              <label class="login__label">Ваша фамилия</label>
+              <div class="login__error">Пожалуйста заполните это поле</div>
+            </div>
+            <div class="login__input-container">
+              <input class="login__input" name="phone" type="tel" autocomplete="off" form="registration-form" required/>
+              <label class="login__label">Ваш номер телефона</label>
+              <div class="login__error">Пожалуйста заполните это поле</div>
+            </div>
+            <div class="login__input-container">
+              <input class="login__input" name="email" type="email" autocomplete="off" form="registration-form" required>
+              <label class="login__label">Ваша электронная почта</label>
+              <div class="login__error">Пожалуйста заполните это поле</div>
+            </div>
+            <div class="login__input-wrapper login__input-wrapper_mb-40">
+              <div class="login__input-container">
+                <input class="login__input password-input" name="specifiedpassword" autocomplete="off" type="text" form="registration-form" required/>
+                <button class="login__password-toggle view" name="passwordShowHide" title="Скрыть пароль" form="registration-form" role="button"></button>
+                <label class="login__label">Придумайте пароль</label>
+                <div class="login__error">Пожалуйста заполните это поле</div>
+                <div class="help-tooltip">
+                  <span class="help-tooltip__title" hidden>Генератор паролей</span>
+                  <span class="help-tooltip__content_one" hidden>
+                    <input class="login__password-length" id="password-length" type="number" name="value" value="8" maxlength="3" form="registration-form">
+                    <label for="password-length">Укажите длину пароля</label>
+                    <span class="login__password-length_symbols">символов</span>
+                  </span>
+                  <span class="help-tooltip__content_two" hidden>
+                    <button class="button button--green button__middle login__btn-generate" id="input-generate" type="button" form="registration-form" role="button">Создать пароль</button>
+                    <button class="button button--red help-tooltip__wrapper-tooltip_close" form="registration-form" role="button">Закрыть</button>
+                  </span>
+                </div>
+              </div>
+              <ul class="login__input-wrapper_description">
+                <li>
+                  Обязательные требования к надежному паролю. Пароль должен содержать не менее 8 символов.
+                  Пароль должен содержать латинские заглавные и строчные буквы, цифры, специальные символы.
+                  Например: pSn5$z
+                </li>
+              </ul>
+            </div>
+            <div class="login__d-flex login__jc-space-between login__ai-center login__mb-40">
+              <div class="login__privacy-policy login__privacy-policy_mb-40">
+                Нажимая «Зарегистрироваться», я даю согласие на обработку персональных данных в соответствии с
+                <a href="https://stop-dolg.ru/upload/mhm_areas/9e6/Politika-konfidencialnosti.pdf" target="_blank">Политикой конфиденциальности</a>
+<!--                <a href="https://stop-dolg.ru/upload/mhm_areas/9e6/Politika-konfidencialnosti.pdf" target="_blank">Политика конфиденциальности</a>-->
+              </div>
+              <div class="g-recaptcha login__g-recaptcha" data-sitekey="6LeNOSYjAAAAAO-CwEcIdRPgKSkcFf55Ngp2dY7Pcc"></div>
+            </div>
+            <button class="login__button animation-glare" form="registration-form" role="button">Зарегистрироваться</button>
+            <a class="login__link login__link_arrow-left login__link_mt-40" href="/login.html" role="link">Назад</a>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+
+
+    <script src="/assets/js/components/cookie.js"></script>
+    <script src="/assets/js/jquery.inputmask/jquery.inputmask.min.js"></script>
+    <script src="/assets/js/jquery.inputmask/jquery.inputmask.setup.js"></script>
+    <script src="/assets/js/validate.form.registration.js"></script>
+    <script src="/assets/js/authAndPassRecovery/show.hide.password.js"></script>
+    <script src="/assets/js/password.generation/password.generation.help.tooltip.js"></script>
+    <script src="/assets/js/password.generation/password.generation.js"></script>
+    <script src="/assets/js/authAndPassRecovery/validateData.helpTooltip.js"></script>
+    <script src="/assets/js/toggle.menu.js"></script>
+  </body>
+</html>

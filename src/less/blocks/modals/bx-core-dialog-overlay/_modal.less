@@ -1,0 +1,112 @@
+/* todo Кастомизированное, стандартное, модальное окно Битрикса */
+.page-news {
+  #bx-admin-prefix {
+    & .bx-core {
+
+      &-dialog-overlay {
+        background-color: @black-rgba-eleven;
+      }
+
+      &-adm-dialog {
+        overflow: visible;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+
+        & .bx-core-adm {
+          &-dialog {
+            &-head {
+              background-color: transparent;
+              border-bottom: none;
+              box-shadow: none;
+              border-radius: 0;
+              height: 0;
+              overflow: visible;
+
+              &-inner {
+                display: none;
+              }
+
+              &-icons {
+                position: fixed;
+                top: 25px;
+                right: 24px;
+                background-color: transparent;
+                margin: 0;
+                padding: 0;
+              }
+            }
+
+            &-content {
+              overflow: visible;
+              border: none;
+              background-color: transparent;
+
+              &-wrap {
+                margin-top: 0;
+                padding: 0;
+
+                &-inner {
+                  padding: 0;
+                }
+              }
+            }
+
+            &-buttons {
+              display: none;
+            }
+          }
+
+          &-icon-close {
+            width: 32px;
+            height: 32px;
+            border: 2px solid @white-rgba-six;
+            border-radius: 50%;
+            background: transparent;
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: 0.3s;
+
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 16px;
+              height: 2px;
+              top: 50%;
+              left: 50%;
+              background: @gray-eleven;
+              transition: 0.3s;
+              border-radius: 30px;
+            }
+
+            &::before {
+              transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &::after {
+              transform: translate(-50%, -50%) rotate(-45deg);
+            }
+
+            &:hover, &:focus, &:active {
+              border: 2px solid @white-rgba-seven;
+              background: @black-rgba-two;
+
+              &::before,
+              &::after {
+                background: @white-one;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & [data-bxCoreDialog="bxCoreDialog"] {
+    * {
+      pointer-events: none;
+    }
+  }
+}

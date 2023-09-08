@@ -1,0 +1,176 @@
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="married">2.1. Состоите ли Вы в браке в данный момент?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="married" type="checkbox" name="switchesVisibleAndHiddenBlock" />
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="questionnaire__form_subtitle">
+        Укажите данные супруги(а)
+    </p>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="surnameCouples[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Фамилия</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="nameCouples[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Имя</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="middleNameCouples[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Отчество</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="dateNameCouples[]" type="date" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Дата заключения брака</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" id="removeDataCouples" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="divorce">2.2. Было ли у Вас расторжение брака за последние 3 года?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="divorce" type="checkbox" name="switchesVisibleAndHiddenBlock" />
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="questionnaire__form_subtitle">
+        Укажите данные супруги(а)
+    </p>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="surnameCouplesDivorce[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Фамилия</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="nameCouplesDivorce[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Имя</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="middleNameCouplesDivorce[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Отчество</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="dateOfMarriage[]" type="date" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Дата заключения брака</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="divorceDate[]" type="date" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Дата расторжения брака</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" id="removeDataCouplesDivorce" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="visibleAndHiddenBlock">
+    <div class="questionnaire__form_row">
+        <div class="switches">
+            <h3 class="switches_title">
+                <label for="minorChildren">2.3. Имеются ли у Вас несовершеннолетние дети?</label>
+            </h3>
+            <div class="switches__elements">
+                <div class="switches__wrapper">
+                    <input class="switches__checkbox" id="minorChildren" type="checkbox" name="switchesVisibleAndHiddenBlock"/>
+                    <div class="switches__knobs">
+                        <span></span>
+                    </div>
+                    <div class="switches__layer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="questionnaire__form_wrapper-parent">
+        <div class="questionnaire__form_wrapper-block">
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="surnameMinorChildren[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Фамилия</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="nameMinorChildren[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Имя</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="middleNameCouples[]" type="text" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Отчество</label>
+            </div>
+            <div class="questionnaire__form_row">
+                <input class="questionnaire__form_input" name="dateNameMinorChildren[]" type="date" form="formCustomerProfile" required/>
+                <label class="questionnaire__form_label">Дата заключения брака</label>
+            </div>
+            <div class="questionnaire__form_row questionnaire__form_end">
+                <button class="button button__very-small button--red" name="deleteBlock" type="button" form="formCustomerProfile" role="button">
+                    <include src="./src/include/icons/common-icons/remove.html"></include>
+                    Удалить блок
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="questionnaire__form_wrapper-button questionnaire__form_center"></div>
+</fieldset>
+
+<fieldset class="questionnaire__form_wrapper" name="individualEntrepreneur">
+    <h3 class="questionnaire__form_title">
+        2.4. Являетесь ли Вы индивидуальным предпринимателем (ИП)?
+    </h3>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneur" type="radio" form="formCustomerProfile"/>
+        <label class="questionnaire__form_label-radio">Да, действующий ИП</label>
+    </div>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneur" type="radio" form="formCustomerProfile"/>
+        <label class="questionnaire__form_label-radio">Нет, не являюсь</label>
+    </div>
+    <div class="questionnaire__form_row questionnaire__form_radio-flex">
+        <input name="radioIndividualEntrepreneur" type="radio" form="formCustomerProfile"/>
+        <label class="questionnaire__form_label-radio">Был, но закрыл ИП</label>
+    </div>
+    <div class="questionnaire__form_space-between">
+        <div class="questionnaire__form_row">
+            <label class="questionnaire__form_label" for="closingYearIE">Укажите год, в котором было закрыто ИП</label>
+        </div>
+        <div class="questionnaire__form_row">
+            <input class="questionnaire__form_input yearInQuestionnaire" id="closingYearIE" placeholder="____ г." name="closingYearIE" type="text" form="formCustomerProfile" required/>
+        </div>
+    </div>
+</fieldset>

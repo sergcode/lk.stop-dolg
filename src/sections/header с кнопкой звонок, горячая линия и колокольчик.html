@@ -1,0 +1,96 @@
+<header class="header scrolling-navbar">
+    <button class="button-burger" role="button">
+        <span class="visually-hidden">
+            Открыть меню
+        </span>
+    </button>
+    <div class="header__logo-wrapper">
+        <a href="/" title="СтопДолг" role="banner">
+            <img src="/assets/images/logo/logo-header.png" alt="СтопДолг" class="header__logo">
+        </a>
+    </div>
+    <div class="header__collapse">
+        <nav class="header__nav nav" role="navigation">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="/index.html" class="nav__link active" role="link">
+                        Главная
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/tasks.html" class="nav__link" role="link">
+                        Задачи
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/borrower-protection.html" class="nav__link" role="link">
+                        Ход дела
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/pay_old.html" class="nav__link" role="link">
+                        Оплата
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/form.html" class="nav__link" role="link">
+                        Анкета
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/documents.html" class="nav__link" role="link">
+                        Документы по делу
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="/new-useful.html" class="nav__link" role="link">
+                        Полезная информация
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header__user-nav user-nav">
+        <ul class="user-nav__list">
+            <li class="user-nav__item">
+                <include src="./src/include/icons/phone-hot-line.html"></include>
+                <a href="tel:88007070033" class="user-nav__icon-and-link" title="Позвонить">
+                    8&nbsp;800&nbsp;707&nbsp;00&nbsp;33
+                </a>
+            </li>
+            <li class="user-nav__item display-none">
+                <a href="" class="user-nav__link user-nav__link--notifications active">
+                    <span class="visually-hidden">
+                        Уведомления
+                    </span>
+                </a>
+            </li>
+            <li class="user-nav__item">
+                <a href="" class="user-nav__link user-nav__link--notifications [[!check_event]]" role="button">
+                    <span class="visually-hidden">
+                        Уведомления
+                    </span>
+                </a>
+            </li>
+            <li class="user-nav__item">
+                <button class="button button--green sendFeed" data-modal="1">
+                    <include src="./src/include/icons/operator.html"></include>
+                    Заказать звонок
+                </button>
+            </li>
+            <li class="user-nav__item">
+                <div class="user-nav__button">
+                    <span class="user-nav__photo-wrapper">
+                        <img src="/assets/images/users/user.jpg" alt="Фотография пользователя" class="user-nav__photo">
+                    </span>
+                    <span>Пиражков Артур Иванович</span>
+                </div>
+                <a href="" class="button-logout">
+                  <span class="visually-hidden">
+                      Выйти из аккаунта
+                  </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>

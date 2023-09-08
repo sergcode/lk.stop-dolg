@@ -1,0 +1,141 @@
+.jq-selectbox {
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 854px) and (orientation : landscape) {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    .jq-selectbox__trigger-arrow {
+      border-top-color: @green-one;
+    }
+  }
+
+  &.opened {
+    .jq-selectbox__trigger-arrow {
+      transform: rotate(180deg);
+      margin-top: -3px;
+      transition: transform 0.15s linear;
+    }
+  }
+
+  &.opened, &.changed {
+    .jq-selectbox__select-text {
+      text-align: left;
+      opacity: 1;
+      transition: 0.3s linear;
+    }
+  }
+
+  &.select {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__select {
+    height: 35px;
+    padding: 0 37px 0 32px;
+    background: @grey-three;
+    box-shadow: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    @media only screen and (max-width: 575.98px) {
+      overflow: hidden;
+    }
+
+    &:hover {
+      border: 1px solid @green-rgba-one;
+      background: @grey-three;
+    }
+
+    &:focus {
+      border: 1px solid @green-rgba-one;
+    }
+
+    &:active {
+      border: 1px solid @green-rgba-one;
+    }
+  }
+
+  &__select-text {
+    line-height: 35px;
+    font-size: 18px;
+    font-weight: 400;
+    color: @grey-one;
+    text-align: center;
+    opacity: 0.6;
+    transition: 0.3s linear;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    text-overflow: ellipsis;
+    @media only screen and (max-width: 575.98px) {
+      font-size: 14px;
+      white-space: normal;
+    }
+    @media screen and (max-width: 854px) and (orientation : landscape) {
+      font-size: 14px;
+    }
+  }
+
+  &__trigger {
+    border-left: none;
+  }
+
+  &__trigger-arrow {
+    transform: none;
+    transition: transform 0.15s linear;
+    right: 10px;
+    border-top: 10px solid @grey-one;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
+
+  &__dropdown {
+    border-radius: 10px;
+    border: 1px solid @green-rgba-one;
+    top: 35px;
+  }
+
+  ul {
+    max-height: 250px;
+    overflow: auto;
+    overflow-x: hidden;
+
+    @media screen and (max-width: 379.98px) {
+      max-height: 225px;
+    }
+  }
+
+  li {
+    white-space: normal;
+    font-size: 16px;
+    line-height: 1.5em;
+
+    &:nth-child(1) {
+      color: @grey-two;
+      font-size: 14px;
+      text-align: center;
+      @media screen and (max-width: 399.98px) {
+        font-size: 12px;
+      }
+      @media screen and (min-width: 450px) and (max-height: 450px) {
+        font-size: 14px;
+      }
+    }
+
+    &.selected {
+      background-color: @green-one;
+      color: @white;
+    }
+
+    &:hover {
+      background-color: @green-rgba-three;
+      color: @white;
+    }
+  }
+}
+
