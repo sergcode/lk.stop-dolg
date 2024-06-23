@@ -1,10 +1,10 @@
 {
-  "name": "crmdev.stop-dolg",
+  "name": "lk.stop-dolg",
   "version": "1.0.0",
-  "description": "Разработка корпоративной CRM Bitrix",
+  "description": "Личный кабинет клиента Стопдолг",
   "main": "gulpfile.js",
   "scripts": {},
-  "author": "Sergey Shakhvorostov <shahvorostov@stop-dolg.ru>",
+  "author": "Sergey Shakhvorostov <shsv100@ya.ru>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.10",

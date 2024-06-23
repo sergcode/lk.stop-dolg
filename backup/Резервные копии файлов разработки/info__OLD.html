@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="../sections/components/head/link.html"></include>
+        <title>Стоп долг | Полезная информация</title>
+        <include src="../sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="../sections/header.html"></include>
+
+        <main class="main" id="tabs" role="main">
+            <div class="main--middle">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/info__OLD.html">
+                                <span itemprop="title">Полезная информация</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <section class="help help--desktop">
+                    <form action="search-results.html" method="get" class="well msearch2" id="mse2_form">
+                        <input type="text" class="help__search" name="query" placeholder="Поиск" value="" role="search"/>
+                        <button type="submit" class="btn btn-default">
+                            <svg focusable="false" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="main__block main__block--tabs">
+                        <div class="tabs">
+                            <button class="tab__button" v-on:click="activetab=61"
+                                    v-bind:class="[ activetab === 61 ? 'active' : '' ]" role="button">
+                                Инструкции
+                            </button>
+                            <button class="tab__button" v-on:click="activetab=2"
+                                    v-bind:class="[ activetab === 2 ? 'active' : '' ]" role="button">
+                                Видеоуроки
+                            </button>
+                            <button class="tab__button" v-on:click="activetab=3"
+                                    v-bind:class="[ activetab === 3 ? 'active' : '' ]" role="button">
+                                Частые вопросы
+                            </button>
+                            <button id="promotionsCashback" class="tab__button" v-on:click="activetab=5"
+                                    v-bind:class="[ activetab === 5 ? 'active' : '' ]" role="button">
+                                Акции
+                            </button>
+                            <button class="tab__button" v-on:click="activetab=4"
+                                    v-bind:class="[ activetab === 4 ? 'active' : '' ]" role="button">
+                                О компании
+                            </button>
+                            <button class="tab__button js-open-modal" data-modal="3" role="button">
+                                Оставить отзыв
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tab__list">
+                        <div class="help__instructions" v-bind:class="{ 'hide' : activetab !== 61}">
+                            <div id="acc">
+                                <ul class="doc__list">
+
+                                    <accordion title="Обучающий ГИД" class="doc__item doc__item--help interactiveGuide">
+                                        <div class="interactive-guide">
+                                            <ul class="interactive-guide__list" role="list">
+                                                <li>
+                                                    <a href="/main.html" data-run-onboard role="button"><span>Главная</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="/tasks.html" data-run-onboard role="link"><span>Задачи</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-run-onboard role="link"><span>Анкета</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-run-onboard role="link"><span>Ход дела</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-run-onboard role="link"><span>Прожиточный минимум</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-run-onboard role="link"><span>Оплата</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="" data-run-onboard role="link"><span>Полезная информация</span></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </accordion>
+                                    <accordion title="Сбор документов" class="doc__item doc__item--help">
+                                        <accordion title="Сбор документов" class="doc__item doc__item--help-white">
+                                            <div class="doc__block">
+                                                <p class="main__text">
+                                                    Ваше дело находится на этапе сбора документов. Сейчас ведущий юрист
+                                                    проводит
+                                                    анализ
+                                                    вашей анкеты и документов, связывается с вашими кредиторами и получает
+                                                    необходимую
+                                                    информацию из государственных органов.
+                                                    Часть документов получить и направить юристу нужно будет вам. Список
+                                                    таких
+                                                    документов направлен вам на электронную почту, также его можно найти в
+                                                    разделе
+                                                    «Задачи» личного кабинета.
+                                                    На этом этапе мы просим Ваше дело находится на этапе сбора документов.
+                                                    Сейчас
+                                                    ведущий юрист проводит анализ вашей анкеты и документов, связывается с
+                                                    вашими
+                                                    кредиторами и получает необходимую информацию из государственных
+                                                    органов.
+                                                    Часть документов получить и направить юристу нужно будет вам. Список
+                                                    таких
+                                                    документов направлен вам на электронную почту, также его можно найти в
+                                                    разделе
+                                                    «Задачи» личного кабинета.
+                                                    На этом этапе мы просим вашего максимального содействия. Чем быстрее
+                                                    будут
+                                                    получены
+                                                    все нужные документы, тем скорее можно будет подать исковое заявление в
+                                                    суд.
+
+
+                                                </p>
+                                            </div>
+                                        </accordion>
+                                        <accordion title="Сбор документов" class="doc__item doc__item--help-white">
+                                            <div class="doc__block">
+                                                <p class="main__text">
+                                                    Ваше дело находится на этапе сбора документов. Сейчас ведущий юрист
+                                                    проводит
+                                                    анализ
+                                                    вашей анкеты и документов, связывается с вашими кредиторами и получает
+                                                    необходимую
+                                                    информацию из государственных органов.
+                                                    Часть документов получить и направить юристу нужно будет вам. Список
+                                                    таких
+                                                    документов направлен вам на электронную почту, также его можно найти в
+                                                    разделе
+                                                    «Задачи» личного кабинета.
+                                                    На этом этапе мы просим Ваше дело находится на этапе сбора документов.
+                                                    Сейчас
+                                                    ведущий юрист проводит анализ вашей анкеты и документов, связывается с
+                                                    вашими
+                                                    кредиторами и получает необходимую информацию из государственных
+                                                    органов.
+                                                    Часть документов получить и направить юристу нужно будет вам. Список
+                                                    таких
+                                                    документов направлен вам на электронную почту, также его можно найти в
+                                                    разделе
+                                                    «Задачи» личного кабинета.
+                                                    На этом этапе мы просим вашего максимального содействия. Чем быстрее
+                                                    будут
+                                                    получены
+                                                    все нужные документы, тем скорее можно будет подать исковое заявление в
+                                                    суд.
+
+
+                                                </p>
+                                            </div>
+                                        </accordion>
+                                    </accordion>
+                                    <accordion title="Подготовка заявления в суд" class="doc__item  doc__item--help">
+                                        <div class="doc__block">
+                                            <p class="main__text">
+                                                В настоящий момент ведется подготовка пакета документов для направления в
+                                                суд.
+                                                Ваш
+                                                комплект документов будет подготовлен в течение 10 рабочих дней.
+                                                Подготовленное
+                                                исковое заявление предварительно будет направлено вам на электронную почту
+                                                для
+                                                ознакомления и подтверждения.
+                                            </p>
+                                        </div>
+                                    </accordion>
+                                    <accordion title="Заявление направлено в суд" class="doc__item  doc__item--help">
+                                        <div class="doc__block">
+                                            <p class="main__text">
+                                                Исковое заявление и весь комплект документов были направлены в Арбитражный
+                                                суд.
+                                                Примерный срок получения документов судом составляет 14 дней. После
+                                                получения
+                                                назначается дата судебного заседания, на котором будет вводиться процедура
+                                                банкротства. Как только дата будет назначена, с вами свяжется ведущий юрист.
+                                            </p>
+                                        </div>
+                                    </accordion>
+                                    <accordion title="Назначена дата судебного заседания" class="doc__item  doc__item--help">
+                                        <div class="doc__block">
+                                            <p class="main__text">
+                                                По вашему делу назначено судебное заседание. Ведущий юрист сообщит вам дату
+                                                и
+                                                время.
+                                                На заседании суд рассмотрит исковое заявление и пакет документов, и примет
+                                                решение о
+                                                введении в отношении вас процедуры банкротства.
+                                            </p>
+                                        </div>
+                                    </accordion>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main__block" v-if="activetab === 2">
+                            <div class="grid">
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/Kak-napravit-zhalobu-pristavu.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Как направить жалобу приставу</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/Napravleniye-v-sudeniya-na-iskovoye-zayavleniye.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Направление в суд возражения на исковое заявление</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/Kak-napravit-apellyatsionnuyu-zhalobu-v-sud.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Как направить апелляционную жалобу в суд</span>
+                                </div>
+
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/17_Besplatnoye-bankrotstvo_Valentina-Zebnitskaya.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Бесплатное банкротство. Новый законопроект.</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/09_Zachem-nuzhny-yuristy-pri-bankrotstve.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Зачем нужны юристы при банкротстве физ.лица</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/13_Protsedura-bankrotstva-zavershena-Artom-Kirillov.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Процедура банкротства завершена. Что нужно знать банкроту?</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/Etapy-protsedury-bankrotstva-zastavka.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Этапы процедуры банкротства физ.лица</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/12_Prishel-sudebnyy-prikaz_Artom-Kirillov.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Пришел судебный приказ. Что делать?</span>
+                                </div>
+                                <div class="grid__item">
+                                    <div class="help__video-wrapper">
+                                        <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery"
+                                           style="background: url('/assets/images/video_preview/zastavka-Ipotechnyye-kanikuly.jpg') no-repeat center / cover"></a>
+                                    </div>
+                                    <span class="help__video-text">Ипотечные каникулы: что это такое и как их использовать</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="help__faq" v-show="activetab === 3">
+                            <ul class="help__acc-list" id="acc">
+                                <accordion title="Если 3 года не платить, то долги спишутся и без банкротства?"
+                                           class="help__acc-item">
+                                    <li class="help__sub-item">
+                                        <p class="help__sub-text">
+                                            Это не так. В случае не оплаты, банк начислит штрафы и пени и через какое-то
+                                            время
+                                            зафиксирует в суде долг в 1.5-2 раза больше текущего остатка. Договор с банком
+                                            является бессрочным, т.е. он не будет завершен, пока полностью не выплачена
+                                            сумма,
+                                            которую требует банк. Существует понятие рока исковой давности - 3 года, но в
+                                            данном
+                                            случае оно не действует (банки помнят про каждый кредит и всегда подают в суд до
+                                            истечения этого срока)
+                                        </p>
+                                    </li>
+                                </accordion>
+                                <accordion title="Какое имущество у меня могут забрать?" class="help__acc-item">
+                                    <li class="help__sub-item">
+                                        <p class="help__sub-text">
+                                            Это не так. В случае не оплаты, банк начислит штрафы и пени и через какое-то
+                                            время
+                                            зафиксирует в суде долг в 1.5-2 раза больше текущего остатка. Договор с банком
+                                            является бессрочным, т.е. он не будет завершен, пока полностью не выплачена
+                                            сумма,
+                                            которую требует банк. Существует понятие рока исковой давности - 3 года, но в
+                                            данном
+                                            случае оно не действует (банки помнят про каждый кредит и всегда подают в суд до
+                                            истечения этого срока)
+                                        </p>
+                                    </li>
+                                </accordion>
+                                <accordion title="Для банкротства нужен долг более 500 тысяч?" class="help__acc-item">
+                                    <li class="help__sub-item">
+                                        <p class="help__sub-text">
+                                            Это не так. В случае не оплаты, банк начислит штрафы и пени и через какое-то
+                                            время
+                                            зафиксирует в суде долг в 1.5-2 раза больше текущего остатка. Договор с банком
+                                            является бессрочным, т.е. он не будет завершен, пока полностью не выплачена
+                                            сумма,
+                                            которую требует банк. Существует понятие рока исковой давности - 3 года, но в
+                                            данном
+                                            случае оно не действует (банки помнят про каждый кредит и всегда подают в суд до
+                                            истечения этого срока)
+                                        </p>
+                                    </li>
+                                </accordion>
+                            </ul>
+                        </div>
+                        <div class="help__instructions" v-if="activetab === 4">
+                            <div class="vue-acc">
+                                <ul class="doc__list">
+                                    <li class="doc__item  doc__item--help">
+                                        <button class="acc__button">О компании</button>
+                                        <ul class="acc__sub-list" style="display: none;">
+                                            <div class="doc__block">
+                                                <div class="main__text">
+                                                    <p>
+                                                <span>
+                                                    <img src="/assets/images/logo/logo-header.png" alt="Юридическая компания «Стопдолг»" width="255" height="49">
+                                                </span>
+                                                    </p>
+                                                    <p>Федеральная юридическая компания «Стопдолг» работает с 2010 года.
+                                                        Мы помогаем людям пройти процедуру личного банкротства, защищаем
+                                                        интересы заёмщиков в суде, уменьшаем размеры неустоек и штрафов,
+                                                        добиваемся, чтобы коллекторы и приставы действовали строго по
+                                                        закону.
+                                                        Если случилось так, что вы не можете вовремя и полностью выплачивать
+                                                        долги, мы дадим вам главное: надежду и чёткий план действий.</p>
+                                                    <p>Стопдолг – первая юридическая онлайн-компания. Это значит, что мы
+                                                        умеем
+                                                        работать дистанционно с клиентами из любой точки России. Мы хорошо
+                                                        знаем особенности работы судов по всей стране, потому что помогаем
+                                                        людям из любого региона России и работать с вами будет целая команда
+                                                        профессионалов.</p>
+                                                    <p>Закон о банкротстве физических лиц работает с
+                                                        октября 2015 года, и за это время мы списали нашим клиентам более
+                                                        1 миллиард 800 миллионов рублей долгов.</p>
+                                                    <p>Мы с гордостью можем сказать, что работаем абсолютно законно,
+                                                        фиксируем
+                                                        стоимость наших услуг и гарантируем списание ваших долгов в
+                                                        процедуре
+                                                        банкротства в договоре, письменно.</p>
+                                                    <p><span>Мы знаем всё о банкротстве и защите прав заёмщиков, потому что
+                                                успешно завершили сотни дел.</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="help__instructions" v-if="activetab === 5">
+                            <a class="default-banner promotions" href="https://stop-dolg.ru/upload/promotions/Red-21-05-21-Usloviya-aktsii-Keshbek.pdf" target="_blank" role="link">
+                                <article role="article">
+                                    <figure class="promotions__d-flex">
+                                        <figcaption class="promotions__file_icon">
+                                            <span class="promotions__file_extension"></span>
+                                            <span class="promotions__file_lines">
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                            </span>
+                                        </figcaption>
+                                        <figcaption class="promotions__link_wrapper">
+                                            <p class="promotions__link_doc">
+                                                Условия проведения акции «Кешбэк»
+                                            </p>
+                                            <span>предусмотренное место для второй строки</span>
+                                        </figcaption>
+                                        <div class="promotions__logo-wrapper">
+                                            <img class="promotions__logo-wrapper_width-125" src="/assets/images/promotions/cashback/cashback_logo.svg" alt="">
+                                        </div>
+                                    </figure>
+                                </article>
+                            </a>
+                            <a class="default-banner promotions" href="https://stop-dolg.ru/upload/promotions/Red-21-05-21-Usloviya-aktsii-Keshbek.pdf" target="_blank" role="link">
+                                <article role="article">
+                                    <figure class="promotions__d-flex">
+                                        <figcaption class="promotions__file_icon">
+                                            <span class="promotions__file_extension"></span>
+                                            <span class="promotions__file_lines">
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                            </span>
+                                        </figcaption>
+                                        <figcaption class="promotions__link_wrapper">
+                                            <p class="promotions__link_doc">
+                                                Условия проведения акции «Приведи друга!»
+                                            </p>
+                                            <span>предусмотренное место для второй строки</span>
+                                        </figcaption>
+                                        <div class="promotions__logo-wrapper">
+                                            <img class="promotions__logo-wrapper_width-125" src="/assets/images/promotions/bring-a-friend/bring-a-friend_logo.svg" alt="">
+                                        </div>
+                                    </figure>
+                                </article>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="help help--mobile" id="tabMobile">
+                    <form action="search-results.html" method="get" role="search">
+                        <input type="text" class="help__search" placeholder="Поиск" name="query">
+                        <button type="submit" class="btn btn-default">
+                            <svg focusable="false" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="main__block main__block--tabs">
+                        <div class="tabs">
+
+                            <accordion_info title="Инструкции">
+                                <div id="accHelpMobile">
+                                    <ul class="doc__list">
+
+                                        <accordion title="Обучающий ГИД" class="doc__item doc__item--help interactiveGuide">
+                                            <div class="interactive-guide">
+                                                <ul class="interactive-guide__list" role="list">
+                                                    <li>
+                                                        <a href="/main.html" data-run-onboard role="button"><span>Главная</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/tasks.html" data-run-onboard role="link"><span>Задачи</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-run-onboard role="link"><span>Анкета</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-run-onboard role="link"><span>Ход дела</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-run-onboard role="link"><span>Прожиточный минимум</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-run-onboard role="link"><span>Оплата</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" data-run-onboard role="link"><span>Полезная информация</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </accordion>
+                                        <accordion title="Сбор документов" class="doc__item doc__item--help">
+                                            <div class="help__instructions">
+                                                <a href="/info-question.html" class="help__button">
+                                                    Как общаться с коллекторами
+                                                </a>
+                                                <a href="/info-question.html" class="help__button">
+                                                    Как общаться с коллекторами
+                                                </a>
+                                                <a href="/info-question.html" class="help__button">
+                                                    Как общаться с коллекторами
+                                                </a>
+                                                <a href="/info-question.html" class="help__button">
+                                                    Как общаться с коллекторами
+                                                </a>
+                                            </div>
+                                        </accordion>
+                                        <accordion title="Подготовка заявления в суд" class="doc__item  doc__item--help">
+                                            <div class="doc__block">
+                                                <p class="main__text">
+                                                    В настоящий момент ведется подготовка пакета документов для направления
+                                                    в суд.
+                                                    Ваш
+                                                    комплект документов будет подготовлен в течение 10 рабочих дней.
+                                                    Подготовленное
+                                                    исковое заявление предварительно будет направлено вам на электронную
+                                                    почту для
+                                                    ознакомления и подтверждения.
+                                                </p>
+                                            </div>
+                                        </accordion>
+                                        <accordion title="Заявление направлено в суд" class="doc__item  doc__item--help">
+                                            <div class="doc__block">
+                                                <p class="main__text">
+                                                    Исковое заявление и весь комплект документов были направлены в
+                                                    Арбитражный суд.
+                                                    Примерный срок получения документов судом составляет 14 дней. После
+                                                    получения
+                                                    назначается дата судебного заседания, на котором будет вводиться
+                                                    процедура
+                                                    банкротства. Как только дата будет назначена, с вами свяжется ведущий
+                                                    юрист.
+                                                </p>
+                                            </div>
+                                        </accordion>
+                                        <accordion title="Назначена дата судебного заседания"
+                                                   class="doc__item  doc__item--help">
+                                            <div class="doc__block">
+                                                <p class="main__text">
+                                                    По вашему делу назначено судебное заседание. Ведущий юрист сообщит вам
+                                                    дату и
+                                                    время.
+                                                    На заседании суд рассмотрит исковое заявление и пакет документов, и
+                                                    примет
+                                                    решение о
+                                                    введении в отношении вас процедуры банкротства.
+                                                </p>
+                                            </div>
+                                        </accordion>
+                                    </ul>
+                                </div>
+                            </accordion_info>
+
+                            <accordion_info title="Видеоуроки">
+                                <div class="main__block help__video-block">
+                                    <div class="grid">
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+                                        <div class="grid__item">
+                                            <div class="help__video-wrapper">
+                                                <a href="https://youtu.be/xO8Cz-9qKTI" class="help__video-link" data-fancybox="gallery">
+                                                    <include src="../include/icons/video.html"></include>
+                                                </a>
+                                            </div>
+                                            <span class="help__video-text">
+                                        Как написать юристу
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </accordion_info>
+
+                            <accordion_info title="Частые вопросы">
+                                <div class="help__faq">
+                                    <ul class="help__acc-list" id="accMobile">
+                                        <accordion title="Если 3 года не платить, то долги спишутся и без банкротства?"
+                                                   class="help__acc-item">
+                                            <li class="help__sub-item">
+                                                <p class="help__sub-text">
+                                                    Это не так. В случае не оплаты, банк начислит штрафы и пени и через
+                                                    какое-то
+                                                    время зафиксирует в суде долг в 1.5-2 раза больше текущего остатка.
+                                                    Договор
+                                                    с банком является бессрочным, т.е. он не будет завершен, пока полностью
+                                                    не
+                                                    выплачена сумма, которую требует банк. Существует понятие рока исковой
+                                                    давности - 3 года, но в данном случае оно не действует (банки помнят про
+                                                    каждый кредит и всегда подают в суд до истечения этого срока)
+                                                </p>
+                                            </li>
+                                        </accordion>
+                                        <accordion title="Какое имущество у меня могут забрать?" class="help__acc-item">
+                                            <li class="help__sub-item">
+                                                <p class="help__sub-text">
+                                                    Это не так. В случае не оплаты, банк начислит штрафы и пени и через
+                                                    какое-то
+                                                    время зафиксирует в суде долг в 1.5-2 раза больше текущего остатка.
+                                                    Договор
+                                                    с банком является бессрочным, т.е. он не будет завершен, пока полностью
+                                                    не
+                                                    выплачена сумма, которую требует банк. Существует понятие рока исковой
+                                                    давности - 3 года, но в данном случае оно не действует (банки помнят про
+                                                    каждый кредит и всегда подают в суд до истечения этого срока)
+                                                </p>
+                                            </li>
+                                        </accordion>
+                                        <accordion title="Для банкротства нужен долг более 500 тысяч?" class="help__acc-item">
+                                            <li class="help__sub-item">
+                                                <p class="help__sub-text">
+                                                    Это не так. В случае не оплаты, банк начислит штрафы и пени и через
+                                                    какое-то
+                                                    время зафиксирует в суде долг в 1.5-2 раза больше текущего остатка.
+                                                    Договор
+                                                    с банком является бессрочным, т.е. он не будет завершен, пока полностью
+                                                    не
+                                                    выплачена сумма, которую требует банк. Существует понятие рока исковой
+                                                    давности - 3 года, но в данном случае оно не действует (банки помнят про
+                                                    каждый кредит и всегда подают в суд до истечения этого срока)
+                                                </p>
+                                            </li>
+                                        </accordion>
+                                    </ul>
+                                </div>
+                            </accordion_info>
+
+                            <accordion_info title="Акции" id="promotionsCashback">
+                                <a class="default-banner promotions" href="https://stop-dolg.ru/upload/promotions/Red-21-05-21-Usloviya-aktsii-Keshbek.pdf" target="_blank" role="link">
+                                    <article role="article">
+                                        <figure class="promotions__d-flex">
+                                            <figcaption class="promotions__file_icon">
+                                                <span class="promotions__file_extension"></span>
+                                                <span class="promotions__file_lines">
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                            </span>
+                                            </figcaption>
+                                            <figcaption class="promotions__link_wrapper">
+                                                <p class="promotions__link_doc">
+                                                    Условия проведения акции «Кешбэк»
+                                                </p>
+                                                <span>предусмотренное место для второй строки</span>
+                                            </figcaption>
+                                            <div class="promotions__logo-wrapper">
+                                                <img class="promotions__logo-wrapper_width-125" src="/assets/images/promotions/cashback/cashback_logo.svg" alt="">
+                                            </div>
+                                        </figure>
+                                    </article>
+                                </a>
+                                <a class="default-banner promotions" href="https://stop-dolg.ru/upload/promotions/Red-21-05-21-Usloviya-aktsii-Keshbek.pdf" target="_blank" role="link">
+                                    <article role="article">
+                                        <figure class="promotions__d-flex">
+                                            <figcaption class="promotions__file_icon">
+                                                <span class="promotions__file_extension"></span>
+                                                <span class="promotions__file_lines">
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                                <strong></strong>
+                                            </span>
+                                            </figcaption>
+                                            <figcaption class="promotions__link_wrapper">
+                                                <p class="promotions__link_doc">
+                                                    Условия проведения акции «Приведи друга!»
+                                                </p>
+                                                <span>предусмотренное место для второй строки</span>
+                                            </figcaption>
+                                            <div class="promotions__logo-wrapper">
+                                                <img class="promotions__logo-wrapper_width-125" src="/assets/images/promotions/bring-a-friend/bring-a-friend_logo.svg" alt="">
+                                            </div>
+                                        </figure>
+                                    </article>
+                                </a>
+                            </accordion_info>
+
+                            <accordion_info title="О компании">
+                                <ul class="acc__sub-list">
+                                    <div class="doc__block">
+                                        <div class="main__text">
+                                            <p>
+                                                <span>
+                                                    <img src="/assets/images/logo/logo-header.png" alt="Юридическая компания «Стопдолг»" width="255" height="49">
+                                                </span>
+                                            </p>
+                                            <p>Федеральная юридическая компания «Стопдолг» работает с 2010 года.
+                                                Мы помогаем людям пройти процедуру личного банкротства, защищаем
+                                                интересы заёмщиков в суде, уменьшаем размеры неустоек и штрафов,
+                                                добиваемся, чтобы коллекторы и приставы действовали строго по закону.
+                                                Если случилось так, что вы не можете вовремя и полностью выплачивать
+                                                долги, мы дадим вам главное: надежду и чёткий план действий.</p>
+                                            <p>Стопдолг – первая юридическая онлайн-компания. Это значит, что мы умеем
+                                                работать дистанционно с клиентами из любой точки России. Мы хорошо
+                                                знаем особенности работы судов по всей стране, потому что помогаем
+                                                людям из любого региона России и работать с вами будет целая команда
+                                                профессионалов.</p>
+                                            <p>Закон о банкротстве физических лиц работает с
+                                                октября 2015 года, и за это время мы списали нашим клиентам более
+                                                1 миллиард 800 миллионов рублей долгов.</p>
+                                            <p>Мы с гордостью можем сказать, что работаем абсолютно законно, фиксируем
+                                                стоимость наших услуг и гарантируем списание ваших долгов в процедуре
+                                                банкротства в договоре, письменно.</p>
+                                            <p><span>Мы знаем всё о банкротстве и защите прав заёмщиков, потому что
+                                                успешно завершили сотни дел.</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </accordion_info>
+
+                            <div class="tab__wrapper">
+                                <button class="tab__button js-open-modal" data-modal="3" role="button">
+                                    Оставить отзыв
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <include src="../sections/footer.html"></include>
+
+        <include src="../sections/components/common-files.html"></include>
+
+        <script src="/assets/js/fancybox.min.js"></script>
+        <script src="/assets/js/helpful.information/promotions.js"></script>
+
+    </body>
+</html>

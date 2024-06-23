@@ -1,0 +1,47 @@
+<div class="info info__green info__anim-default-hidden" data-id="[[+dogovor_id]]" data-message-parent>
+    <div class="info__wrapper">
+        <p class="info__text">[[+message]]</p>
+        <button class="info__close info__close_white" data-oplata-id="[[+oplataId]]" data-message-close='[[+id]]' title="Закрыть" role="button"></button>
+    </div>
+
+    <script>
+			$(document).ready(function() {
+				$("[data-message-close='[[+id]]']").on('click', function() {
+					let fd = new FormData();
+					fd.append('action', 'info_banner');
+					fd.append('is_checked', '1');
+					fd.append('id', '[[+id]]');
+
+					$.ajax({
+						type: "POST",
+						url: "/assets/ajax.php",
+						data: fd,
+						contentType: false,
+						cache: false,
+						processData: false,
+						success: function(msg) {
+							let mass = JSON.parse(msg);
+
+							if (mass.result === 'error') {
+								console.log(mass.msg);
+
+							} else {
+								$.ajax({
+									url: '[[~256]]',
+									method: 'post',
+									dataType: 'html',
+									success: function(data) {
+										if (data) {
+											$('header').after(data);
+											$("[data-message-parent]").addClass('info__anim-hide');
+											$("[data-message-parent]").css('max-height', $("[data-message-parent]")[0].scrollHeight + 'px');
+										}
+									}
+								});
+							}
+						}
+					});
+				});
+			});
+    </script>
+</div>

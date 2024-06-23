@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <include src="../sections/components/head/link.html"></include>
+        <title>Стоп долг | Анкета</title>
+        <include src="../sections/components/head/meta.html"></include>
+    </head>
+    <body>
+
+        <include src="../sections/header.html"></include>
+
+        <main class="main" role="main">
+            <div class="main--small">
+
+                <nav class="breadcrumbs" role="navigation">
+                    <ul class="B_crumbBox">
+                        <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_homeCrumb" itemprop="url" rel="Home" href="https://lk.stop-dolg.ru/">
+                                <span itemprop="title">Главная</span>
+                            </a>
+                        </li>
+                        <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a class="B_currentCrumb" itemprop="url" rel="Задачи" href="/form-questionnaire.html">
+                                <span itemprop="title">Анкета</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <form class="main__block form">
+                    <span class="form__title">
+                        Анкета
+                    </span>
+                    <label class="form__row">
+                        <span class="form__text">
+                            Площадь <span class="color__red">*</span>
+                        </span>
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <label class="form__row">
+                        <span class="form__text">
+                            Ориентировочная стоимость <span class="color__red">*</span>
+                        </span>
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <label class="form__row">
+                        <span class="form__text">
+                            Страна <span class="color__red">*</span>
+                        </span>
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <label class="form__row">
+                        <span class="form__text">
+                            Город <span class="color__red">*</span>
+                        </span>
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <label class="form__row">
+                        <span class="form__text">
+                            Вид субъекта <span class="color__red">*</span>
+                        </span>
+                        <input type="text" class="form__input" required>
+                    </label>
+                    <div class="form__row form__row--nowrap">
+                        <button class="button button--green" type="submit">
+                            Отправить на проверку
+                        </button>
+                        <a href="" class="button button--green">
+                            Сохранить
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+
+        <include src="../sections/footer.html"></include>
+
+        <include src="../sections/components/common-files.html"></include>
+
+        <section class="alert">
+            <span class="alert__text">
+                Данные успешно отправлены
+            </span>
+            <a href="/form.html" class="button button--green">
+                Вернуться в меню
+            </a>
+        </section>
+
+        <script src="/assets/js/slick.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            $('.slider__list').slick({
+              slidesToScroll: 1,
+              centerMode: false,
+              variableWidth: true,
+              // prevArrow: $('.slider__button--prew'),
+              // nextArrow: $('.slider__button--next')
+              prevArrow: '<button class="slider__button slider__button--prev"><span class="visually-hidden">Предыдущий пункт</span></button>',
+              nextArrow: '<button class="slider__button slider__button--next"><span class="visually-hidden">Следующий пункт</span></button>'
+            });
+          });
+        </script>
+
+    </body>
+</html>

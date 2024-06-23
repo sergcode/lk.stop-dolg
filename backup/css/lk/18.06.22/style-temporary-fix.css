@@ -1,0 +1,14 @@
+.main-page__cards-step_head-lawyers .main-page__cards_body .main-page__cards-name {
+  order: 0;
+}
+
+@media screen and (max-width: 779.98px) {
+  .main-page__cards-step_head-lawyers .main-page__cards_body {
+    justify-content: center;
+  }
+
+  .main-page__cards-step_head-lawyers .main-page__cards_body .main-page__cards_info-employee {
+    max-width: max-content;
+  }
+}
+

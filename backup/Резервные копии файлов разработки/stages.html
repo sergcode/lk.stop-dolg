@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<include src="../sections/components/head/link.html"></include>
+		<title>Ход дела</title>
+		<include src="../sections/components/head/meta.html"></include>
+	</head>
+	<body>
+
+		<include src="../sections/header.html"></include>
+
+		<main class="main" role="main">
+			<nav class="breadcrumbs" role="navigation">
+				<ul class="B_crumbBox">
+					<li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a class="B_homeCrumb" itemprop="url" rel="Home" href="http://stopdolg.ruyou.ru/">
+							<span itemprop="title">Главная</span>
+						</a>
+					</li>
+					<li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+						<a class="B_currentCrumb" itemprop="url" rel="Задачи" href="tasks.html">
+							<span itemprop="title">Ход дела</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="Wrap" id="app">
+				<div class="Accordion stages">
+					<expander
+							title="1. Подготовка к процедуре внесудебного банкротства" animation="bottomToTop"
+							image='/assets/images/stages/img-one.svg'>
+
+						<div class="Expander__body_item">
+							<h3>1.1. Анализ ситуации</h3>
+							<p>В настоящее время ведущий юрист изучает Вашу анкету и готовит дальнейший план действий
+								для подготовки
+								к внесудебной процедуре банкротства. Сейчас очень важно детально изучить Ваши
+								документы. </p>
+						</div>
+
+						<div class="Expander__body_item">
+							<h3>1.2. Подготовка кредитов к процедуре, защита доходов и имущества</h3>
+							<p>Мы провели ваш анализ ситуации и определились с планом действий. Необходимо действовать
+								согласно
+								рекомендациям Вашего юриста. </p>
+						</div>
+
+						<div class="Expander__body_item stage-work">
+							<h3>1.3. Переговоры с кредиторами</h3>
+							<p>Мы готовим для Вас заявления для кредиторов об изменении условий договора, они будут
+								направлены Вам
+								на почту по готовности. </p>
+						</div>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>1.4. Ожидание ответов от кредиторов</h3>
+							<p>Ваши заявления об изменении условий договора успешно направлены, необходимо дождаться
+								ответа от
+								каждого кредитора, при получении ответа незамедлительно направляйте их ведущему
+								юристу.</p>
+						</div>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>1.5. Ваше дело готово к внесудебному банкротству</h3>
+						</div>
+
+					</expander>
+					<expander
+							title="2. Сбор документов и признание банкротом" animation="rightToLeft"
+							image='/assets/images/stages/img-two.svg'>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>2.1. Сбор документов</h3>
+							<p>Мы успешно подготовились к внесудебной процедуре банкротства. Сейчас идет сбор
+								необходимых документов
+								для составления заявления на банкротство. </p>
+						</div>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>2.2. Подготовка заявления на банкротство</h3>
+							<p>В настоящее время Ваш ведущий юрист готовит комплект документов и составляет заявление.
+								Заявление на
+								банкротство будет направлено на Вашу электронную почту для ознакомления.</p>
+						</div>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>2.3. Заявление направлено арбитражному управляющему</h3>
+							<p>Все документы готовы и уже направлены для ознакомления Арбитражному управляющему.</p>
+						</div>
+
+					</expander>
+
+					<expander title="3. Процедура внесудебного банкротства" animation="rightToLeft"
+							  image='/assets/images/stages/img-three.svg'>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>3.1. Процедура внесудебного банкротства</h3>
+						</div>
+
+						<div class="Expander__body_item stage-pending">
+							<h3>3.2. Процедура банкротства завершена, все долги списаны</h3>
+						</div>
+
+					</expander>
+				</div>
+			</div>
+
+		</main>
+
+		<include src="../sections/footer.html"></include>
+
+		<include src="../sections/components/common-files.html"></include>
+
+	</body>
+</html>

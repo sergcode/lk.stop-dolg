@@ -1,0 +1,194 @@
+2\drivers\udecx.sys" />
+      <NODE NAME="12F" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\UEFI.sys" />
+      <NODE NAME="130" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\ufx01000.sys" />
+      <NODE NAME="131" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\UfxChipidea.sys" />
+      <NODE NAME="132" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\ufxsynopsys.sys" />
+      <NODE NAME="133" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\umbus.sys" />
+      <NODE NAME="134" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\umpass.sys" />
+      <NODE NAME="135" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\urschipidea.sys" />
+      <NODE NAME="136" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\urscx01000.sys" />
+      <NODE NAME="137" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\urssynopsys.sys" />
+      <NODE NAME="138" TYPE="string" VALUE="C:\WINDOWS\System32\Drivers\usbaapl64.sys" />
+      <NODE NAME="139" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbccgp.sys" />
+      <NODE NAME="13A" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbcir.sys" />
+      <NODE NAME="13B" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbehci.sys" />
+      <NODE NAME="13C" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbhub.sys" />
+      <NODE NAME="13D" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\UsbHub3.sys" />
+      <NODE NAME="13E" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbohci.sys" />
+      <NODE NAME="13F" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbprint.sys" />
+      <NODE NAME="140" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbser.sys" />
+      <NODE NAME="141" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\USBSTOR.SYS" />
+      <NODE NAME="142" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\usbuhci.sys" />
+      <NODE NAME="143" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\USBXHCI.SYS" />
+      <NODE NAME="144" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vdrvroot.sys" />
+      <NODE NAME="145" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vhdmp.sys" />
+      <NODE NAME="146" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vhf.sys" />
+      <NODE NAME="147" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\Vid.sys" />
+      <NODE NAME="148" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vmbus.sys" />
+      <NODE NAME="149" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\VMBusHID.sys" />
+      <NODE NAME="14A" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vmgid.sys" />
+      <NODE NAME="14B" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\volmgr.sys" />
+      <NODE NAME="14C" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\volmgrx.sys" />
+      <NODE NAME="14D" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\volsnap.sys" />
+      <NODE NAME="14E" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\volume.sys" />
+      <NODE NAME="14F" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vpci.sys" />
+      <NODE NAME="150" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vsmraid.sys" />
+      <NODE NAME="151" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vstxraid.sys" />
+      <NODE NAME="152" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vwifibus.sys" />
+      <NODE NAME="153" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\vwififlt.sys" />
+      <NODE NAME="154" TYPE="string" VALUE="C:\WINDOWS\System32\drivers\wacompen.sys" />
+      <NODE NAME="155" TYPE="string" VALUE="C:\WINDOWS\System32\DRIVERS\wanarp.sys" />
+      <NODE NAME="156" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\wcifs.sys" />
+      <NODE NAME="157" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\wcnfs.sys" />
+      <NODE NAME="158" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\WdBoot.sys" />
+      <NODE NAME="159" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\Wdf01000.sys" />
+      <NODE NAME="15A" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\WdFilter.sys" />
+      <NODE NAME="15B" TYPE="string" VALUE="C:\WINDOWS\system32\DRIVERS\wdiwifi.sys" />
+      <NODE NAME="15C" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\WdmCompanionFilter.sys" />
+      <NODE NAME/>
+      <NODE NAME="18B" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\ext-ms-win-ntos-ksr-l1-1-1.dll" />
+      <NODE NAME="18C" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\portcls.sys" />
+      <NODE NAME="18D" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\HIDCLASS.SYS" />
+      <NODE NAME="18E" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\winhvr.sys" />
+      <NODE NAME="18F" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\PCIIDEX.SYS" />
+      <NODE NAME="190" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\ext-ms-win-fs-clfs-l1-1-0.dll" />
+      <NODE NAME="191" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\USBPORT.SYS" />
+      <NODE NAME="192" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\hvsocket.sys" />
+      <NODE NAME="193" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\winhv.sys" />
+      <NODE NAME="194" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\DevAuthE.sys" />
+      <NODE NAME="195" TYPE="string" VALUE="C:\WINDOWS\system32\drivers\ext-ms-win-ntos-werkernel-l1-1-0.dll" />
+     </ITEM>
+     <ITEM NAME="options">
+      <NODE NAME="LogBlocked" TYPE="number" VALUE="0" />
+      <NODE NAME="ReportStartupChangesDefaultOff" TYPE="number" VALUE="0" />
+     </ITEM>
+     <ITEM NAME="rules" DELETE="1" />
+     <NODE NAME="eraAgentProtection" TYPE="number" VALUE="0" />
+     <NODE NAME="protectedService" TYPE="number" VALUE="1" />
+     <NODE NAME="eiAgentProtection" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000003">
+    <ITEM NAME="settings">
+     <NODE NAME="enabled" TYPE="number" VALUE="1" />
+     <ITEM NAME="rules" DELETE="1">
+      <ITEM NAME="1">
+       <NODE NAME="enabled" TYPE="number" VALUE="1" />
+       <NODE NAME="default" TYPE="number" VALUE="1" />
+       <NODE NAME="pegasus" TYPE="number" VALUE="0" />
+       <NODE NAME="website" TYPE="string" VALUE="www.paypal.com" />
+       <NODE NAME="browser" TYPE="number" VALUE="0" />
+      </ITEM>
+     </ITEM>
+     <ITEM NAME="BrowsersList" DELETE="1" />
+     <NODE NAME="redirector" TYPE="number" VALUE="1" />
+     <NODE NAME="enhancedMemoryProtection" TYPE="number" VALUE="1" />
+     <NODE NAME="keyboardProtection" TYPE="number" VALUE="1" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000005">
+    <ITEM NAME="settings">
+     <NODE NAME="LogsEnabled" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000007">
+    <ITEM NAME="settings">
+     <NODE NAME="ParticipateInCeip" TYPE="number" VALUE="1" />
+     <NODE NAME="NotificationEnabled" TYPE="number" VALUE="1" />
+     <NODE NAME="SecurityReportDays" TYPE="number" VALUE="1E" />
+     <NODE NAME="AdvancedLoggingEnabled" TYPE="number" VALUE="0" />
+     <NODE NAME="CeipAlertWindowTimestamp" TYPE="number" VALUE="5C82A003" />
+     <NODE NAME="CeipAlertWindowShown" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000008">
+    <ITEM NAME="settings">
+     <NODE NAME="AdvancedLoggingEnabled" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000009">
+    <ITEM NAME="settings">
+     <NODE NAME="AllowMarketing" TYPE="number" VALUE="2" />
+     <NODE NAME="AllowPromotions" TYPE="number" VALUE="1" />
+     <NODE NAME="ConfigInterval" TYPE="number" VALUE="15180" />
+     <NODE NAME="MessageInterval" TYPE="number" VALUE="15180" />
+     <NODE NAME="DisplayTime" TYPE="number" VALUE="15180" />
+     <NODE NAME="AngryPoints" TYPE="number" VALUE="64" />
+     <NODE NAME="LastAngryPointsIncTime" TYPE="number" VALUE="5ED68621" />
+     <NODE NAME="LastServerConnect" TYPE="number" VALUE="0" />
+     <NODE NAME="LastCertTime" TYPE="number" VALUE="5530FB33" />
+     <NODE NAME="LastPopupTime" TYPE="number" VALUE="0" />
+     <NODE NAME="CountOfMessagesToday" TYPE="number" VALUE="0" />
+     <NODE NAME="LastConfigTime" TYPE="number" VALUE="5ED7B9AB" />
+     <NODE NAME="LastMessageTime" TYPE="number" VALUE="5ED7B9AC" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000100">
+    <ITEM NAME="scan_idle_config">
+     <NODE NAME="IdleEnableScanner" TYPE="number" VALUE="0" />
+     <NODE NAME="IdleEnableLog" TYPE="number" VALUE="0" />
+     <NODE NAME="IdleEnableRunOnBattery" TYPE="number" VALUE="0" />
+     <NODE NAME="IdleEnableIdlePriority" TYPE="number" VALUE="0" />
+    </ITEM>
+    <ITEM NAME="FirstScan">
+     <NODE NAME="Enabled" TYPE="number" VALUE="1" />
+     <NODE NAME="AlreadyStarted" TYPE="number" VALUE="1" />
+    </ITEM>
+    <NODE NAME="AdvancedLoggingEnabled" TYPE="number" VALUE="0" />
+   </ITEM>
+   <ITEM NAME="01000101">
+    <ITEM NAME="settings">
+     <NODE NAME="ScanRemovableDisk" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanLocalDisk" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanNetwork" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanOnOpen" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanOnExecute" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanOnClose" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanNetworkOnClose" TYPE="number" VALUE="0" />
+     <NODE NAME="ScanOnRemovableConnect" TYPE="number" VALUE="1" />
+     <NODE NAME="AvIntegrated" TYPE="number" VALUE="1" />
+     <NODE NAME="OnCloseRtpArchives" TYPE="number" VALUE="1" />
+     <NODE NAME="OnCloseSfxArchives" TYPE="number" VALUE="1" />
+     <NODE NAME="OnCloseAdvancedHeuristic" TYPE="number" VALUE="1" />
+     <NODE NAME="OnExecuteAH" TYPE="number" VALUE="1" />
+     <NODE NAME="OnExecuteAHRemovable" TYPE="number" VALUE="1" />
+     <NODE NAME="UseDefaultArch" TYPE="number" VALUE="1" />
+     <NODE NAME="ArchDepth" TYPE="number" VALUE="0" />
+     <NODE NAME="ArchMaxFilesize" TYPE="number" VALUE="0" />
+     <NODE NAME="ScanOfRemovableDeviceDefaultAction" TYPE="number" VALUE="2" />
+     <ITEM NAME="ExcludedProcesses" DELETE="1" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000102">
+    <ITEM NAME="settings">
+     <NODE NAME="ScanIncoming" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanOutgoing" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanReading" TYPE="number" VALUE="1" />
+     <NODE NAME="ScanMarked" TYPE="number" VALUE="1" />
+     <NODE NAME="BuildRescan" TYPE="number" VALUE="1" />
+     <NODE NAME="MoveMessage" TYPE="number" VALUE="3" />
+     <NODE NAME="MoveFolder" TYPE="string" VALUE="Зараженные элементы" />
+     <NODE NAME="IsEmailProtectionIntegrated" TYPE="number" VALUE="1" />
+     <NODE NAME="Hidden_ConvertPlainText" TYPE="number" VALUE="0" />
+     <NODE NAME="Hidden_ScanPlainText" TYPE="number" VALUE="0" />
+     <NODE NAME="Hidden_ScanRTF" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000103">
+    <ITEM NAME="settings">
+     <NODE NAME="m_dwRegister" TYPE="number" VALUE="0" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000105">
+    <ITEM NAME="Eamsi">
+     <NODE NAME="Enabled" TYPE="number" VALUE="1" />
+    </ITEM>
+    <ITEM NAME="Settings">
+     <NODE NAME="Enabled" TYPE="number" VALUE="1" />
+    </ITEM>
+   </ITEM>
+   <ITEM NAME="01000200">
+    <ITEM NAME="modEpfw">
+     <ITEM NAME="stRules" DELETE="1">
+      <ITEM NAME="1">
+       <NODE NAME="ruleID" TYPE="string" VALUE=

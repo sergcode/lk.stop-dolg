@@ -1,0 +1,91 @@
+<?php
+function SiteVerify($url)
+{
+    $curl = curl_init();
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 15);
+    curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36");
+    $curlData = curl_exec($curl);
+    curl_close($curl);
+    return $curlData;
+}
+try{
+
+require_once MODX_ASSETS_PATH.'classes/crest/crest.php';
+
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+    $recaptcha=$_POST['g-recaptcha-response'];
+    if(!empty($recaptcha))
+    {
+
+        $google_url="https://www.google.com/recaptcha/api/siteverify";
+        $secret='6LeNOSYjAAAAAAKUj0tnNR3wV2DrA8Jyxh--n8Jf';
+        $ip=$_SERVER['REMOTE_ADDR'];
+        $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
+        $res=SiteVerify($url);
+        $res= json_decode($res, true);
+
+        // var_dump($res);
+        if($res['success'])
+        {
+            $data = [
+                'username' => $_POST['email'],
+                'fullname' => $_POST['surname'] . ' ' . $_POST['name'],
+                'email' => $_POST['email'],
+                'mobilephone' => preg_replace('/[^\d]/','', $_POST['phone']),
+                'password' => $_POST['specifiedpassword'],
+            ];
+            
+            $Office = $modx->getService('office', 'Office', MODX_CORE_PATH . 'components/office/model/office/', array('groups' => 'Users'));
+    
+            $Auth = $Office->loadController('SDauth');
+            
+            $result = $Auth->formRegister($data);
+            if($result['success']){
+                $phone = $data['mobilephone'];
+                $lid = CRest::call(
+                    'crm.lead.add',
+                    [
+                        'fields' => [
+                            "TITLE" => $phone."- Регистрация в ЛК",
+                            "NAME" => $_POST['name'],
+                            "SECOND_NAME" => $_POST['surname'],
+                            "STATUS_ID" => "ASSIGNED",
+                            "SOURCE_ID" => "UC_KINZ86",
+                            "PHONE" => [["VALUE" => $phone, "VALUE_TYPE" => "WORK"]],
+                            "EMAIL"=>$_POST['email']
+                        ]
+                    ]);
+        
+                $modx->log(1, print_r($lid, 1));
+                
+                
+                
+                
+                echo $modx->toJSON(['msg' => $result['message'], 'result' => 'success',$result,$lid]);
+                
+                die();
+            }else{
+                $result = $Auth->formLogin($data);
+            }
+            echo $modx->toJSON(['msg' => $result['message'], 'result' => 'error',$result]);
+
+        }
+        else
+        {
+            echo $modx->toJSON(['msg' => 'Произошла ошибка', 'result' => 'error']);
+
+        }
+
+    }
+    else
+    {
+        echo $modx->toJSON(['msg' => 'Не пройдена капча', 'result' => 'error']);
+    }
+
+}
+}catch(Exception $e){
+    echo $e->getMessage();
+}

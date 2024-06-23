@@ -55,8 +55,9 @@ try {
 		gulp.watch("./src/less/**/*.less", gulp.series("less"));
 		gulp.watch("./src/*.html", gulp.series("copy:html", "include"));
 		gulp.watch("./src/sections/*.html", gulp.series("copy:html", "include"));
-		gulp.watch("./src/*.html").on("change", browsersync.reload);
 		gulp.watch("./src/images/**/*.{png,jpg,svg,gif}", gulp.series("images"));
+		gulp.watch("./src/projects/**/*", gulp.series("copy:projects"));
+		gulp.watch("./src/*.html").on("change", browsersync.reload);
 		gulp.watch("./src/js/**/*.js", gulp.series("babel")).on("change", browsersync.reload);
 	});
 
@@ -127,6 +128,7 @@ try {
 					"./src/docs/**/*.{pdf,docx,doc}",
 					"./src/images/**/*.{json,xml}",
 					"./src/css/**/*.css",
+					"./src/projects/**/*",
 				],
 				{
 					base: "./src"
@@ -155,6 +157,13 @@ try {
 
 	gulp.task("copy:images", () => {
 		return gulp.src("./src/images/**/*.{png,jpg,svg,gif}", {
+			base: "./src"
+		})
+				.pipe(gulp.dest(dist + "/assets/"));
+	});
+
+	gulp.task("copy:projects", () => {
+		return gulp.src("./src/projects/**/*", {
 			base: "./src"
 		})
 				.pipe(gulp.dest(dist + "/assets/"));
